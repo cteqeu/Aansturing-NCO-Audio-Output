@@ -1,0 +1,2080 @@
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"EZI2C_EZI2C.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.EZI2C_EzI2CInit,"ax",%progbits
+  18              		.align	2
+  19              		.global	EZI2C_EzI2CInit
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	EZI2C_EzI2CInit, %function
+  23              	EZI2C_EzI2CInit:
+  24              	.LFB1:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\EZI2C_EZI2C.c"
+   1:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * File Name: EZI2C_EZI2C.c
+   3:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Version 3.0
+   4:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+   5:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Description:
+   6:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  This file provides the source code to the API for the SCB Component in
+   7:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  EZI2C mode.
+   8:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+   9:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Note:
+  10:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+  11:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************
+  12:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  18:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #include "EZI2C_PVT.h"
+  19:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #include "EZI2C_EZI2C_PVT.h"
+  20:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  21:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  22:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /***************************************
+  23:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *      EZI2C Private Vars
+  24:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ***************************************/
+  25:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  26:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** volatile uint8 EZI2C_curStatus; /* Status byte */
+  27:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** uint8 EZI2C_fsmState;           /* FSM state   */
+  28:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  29:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /* Variables intended to be used with Buffer 1: Primary slave address */
+  30:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** volatile uint8 * EZI2C_dataBuffer1; /* Pointer to data buffer 1 */
+  31:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** uint16 EZI2C_bufSizeBuf1; /* Size of buffer 1 in bytes      */
+  32:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** uint16 EZI2C_protectBuf1; /* Start index of write protected area buffer 1 */
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** uint8 EZI2C_offsetBuf1; /* Current offset within buffer 1 */
+  34:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** uint16 EZI2C_indexBuf1;  /* Current index within buffer 1  */
+  35:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  36:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #if(EZI2C_SECONDARY_ADDRESS_ENABLE_CONST)
+  37:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint8 EZI2C_addrBuf1; /* Primary slave address. Used for software comparison   */
+  38:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint8 EZI2C_addrBuf2; /* Secondary slave address. Used for software comparison */
+  39:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  40:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     /* Variables intended to be used with Buffer 2: Primary slave address */
+  41:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     volatile uint8 * EZI2C_dataBuffer2; /* Pointer to data buffer 2 */
+  42:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint16 EZI2C_bufSizeBuf2; /* Size of buffer 2 in bytes      */
+  43:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint16 EZI2C_protectBuf2; /* Start index of write protected area buffer 2 */
+  44:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint8 EZI2C_offsetBuf2; /* Current offset within buffer 2 */
+  45:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint16 EZI2C_indexBuf2;  /* Current index within buffer 2  */
+  46:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #endif /* (EZI2C_SECONDARY_ADDRESS_ENABLE_CONST) */
+  47:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  48:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  49:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /***************************************
+  50:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *      EZI2C Private Functions
+  51:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ***************************************/
+  52:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  53:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #if(EZI2C_SECONDARY_ADDRESS_ENABLE_CONST)
+  54:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     static uint32 EZI2C_EzI2CUpdateRxMatchReg(uint32 addr1, uint32 addr2);
+  55:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #endif /* (EZI2C_SECONDARY_ADDRESS_ENABLE_CONST) */
+  56:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  57:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #if(EZI2C_SCB_MODE_UNCONFIG_CONST_CFG)
+  58:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  59:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     /***************************************
+  60:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *  Configuration Structure Initialization
+  61:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     ***************************************/
+  62:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  63:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     /* Constant configuration of EZI2C */
+  64:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     const EZI2C_EZI2C_INIT_STRUCT EZI2C_configEzI2C =
+  65:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+  66:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_CLOCK_STRETCHING,
+  67:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_MEDIAN_FILTER_ENABLE,
+  68:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_NUMBER_OF_ADDRESSES,
+  69:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_PRIMARY_SLAVE_ADDRESS,
+  70:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_SECONDARY_SLAVE_ADDRESS,
+  71:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_SUB_ADDRESS_SIZE,
+  72:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_WAKE_ENABLE,
+  73:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EZI2C_BYTE_MODE_ENABLE
+  74:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     };
+  75:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+  76:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     /*******************************************************************************
+  77:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Function Name: EZI2C_EzI2CInit
+  78:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     ********************************************************************************
+  79:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+  80:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Summary:
+  81:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *  Configures the SCB for the EZI2C operation.
+  82:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+  83:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Parameters:
+  84:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *  config:  Pointer to a structure that contains the following ordered list of
+  85:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *           fields. These fields match the selections available in the
+  86:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *           customizer.
+  87:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+  88:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Return:
+  89:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *  None
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+  91:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *******************************************************************************/
+  92:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     void EZI2C_EzI2CInit(const EZI2C_EZI2C_INIT_STRUCT *config)
+  93:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+  94:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         if(NULL == config)
+  95:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         {
+  96:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+  97:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         }
+  98:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         else
+  99:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         {
+ 100:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Configure pins */
+ 101:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_SetPins(EZI2C_SCB_MODE_EZI2C, EZI2C_DUMMY_PARAM,
+ 102:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                                       EZI2C_DUMMY_PARAM);
+ 103:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 104:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Store internal configuration */
+ 105:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_scbMode       = (uint8) EZI2C_SCB_MODE_EZI2C;
+ 106:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_scbEnableWake = (uint8) config->enableWake;
+ 107:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_scbEnableIntr = (uint8) EZI2C_SCB_IRQ_INTERNAL;
+ 108:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 109:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_numberOfAddr  = (uint8) config->numberOfAddresses;
+ 110:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_subAddrSize   = (uint8) config->subAddrSize;
+ 111:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 112:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         #if (EZI2C_CY_SCBIP_V0)
+ 113:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Adjust SDA filter settings. Ticket ID#150521 */
+ 114:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_SET_I2C_CFG_SDA_FILT_TRIM(EZI2C_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+ 115:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         #endif /* (EZI2C_CY_SCBIP_V0) */
+ 116:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 117:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Adjust AF and DF filter settings, AF = 1, DF = 0. Ticket ID#176179 */
+ 118:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_I2C_CFG_ANALOG_FITER_ENABLE;
+ 119:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 120:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Configure I2C interface */
+ 121:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_CTRL_REG     = EZI2C_GET_CTRL_BYTE_MODE  (config->enableByteMode)    |
+ 122:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                             EZI2C_GET_CTRL_ADDR_ACCEPT(config->numberOfAddresses) |
+ 123:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                             EZI2C_GET_CTRL_EC_AM_MODE (config->enableWake);
+ 124:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 125:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_I2C_CTRL_REG = EZI2C_EZI2C_CTRL;
+ 126:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 127:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Configure RX direction */
+ 128:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_RX_CTRL_REG = EZI2C_EZI2C_RX_CTRL |
+ 129:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                         EZI2C_GET_RX_CTRL_MEDIAN(EZI2C_DIGITAL_FILTER_DISABLE);
+ 130:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                 ;
+ 131:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_RX_FIFO_CTRL_REG = EZI2C_CLEAR_REG;
+ 132:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 133:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Set default address and mask */
+ 134:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             if(EZI2C_EZI2C_PRIMARY_ADDRESS == config->numberOfAddresses)
+ 135:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             {
+ 136:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 EZI2C_RX_MATCH_REG = EZI2C_EzI2CUpdateRxMatchReg(config->primarySlaveAddr,
+ 137:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                                                        config->prim
+ 138:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             }
+ 139:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             else
+ 140:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             {
+ 141:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 EZI2C_RX_MATCH_REG = EZI2C_EzI2CUpdateRxMatchReg(config->primarySlaveAddr,
+ 142:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                                                        config->seco
+ 143:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             }
+ 144:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 145:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Configure TX direction */
+ 146:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_TX_CTRL_REG      = EZI2C_EZI2C_TX_CTRL;
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 4
+
+
+ 147:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_TX_FIFO_CTRL_REG = ((0u != (config->enableClockStretch)) ?
+ 148:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                  EZI2C_CLEAR_REG : EZI2C_EZI2C_TX_FIFO_CTRL);
+ 149:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 150:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Configure interrupt sources */
+ 151:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         #if (!EZI2C_CY_SCBIP_V1)
+ 152:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****            EZI2C_INTR_SPI_EC_MASK_REG = EZI2C_NO_INTR_SOURCES;
+ 153:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         #endif /* (!EZI2C_CY_SCBIP_V1) */
+ 154:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 155:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_INTR_I2C_EC_MASK_REG = EZI2C_NO_INTR_SOURCES;
+ 156:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_INTR_MASTER_MASK_REG = EZI2C_NO_INTR_SOURCES;
+ 157:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_INTR_SLAVE_MASK_REG  = EZI2C_EZI2C_INTR_SLAVE_MASK;
+ 158:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_INTR_TX_MASK_REG     = EZI2C_NO_INTR_SOURCES;
+ 159:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 160:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Configure interrupt with EZI2C handler but do not enable it */
+ 161:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             CyIntDisable    (EZI2C_ISR_NUMBER);
+ 162:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             CyIntSetPriority(EZI2C_ISR_NUMBER, EZI2C_ISR_PRIORITY);
+ 163:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             (void) CyIntSetVector(EZI2C_ISR_NUMBER, (0u != (config->enableClockStretch)) ?
+ 164:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                                       (&EZI2C_EZI2C_STRETCH_ISR) :
+ 165:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                                       (&EZI2C_EZI2C_NO_STRETCH_ISR)
+ 166:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 167:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             if(0u != (config->enableClockStretch))
+ 168:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             {
+ 169:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 /* Configure interrupt sources */
+ 170:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 EZI2C_INTR_SLAVE_MASK_REG |= EZI2C_INTR_SLAVE_I2C_ADDR_MATCH;
+ 171:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 EZI2C_INTR_RX_MASK_REG     = EZI2C_NO_INTR_SOURCES;
+ 172:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             }
+ 173:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             else
+ 174:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             {
+ 175:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 /* Enable Auto ACK/NACK features */
+ 176:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 EZI2C_I2C_CTRL_REG |= EZI2C_EZI2C_CTRL_AUTO;
+ 177:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 178:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 /* Configure RX interrupt source */
+ 179:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 EZI2C_INTR_SLAVE_MASK_REG |= EZI2C_INTR_SLAVE_I2C_START;
+ 180:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                 EZI2C_INTR_RX_MASK_REG     = EZI2C_INTR_RX_NOT_EMPTY;
+ 181:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             }
+ 182:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 183:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             /* Configure global variables */
+ 184:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_fsmState = EZI2C_EZI2C_FSM_IDLE;
+ 185:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 186:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_curStatus  = 0u;
+ 187:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_indexBuf1  = 0u;
+ 188:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_offsetBuf1 = 0u;
+ 189:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_indexBuf2  = 0u;
+ 190:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_offsetBuf2 = 0u;
+ 191:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 192:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_addrBuf1 = (uint8) config->primarySlaveAddr;
+ 193:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             EZI2C_addrBuf2 = (uint8) config->secondarySlaveAddr;
+ 194:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         }
+ 195:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 196:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 197:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #else
+ 198:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 199:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     /*******************************************************************************
+ 200:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Function Name: EZI2C_EzI2CInit
+ 201:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     ********************************************************************************
+ 202:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+ 203:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Summary:
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 5
+
+
+ 204:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *  Configures the SCB for the EZI2C operation.
+ 205:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+ 206:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Parameters:
+ 207:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *  None
+ 208:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+ 209:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     * Return:
+ 210:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *  None
+ 211:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *
+ 212:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     *******************************************************************************/
+ 213:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     void EZI2C_EzI2CInit(void)
+ 214:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+  26              		.loc 1 214 0
+  27              		.cfi_startproc
+  28 0000 10B5     		push	{r4, lr}
+  29              		.cfi_def_cfa_offset 8
+  30              		.cfi_offset 4, -8
+  31              		.cfi_offset 14, -4
+ 215:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Configure I2C interface */
+ 216:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_CTRL_REG     = EZI2C_EZI2C_DEFAULT_CTRL;
+  32              		.loc 1 216 0
+  33 0002 0024     		mov	r4, #0
+  34 0004 194B     		ldr	r3, .L2
+  35 0006 1C60     		str	r4, [r3]
+ 217:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_I2C_CTRL_REG = EZI2C_EZI2C_DEFAULT_I2C_CTRL;
+  36              		.loc 1 217 0
+  37 0008 194A     		ldr	r2, .L2+4
+  38 000a 1A4B     		ldr	r3, .L2+8
+  39 000c 1A60     		str	r2, [r3]
+ 218:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 219:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if (EZI2C_CY_SCBIP_V0)
+ 220:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Adjust SDA filter settings. Ticket ID#150521 */
+ 221:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_SET_I2C_CFG_SDA_FILT_TRIM(EZI2C_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+ 222:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif /* (EZI2C_CY_SCBIP_V0) */
+ 223:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 224:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Configure RX direction */
+ 225:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_RX_CTRL_REG      = EZI2C_EZI2C_DEFAULT_RX_CTRL;
+  40              		.loc 1 225 0
+  41 000e 1A4B     		ldr	r3, .L2+12
+  42 0010 1A4A     		ldr	r2, .L2+16
+  43 0012 1360     		str	r3, [r2]
+ 226:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_RX_FIFO_CTRL_REG = EZI2C_EZI2C_DEFAULT_RX_FIFO_CTRL;
+  44              		.loc 1 226 0
+  45 0014 1A4A     		ldr	r2, .L2+20
+  46 0016 1460     		str	r4, [r2]
+ 227:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 228:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Set default address and mask */
+ 229:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_RX_MATCH_REG     = EZI2C_EZI2C_DEFAULT_RX_MATCH;
+  47              		.loc 1 229 0
+  48 0018 1A49     		ldr	r1, .L2+24
+  49 001a 1B4A     		ldr	r2, .L2+28
+  50 001c 1160     		str	r1, [r2]
+ 230:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 231:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Configure TX direction */
+ 232:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_TX_CTRL_REG      = EZI2C_EZI2C_DEFAULT_TX_CTRL;
+  51              		.loc 1 232 0
+  52 001e 1B4A     		ldr	r2, .L2+32
+  53 0020 1360     		str	r3, [r2]
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 6
+
+
+ 233:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_TX_FIFO_CTRL_REG = EZI2C_EZI2C_DEFAULT_TX_FIFO_CTRL;
+  54              		.loc 1 233 0
+  55 0022 1B4B     		ldr	r3, .L2+36
+  56 0024 1C60     		str	r4, [r3]
+ 234:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 235:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Configure interrupt with EZI2C handler but do not enable it */
+ 236:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if !defined (CY_EXTERNAL_INTERRUPT_CONFIG)
+ 237:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         CyIntDisable    (EZI2C_ISR_NUMBER);
+  57              		.loc 1 237 0
+  58 0026 0820     		mov	r0, #8
+  59 0028 FFF7FEFF 		bl	CyIntDisable
+  60              	.LVL0:
+ 238:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         CyIntSetPriority(EZI2C_ISR_NUMBER, EZI2C_ISR_PRIORITY);
+  61              		.loc 1 238 0
+  62 002c 0820     		mov	r0, #8
+  63 002e 0321     		mov	r1, #3
+  64 0030 FFF7FEFF 		bl	CyIntSetPriority
+  65              	.LVL1:
+ 239:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 240:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if (EZI2C_EZI2C_SCL_STRETCH_ENABLE_CONST)
+ 241:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         (void) CyIntSetVector(EZI2C_ISR_NUMBER, &EZI2C_EZI2C_STRETCH_ISR);
+  66              		.loc 1 241 0
+  67 0034 0820     		mov	r0, #8
+  68 0036 1749     		ldr	r1, .L2+40
+  69 0038 FFF7FEFF 		bl	CyIntSetVector
+  70              	.LVL2:
+ 242:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #else
+ 243:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         (void) CyIntSetVector(EZI2C_ISR_NUMBER, &EZI2C_EZI2C_NO_STRETCH_ISR);
+ 244:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif /* (EZI2C_EZI2C_SCL_STRETCH_ENABLE_CONST) */
+ 245:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 246:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif /* !defined (CY_EXTERNAL_INTERRUPT_CONFIG) */
+ 247:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 248:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Configure interrupt sources */
+ 249:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if (!EZI2C_CY_SCBIP_V1)
+ 250:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_INTR_SPI_EC_MASK_REG = EZI2C_EZI2C_DEFAULT_INTR_SPI_EC_MASK;
+  71              		.loc 1 250 0
+  72 003c 164B     		ldr	r3, .L2+44
+  73 003e 1C60     		str	r4, [r3]
+ 251:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif /* (!EZI2C_CY_SCBIP_V1) */
+ 252:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 253:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_INTR_I2C_EC_MASK_REG = EZI2C_EZI2C_DEFAULT_INTR_I2C_EC_MASK;
+  74              		.loc 1 253 0
+  75 0040 164B     		ldr	r3, .L2+48
+  76 0042 1C60     		str	r4, [r3]
+ 254:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_INTR_SLAVE_MASK_REG  = EZI2C_EZI2C_DEFAULT_INTR_SLAVE_MASK;
+  77              		.loc 1 254 0
+  78 0044 5222     		mov	r2, #82
+  79 0046 FF32     		add	r2, r2, #255
+  80 0048 154B     		ldr	r3, .L2+52
+  81 004a 1A60     		str	r2, [r3]
+ 255:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_INTR_MASTER_MASK_REG = EZI2C_EZI2C_DEFAULT_INTR_MASTER_MASK;
+  82              		.loc 1 255 0
+  83 004c 154B     		ldr	r3, .L2+56
+  84 004e 1C60     		str	r4, [r3]
+ 256:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_INTR_RX_MASK_REG     = EZI2C_EZI2C_DEFAULT_INTR_RX_MASK;
+  85              		.loc 1 256 0
+  86 0050 154B     		ldr	r3, .L2+60
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 7
+
+
+  87 0052 1C60     		str	r4, [r3]
+ 257:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_INTR_TX_MASK_REG     = EZI2C_EZI2C_DEFAULT_INTR_TX_MASK;
+  88              		.loc 1 257 0
+  89 0054 154B     		ldr	r3, .L2+64
+  90 0056 1C60     		str	r4, [r3]
+ 258:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 259:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* Configure global variables */
+ 260:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_fsmState = EZI2C_EZI2C_FSM_IDLE;
+  91              		.loc 1 260 0
+  92 0058 154B     		ldr	r3, .L2+68
+  93 005a 1C70     		strb	r4, [r3]
+ 261:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 262:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_curStatus  = 0u;
+  94              		.loc 1 262 0
+  95 005c 154B     		ldr	r3, .L2+72
+  96 005e 1C70     		strb	r4, [r3]
+ 263:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_indexBuf1  = 0u;
+  97              		.loc 1 263 0
+  98 0060 154B     		ldr	r3, .L2+76
+  99 0062 1C80     		strh	r4, [r3]
+ 264:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_offsetBuf1 = 0u;
+ 100              		.loc 1 264 0
+ 101 0064 154B     		ldr	r3, .L2+80
+ 102 0066 0022     		mov	r2, #0
+ 103 0068 1A70     		strb	r2, [r3]
+ 265:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 266:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if(EZI2C_SECONDARY_ADDRESS_ENABLE_CONST)
+ 267:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_indexBuf2  = 0u;
+ 268:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_offsetBuf2 = 0u;
+ 269:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 270:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_addrBuf1 = EZI2C_EZI2C_PRIMARY_SLAVE_ADDRESS;
+ 271:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_addrBuf2 = EZI2C_EZI2C_SECONDARY_SLAVE_ADDRESS;
+ 272:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif /* (EZI2C_SECONDARY_ADDRESS_ENABLE_CONST) */
+ 273:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 104              		.loc 1 273 0
+ 105              		@ sp needed
+ 106 006a 10BD     		pop	{r4, pc}
+ 107              	.L3:
+ 108              		.align	2
+ 109              	.L2:
+ 110 006c 00002440 		.word	1076101120
+ 111 0070 00080040 		.word	1073743872
+ 112 0074 60002440 		.word	1076101216
+ 113 0078 07010080 		.word	-2147483385
+ 114 007c 00032440 		.word	1076101888
+ 115 0080 04032440 		.word	1076101892
+ 116 0084 1000FE00 		.word	16646160
+ 117 0088 10032440 		.word	1076101904
+ 118 008c 00022440 		.word	1076101632
+ 119 0090 04022440 		.word	1076101636
+ 120 0094 00000000 		.word	EZI2C_EZI2C_STRETCH_ISR
+ 121 0098 C80E2440 		.word	1076104904
+ 122 009c 880E2440 		.word	1076104840
+ 123 00a0 480F2440 		.word	1076105032
+ 124 00a4 080F2440 		.word	1076104968
+ 125 00a8 C80F2440 		.word	1076105160
+ 126 00ac 880F2440 		.word	1076105096
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 8
+
+
+ 127 00b0 00000000 		.word	EZI2C_fsmState
+ 128 00b4 00000000 		.word	EZI2C_curStatus
+ 129 00b8 00000000 		.word	EZI2C_indexBuf1
+ 130 00bc 00000000 		.word	EZI2C_offsetBuf1
+ 131              		.cfi_endproc
+ 132              	.LFE1:
+ 133              		.size	EZI2C_EzI2CInit, .-EZI2C_EzI2CInit
+ 134              		.section	.text.EZI2C_EzI2CStop,"ax",%progbits
+ 135              		.align	2
+ 136              		.global	EZI2C_EzI2CStop
+ 137              		.code	16
+ 138              		.thumb_func
+ 139              		.type	EZI2C_EzI2CStop, %function
+ 140              	EZI2C_EzI2CStop:
+ 141              	.LFB2:
+ 274:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** #endif /* (EZI2C_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 275:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 276:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 277:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /*******************************************************************************
+ 278:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Function Name: EZI2C_EzI2CStop
+ 279:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ********************************************************************************
+ 280:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 281:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Summary:
+ 282:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Resets the EZI2C FSM into the default state.
+ 283:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 284:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Parameters:
+ 285:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  None
+ 286:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 287:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Return:
+ 288:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  None
+ 289:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 290:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************/
+ 291:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** void EZI2C_EzI2CStop(void)
+ 292:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** {
+ 142              		.loc 1 292 0
+ 143              		.cfi_startproc
+ 293:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     EZI2C_fsmState = EZI2C_EZI2C_FSM_IDLE;
+ 144              		.loc 1 293 0
+ 145 0000 0022     		mov	r2, #0
+ 146 0002 014B     		ldr	r3, .L5
+ 147 0004 1A70     		strb	r2, [r3]
+ 294:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** }
+ 148              		.loc 1 294 0
+ 149              		@ sp needed
+ 150 0006 7047     		bx	lr
+ 151              	.L6:
+ 152              		.align	2
+ 153              	.L5:
+ 154 0008 00000000 		.word	EZI2C_fsmState
+ 155              		.cfi_endproc
+ 156              	.LFE2:
+ 157              		.size	EZI2C_EzI2CStop, .-EZI2C_EzI2CStop
+ 158              		.section	.text.EZI2C_EzI2CGetActivity,"ax",%progbits
+ 159              		.align	2
+ 160              		.global	EZI2C_EzI2CGetActivity
+ 161              		.code	16
+ 162              		.thumb_func
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 9
+
+
+ 163              		.type	EZI2C_EzI2CGetActivity, %function
+ 164              	EZI2C_EzI2CGetActivity:
+ 165              	.LFB3:
+ 295:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 296:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 297:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /*******************************************************************************
+ 298:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Function Name: EZI2C_EzI2CGetActivity
+ 299:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ********************************************************************************
+ 300:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 301:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Summary:
+ 302:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Returns the EZI2C slave status.
+ 303:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  The read, write and error status flags reset to zero after this function
+ 304:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  call. The busy status flag is cleared when the transaction intended for
+ 305:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  the EZI2C slave completes.
+ 306:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 307:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Parameters:
+ 308:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  None
+ 309:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 310:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Return:
+ 311:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Returns the status of the EZI2C Slave activity.
+ 312:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 313:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************/
+ 314:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** uint32 EZI2C_EzI2CGetActivity(void)
+ 315:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** {
+ 166              		.loc 1 315 0
+ 167              		.cfi_startproc
+ 168 0000 10B5     		push	{r4, lr}
+ 169              		.cfi_def_cfa_offset 8
+ 170              		.cfi_offset 4, -8
+ 171              		.cfi_offset 14, -4
+ 316:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint32 status;
+ 317:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 318:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     EZI2C_DisableInt();  /* Lock from interruption */
+ 172              		.loc 1 318 0
+ 173 0002 0820     		mov	r0, #8
+ 174 0004 FFF7FEFF 		bl	CyIntDisable
+ 175              	.LVL3:
+ 319:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 320:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     status = EZI2C_curStatus;
+ 176              		.loc 1 320 0
+ 177 0008 054B     		ldr	r3, .L8
+ 178 000a 1C78     		ldrb	r4, [r3]
+ 179 000c E4B2     		uxtb	r4, r4
+ 180              	.LVL4:
+ 321:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 322:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     /* Relay on address match event from HW as bus busy status */
+ 323:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if(EZI2C_EZI2C_SCL_STRETCH_DISABLE)
+ 324:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+ 325:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         /* For EZI2C_CY_SCBIP_V0 the wake is prohibited by customizer */
+ 326:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         #if(EZI2C_EZI2C_EC_AM_ENABLE)
+ 327:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         {
+ 328:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             status |= EZI2C_CHECK_INTR_I2C_EC(EZI2C_INTR_I2C_EC_WAKE_UP) ?
+ 329:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                         EZI2C_EZI2C_STATUS_BUSY : 0u;
+ 330:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         }
+ 331:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         #else
+ 332:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         {
+ 333:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****             status |= EZI2C_CHECK_INTR_SLAVE(EZI2C_INTR_SLAVE_I2C_ADDR_MATCH) ?
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 10
+
+
+ 334:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                         EZI2C_EZI2C_STATUS_BUSY : 0u;
+ 335:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         }
+ 336:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         #endif
+ 337:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 338:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif
+ 339:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 340:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     EZI2C_curStatus &= ((uint8) ~EZI2C_EZI2C_CLEAR_STATUS);
+ 181              		.loc 1 340 0
+ 182 000e 1A78     		ldrb	r2, [r3]
+ 183 0010 1F21     		mov	r1, #31
+ 184 0012 8A43     		bic	r2, r1
+ 185 0014 1A70     		strb	r2, [r3]
+ 341:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 342:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     EZI2C_EnableInt();   /* Release lock */
+ 186              		.loc 1 342 0
+ 187 0016 0820     		mov	r0, #8
+ 188 0018 FFF7FEFF 		bl	CyIntEnable
+ 189              	.LVL5:
+ 343:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 344:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     return(status);
+ 345:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** }
+ 190              		.loc 1 345 0
+ 191 001c 201C     		mov	r0, r4
+ 192              		@ sp needed
+ 193              	.LVL6:
+ 194 001e 10BD     		pop	{r4, pc}
+ 195              	.L9:
+ 196              		.align	2
+ 197              	.L8:
+ 198 0020 00000000 		.word	EZI2C_curStatus
+ 199              		.cfi_endproc
+ 200              	.LFE3:
+ 201              		.size	EZI2C_EzI2CGetActivity, .-EZI2C_EzI2CGetActivity
+ 202              		.section	.text.EZI2C_EzI2CSetAddress1,"ax",%progbits
+ 203              		.align	2
+ 204              		.global	EZI2C_EzI2CSetAddress1
+ 205              		.code	16
+ 206              		.thumb_func
+ 207              		.type	EZI2C_EzI2CSetAddress1, %function
+ 208              	EZI2C_EzI2CSetAddress1:
+ 209              	.LFB4:
+ 346:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 347:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 348:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /*******************************************************************************
+ 349:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Function Name: EZI2C_EzI2CSetAddress1
+ 350:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ********************************************************************************
+ 351:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 352:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Summary:
+ 353:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Sets the primary I2C slave address.
+ 354:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 355:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Parameters:
+ 356:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  address: I2C slave address for the secondary device.
+ 357:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *           This address is the 7-bit right-justified slave address and does
+ 358:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *           not include the R/W bit.
+ 359:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *           This value may be any address between 0 and 127 (0x00 to 0x7F).
+ 360:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 361:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Return:
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 11
+
+
+ 362:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  None
+ 363:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 364:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************/
+ 365:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** void EZI2C_EzI2CSetAddress1(uint32 address)
+ 366:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** {
+ 210              		.loc 1 366 0
+ 211              		.cfi_startproc
+ 212              	.LVL7:
+ 213              	.LBB2:
+ 367:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if(EZI2C_SECONDARY_ADDRESS_ENABLE)
+ 368:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+ 369:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_addrBuf1 = (uint8) address;
+ 370:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 371:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_RX_MATCH_REG = EZI2C_EzI2CUpdateRxMatchReg(address,
+ 372:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                                                                                (uint32) EZI2C_addrB
+ 373:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 374:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #else
+ 375:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+ 376:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         uint32 matchReg;
+ 377:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 378:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         matchReg = EZI2C_RX_MATCH_REG;
+ 214              		.loc 1 378 0
+ 215 0000 044B     		ldr	r3, .L11
+ 216 0002 1968     		ldr	r1, [r3]
+ 217              	.LVL8:
+ 379:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 380:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         matchReg &= ((uint32) ~EZI2C_RX_MATCH_ADDR_MASK);            /* Clear address bits */
+ 218              		.loc 1 380 0
+ 219 0004 FF22     		mov	r2, #255
+ 220 0006 9143     		bic	r1, r2
+ 221              	.LVL9:
+ 381:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         matchReg |= ((uint32)  EZI2C_GET_I2C_8BIT_ADDRESS(address)); /* Set mask */
+ 222              		.loc 1 381 0
+ 223 0008 4000     		lsl	r0, r0, #1
+ 224              	.LVL10:
+ 225 000a 0240     		and	r2, r0
+ 226 000c 0A43     		orr	r2, r1
+ 227              	.LVL11:
+ 382:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 383:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_RX_MATCH_REG = matchReg;
+ 228              		.loc 1 383 0
+ 229 000e 1A60     		str	r2, [r3]
+ 230              	.LBE2:
+ 384:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 385:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif
+ 386:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** }
+ 231              		.loc 1 386 0
+ 232              		@ sp needed
+ 233 0010 7047     		bx	lr
+ 234              	.L12:
+ 235 0012 C046     		.align	2
+ 236              	.L11:
+ 237 0014 10032440 		.word	1076101904
+ 238              		.cfi_endproc
+ 239              	.LFE4:
+ 240              		.size	EZI2C_EzI2CSetAddress1, .-EZI2C_EzI2CSetAddress1
+ 241              		.section	.text.EZI2C_EzI2CGetAddress1,"ax",%progbits
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 12
+
+
+ 242              		.align	2
+ 243              		.global	EZI2C_EzI2CGetAddress1
+ 244              		.code	16
+ 245              		.thumb_func
+ 246              		.type	EZI2C_EzI2CGetAddress1, %function
+ 247              	EZI2C_EzI2CGetAddress1:
+ 248              	.LFB5:
+ 387:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 388:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 389:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /*******************************************************************************
+ 390:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Function Name: EZI2C_EzI2CGetAddress1
+ 391:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ********************************************************************************
+ 392:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 393:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Summary:
+ 394:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Gets the primary I2C slave 7-bit address.
+ 395:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 396:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Parameters:
+ 397:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  None
+ 398:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 399:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Return:
+ 400:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Returns I2C slave address for the primary device.
+ 401:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  This address is the 7-bit right-justified slave address and does not
+ 402:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  include the R/W bit.
+ 403:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  This value may be any address between 0 and 127 (0x00 to 0x7F).
+ 404:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 405:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************/
+ 406:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** uint32 EZI2C_EzI2CGetAddress1(void)
+ 407:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** {
+ 249              		.loc 1 407 0
+ 250              		.cfi_startproc
+ 408:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     uint32 address;
+ 409:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 410:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #if(EZI2C_SECONDARY_ADDRESS_ENABLE)
+ 411:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+ 412:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         address = (uint32) EZI2C_addrBuf1;
+ 413:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 414:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #else
+ 415:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+ 416:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         address = (EZI2C_GET_RX_MATCH_ADDR(EZI2C_RX_MATCH_REG) >>
+ 251              		.loc 1 416 0
+ 252 0000 024B     		ldr	r3, .L14
+ 253 0002 1868     		ldr	r0, [r3]
+ 254 0004 0006     		lsl	r0, r0, #24
+ 255 0006 400E     		lsr	r0, r0, #25
+ 256              	.LVL12:
+ 417:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****                    EZI2C_I2C_SLAVE_ADDR_POS);
+ 418:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 419:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     #endif
+ 420:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 421:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     return(address);
+ 422:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** }
+ 257              		.loc 1 422 0
+ 258              		@ sp needed
+ 259 0008 7047     		bx	lr
+ 260              	.L15:
+ 261 000a C046     		.align	2
+ 262              	.L14:
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 13
+
+
+ 263 000c 10032440 		.word	1076101904
+ 264              		.cfi_endproc
+ 265              	.LFE5:
+ 266              		.size	EZI2C_EzI2CGetAddress1, .-EZI2C_EzI2CGetAddress1
+ 267              		.section	.text.EZI2C_EzI2CSetBuffer1,"ax",%progbits
+ 268              		.align	2
+ 269              		.global	EZI2C_EzI2CSetBuffer1
+ 270              		.code	16
+ 271              		.thumb_func
+ 272              		.type	EZI2C_EzI2CSetBuffer1, %function
+ 273              	EZI2C_EzI2CSetBuffer1:
+ 274              	.LFB6:
+ 423:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 424:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 425:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /*******************************************************************************
+ 426:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Function Name: EZI2C_EzI2CSetBuffer1
+ 427:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ********************************************************************************
+ 428:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 429:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Summary:
+ 430:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Sets up the data buffer to be exposed to the I2C master on a primary slave
+ 431:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  address request.
+ 432:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 433:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Parameters:
+ 434:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  bufSize: Size of the buffer in bytes.
+ 435:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  rwBoundary: Sets how many bytes are writeable in the beginning of the buffer.
+ 436:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *              This value must be less than or equal to the buffer size.
+ 437:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *              Data located at offset rwBoundry and greater are read only.
+ 438:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  buffer: Pointer to the data buffer.
+ 439:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 440:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Return:
+ 441:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  None
+ 442:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 443:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************/
+ 444:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** void EZI2C_EzI2CSetBuffer1(uint32 bufSize, uint32 rwBoundary, volatile uint8 * buffer)
+ 445:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** {
+ 275              		.loc 1 445 0
+ 276              		.cfi_startproc
+ 277              	.LVL13:
+ 278 0000 70B5     		push	{r4, r5, r6, lr}
+ 279              		.cfi_def_cfa_offset 16
+ 280              		.cfi_offset 4, -16
+ 281              		.cfi_offset 5, -12
+ 282              		.cfi_offset 6, -8
+ 283              		.cfi_offset 14, -4
+ 284 0002 061C     		mov	r6, r0
+ 285 0004 0D1C     		mov	r5, r1
+ 286 0006 141E     		sub	r4, r2, #0
+ 446:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     if (NULL != buffer)
+ 287              		.loc 1 446 0
+ 288 0008 0BD0     		beq	.L16
+ 447:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     {
+ 448:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_DisableInt();  /* Lock from interruption */
+ 289              		.loc 1 448 0
+ 290 000a 0820     		mov	r0, #8
+ 291              	.LVL14:
+ 292 000c FFF7FEFF 		bl	CyIntDisable
+ 293              	.LVL15:
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 14
+
+
+ 449:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 450:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_dataBuffer1 =  buffer;
+ 294              		.loc 1 450 0
+ 295 0010 044B     		ldr	r3, .L18
+ 296 0012 1C60     		str	r4, [r3]
+ 451:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_bufSizeBuf1 = (uint16) bufSize;
+ 297              		.loc 1 451 0
+ 298 0014 044B     		ldr	r3, .L18+4
+ 299 0016 1E80     		strh	r6, [r3]
+ 452:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_protectBuf1 = (uint16) rwBoundary;
+ 300              		.loc 1 452 0
+ 301 0018 044B     		ldr	r3, .L18+8
+ 302 001a 1D80     		strh	r5, [r3]
+ 453:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 454:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****         EZI2C_EnableInt();   /* Release lock */
+ 303              		.loc 1 454 0
+ 304 001c 0820     		mov	r0, #8
+ 305 001e FFF7FEFF 		bl	CyIntEnable
+ 306              	.LVL16:
+ 307              	.L16:
+ 455:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     }
+ 456:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** }
+ 308              		.loc 1 456 0
+ 309              		@ sp needed
+ 310              	.LVL17:
+ 311              	.LVL18:
+ 312              	.LVL19:
+ 313 0022 70BD     		pop	{r4, r5, r6, pc}
+ 314              	.L19:
+ 315              		.align	2
+ 316              	.L18:
+ 317 0024 00000000 		.word	EZI2C_dataBuffer1
+ 318 0028 00000000 		.word	EZI2C_bufSizeBuf1
+ 319 002c 00000000 		.word	EZI2C_protectBuf1
+ 320              		.cfi_endproc
+ 321              	.LFE6:
+ 322              		.size	EZI2C_EzI2CSetBuffer1, .-EZI2C_EzI2CSetBuffer1
+ 323              		.section	.text.EZI2C_EzI2CSetReadBoundaryBuffer1,"ax",%progbits
+ 324              		.align	2
+ 325              		.global	EZI2C_EzI2CSetReadBoundaryBuffer1
+ 326              		.code	16
+ 327              		.thumb_func
+ 328              		.type	EZI2C_EzI2CSetReadBoundaryBuffer1, %function
+ 329              	EZI2C_EzI2CSetReadBoundaryBuffer1:
+ 330              	.LFB7:
+ 457:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 458:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** 
+ 459:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** /*******************************************************************************
+ 460:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Function Name: EZI2C_EzI2CSetReadBoundaryBuffer1
+ 461:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** ********************************************************************************
+ 462:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 463:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Summary:
+ 464:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  Sets the read only boundary in the data buffer to be exposed to the I2C
+ 465:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  master on a primary slave address request.
+ 466:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 467:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Parameters:
+ 468:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  rwBoundry: Sets how many bytes are writeable in the beginning of the buffer.
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 15
+
+
+ 469:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *             This value must be less than or equal to the buffer size.
+ 470:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *             Data located at offset rwBoundry and greater are read only.
+ 471:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 472:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** * Return:
+ 473:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *  None
+ 474:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *
+ 475:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** *******************************************************************************/
+ 476:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** void EZI2C_EzI2CSetReadBoundaryBuffer1(uint32 rwBoundary)
+ 477:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** {
+ 331              		.loc 1 477 0
+ 332              		.cfi_startproc
+ 333              	.LVL20:
+ 478:.\Generated_Source\PSoC4/EZI2C_EZI2C.c ****     EZI2C_protectBuf1 = (uint16) rwBoundary;
+ 334              		.loc 1 478 0
+ 335 0000 014B     		ldr	r3, .L21
+ 336 0002 1880     		strh	r0, [r3]
+ 479:.\Generated_Source\PSoC4/EZI2C_EZI2C.c **** }
+ 337              		.loc 1 479 0
+ 338              		@ sp needed
+ 339 0004 7047     		bx	lr
+ 340              	.L22:
+ 341 0006 C046     		.align	2
+ 342              	.L21:
+ 343 0008 00000000 		.word	EZI2C_protectBuf1
+ 344              		.cfi_endproc
+ 345              	.LFE7:
+ 346              		.size	EZI2C_EzI2CSetReadBoundaryBuffer1, .-EZI2C_EzI2CSetReadBoundaryBuffer1
+ 347              		.comm	EZI2C_indexBuf1,2,2
+ 348              		.comm	EZI2C_offsetBuf1,1,1
+ 349              		.comm	EZI2C_protectBuf1,2,2
+ 350              		.comm	EZI2C_bufSizeBuf1,2,2
+ 351              		.comm	EZI2C_dataBuffer1,4,4
+ 352              		.comm	EZI2C_fsmState,1,1
+ 353              		.comm	EZI2C_curStatus,1,1
+ 354              		.text
+ 355              	.Letext0:
+ 356              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 357              		.file 3 "Generated_Source\\PSoC4/CyLib.h"
+ 358              		.section	.debug_info,"",%progbits
+ 359              	.Ldebug_info0:
+ 360 0000 40030000 		.4byte	0x340
+ 361 0004 0400     		.2byte	0x4
+ 362 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 363 000a 04       		.byte	0x4
+ 364 000b 01       		.uleb128 0x1
+ 365 000c 97010000 		.4byte	.LASF39
+ 366 0010 01       		.byte	0x1
+ 367 0011 C8000000 		.4byte	.LASF40
+ 368 0015 71020000 		.4byte	.LASF41
+ 369 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 370 001d 00000000 		.4byte	0
+ 371 0021 00000000 		.4byte	.Ldebug_line0
+ 372 0025 02       		.uleb128 0x2
+ 373 0026 01       		.byte	0x1
+ 374 0027 06       		.byte	0x6
+ 375 0028 3D030000 		.4byte	.LASF0
+ 376 002c 02       		.uleb128 0x2
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 16
+
+
+ 377 002d 01       		.byte	0x1
+ 378 002e 08       		.byte	0x8
+ 379 002f BA000000 		.4byte	.LASF1
+ 380 0033 02       		.uleb128 0x2
+ 381 0034 02       		.byte	0x2
+ 382 0035 05       		.byte	0x5
+ 383 0036 DA020000 		.4byte	.LASF2
+ 384 003a 02       		.uleb128 0x2
+ 385 003b 02       		.byte	0x2
+ 386 003c 07       		.byte	0x7
+ 387 003d 56000000 		.4byte	.LASF3
+ 388 0041 02       		.uleb128 0x2
+ 389 0042 04       		.byte	0x4
+ 390 0043 05       		.byte	0x5
+ 391 0044 FD020000 		.4byte	.LASF4
+ 392 0048 02       		.uleb128 0x2
+ 393 0049 04       		.byte	0x4
+ 394 004a 07       		.byte	0x7
+ 395 004b FF000000 		.4byte	.LASF5
+ 396 004f 02       		.uleb128 0x2
+ 397 0050 08       		.byte	0x8
+ 398 0051 05       		.byte	0x5
+ 399 0052 3F020000 		.4byte	.LASF6
+ 400 0056 02       		.uleb128 0x2
+ 401 0057 08       		.byte	0x8
+ 402 0058 07       		.byte	0x7
+ 403 0059 6F010000 		.4byte	.LASF7
+ 404 005d 03       		.uleb128 0x3
+ 405 005e 04       		.byte	0x4
+ 406 005f 05       		.byte	0x5
+ 407 0060 696E7400 		.ascii	"int\000"
+ 408 0064 02       		.uleb128 0x2
+ 409 0065 04       		.byte	0x4
+ 410 0066 07       		.byte	0x7
+ 411 0067 5A010000 		.4byte	.LASF8
+ 412 006b 04       		.uleb128 0x4
+ 413 006c 11010000 		.4byte	.LASF9
+ 414 0070 02       		.byte	0x2
+ 415 0071 B3       		.byte	0xb3
+ 416 0072 2C000000 		.4byte	0x2c
+ 417 0076 04       		.uleb128 0x4
+ 418 0077 3A010000 		.4byte	.LASF10
+ 419 007b 02       		.byte	0x2
+ 420 007c B4       		.byte	0xb4
+ 421 007d 3A000000 		.4byte	0x3a
+ 422 0081 04       		.uleb128 0x4
+ 423 0082 41010000 		.4byte	.LASF11
+ 424 0086 02       		.byte	0x2
+ 425 0087 B5       		.byte	0xb5
+ 426 0088 48000000 		.4byte	0x48
+ 427 008c 02       		.uleb128 0x2
+ 428 008d 04       		.byte	0x4
+ 429 008e 04       		.byte	0x4
+ 430 008f B4000000 		.4byte	.LASF12
+ 431 0093 02       		.uleb128 0x2
+ 432 0094 08       		.byte	0x8
+ 433 0095 04       		.byte	0x4
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 17
+
+
+ 434 0096 27010000 		.4byte	.LASF13
+ 435 009a 02       		.uleb128 0x2
+ 436 009b 01       		.byte	0x1
+ 437 009c 08       		.byte	0x8
+ 438 009d 4D020000 		.4byte	.LASF14
+ 439 00a1 05       		.uleb128 0x5
+ 440 00a2 6B000000 		.4byte	0x6b
+ 441 00a6 06       		.uleb128 0x6
+ 442 00a7 00000000 		.4byte	.LASF15
+ 443 00ab 02       		.byte	0x2
+ 444 00ac 5F01     		.2byte	0x15f
+ 445 00ae B2000000 		.4byte	0xb2
+ 446 00b2 05       		.uleb128 0x5
+ 447 00b3 81000000 		.4byte	0x81
+ 448 00b7 06       		.uleb128 0x6
+ 449 00b8 13020000 		.4byte	.LASF16
+ 450 00bc 02       		.byte	0x2
+ 451 00bd 6F01     		.2byte	0x16f
+ 452 00bf C3000000 		.4byte	0xc3
+ 453 00c3 07       		.uleb128 0x7
+ 454 00c4 04       		.byte	0x4
+ 455 00c5 C9000000 		.4byte	0xc9
+ 456 00c9 08       		.uleb128 0x8
+ 457 00ca 02       		.uleb128 0x2
+ 458 00cb 04       		.byte	0x4
+ 459 00cc 07       		.byte	0x7
+ 460 00cd 20020000 		.4byte	.LASF17
+ 461 00d1 09       		.uleb128 0x9
+ 462 00d2 37000000 		.4byte	.LASF18
+ 463 00d6 01       		.byte	0x1
+ 464 00d7 D5       		.byte	0xd5
+ 465 00d8 00000000 		.4byte	.LFB1
+ 466 00dc C0000000 		.4byte	.LFE1-.LFB1
+ 467 00e0 01       		.uleb128 0x1
+ 468 00e1 9C       		.byte	0x9c
+ 469 00e2 21010000 		.4byte	0x121
+ 470 00e6 0A       		.uleb128 0xa
+ 471 00e7 2C000000 		.4byte	.LVL0
+ 472 00eb F5020000 		.4byte	0x2f5
+ 473 00ef F9000000 		.4byte	0xf9
+ 474 00f3 0B       		.uleb128 0xb
+ 475 00f4 01       		.uleb128 0x1
+ 476 00f5 50       		.byte	0x50
+ 477 00f6 01       		.uleb128 0x1
+ 478 00f7 38       		.byte	0x38
+ 479 00f8 00       		.byte	0
+ 480 00f9 0A       		.uleb128 0xa
+ 481 00fa 34000000 		.4byte	.LVL1
+ 482 00fe 06030000 		.4byte	0x306
+ 483 0102 11010000 		.4byte	0x111
+ 484 0106 0B       		.uleb128 0xb
+ 485 0107 01       		.uleb128 0x1
+ 486 0108 51       		.byte	0x51
+ 487 0109 01       		.uleb128 0x1
+ 488 010a 33       		.byte	0x33
+ 489 010b 0B       		.uleb128 0xb
+ 490 010c 01       		.uleb128 0x1
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 18
+
+
+ 491 010d 50       		.byte	0x50
+ 492 010e 01       		.uleb128 0x1
+ 493 010f 38       		.byte	0x38
+ 494 0110 00       		.byte	0
+ 495 0111 0C       		.uleb128 0xc
+ 496 0112 3C000000 		.4byte	.LVL2
+ 497 0116 1C030000 		.4byte	0x31c
+ 498 011a 0B       		.uleb128 0xb
+ 499 011b 01       		.uleb128 0x1
+ 500 011c 50       		.byte	0x50
+ 501 011d 01       		.uleb128 0x1
+ 502 011e 38       		.byte	0x38
+ 503 011f 00       		.byte	0
+ 504 0120 00       		.byte	0
+ 505 0121 0D       		.uleb128 0xd
+ 506 0122 17010000 		.4byte	.LASF42
+ 507 0126 01       		.byte	0x1
+ 508 0127 2301     		.2byte	0x123
+ 509 0129 00000000 		.4byte	.LFB2
+ 510 012d 0C000000 		.4byte	.LFE2-.LFB2
+ 511 0131 01       		.uleb128 0x1
+ 512 0132 9C       		.byte	0x9c
+ 513 0133 0E       		.uleb128 0xe
+ 514 0134 0F030000 		.4byte	.LASF22
+ 515 0138 01       		.byte	0x1
+ 516 0139 3A01     		.2byte	0x13a
+ 517 013b 81000000 		.4byte	0x81
+ 518 013f 00000000 		.4byte	.LFB3
+ 519 0143 24000000 		.4byte	.LFE3-.LFB3
+ 520 0147 01       		.uleb128 0x1
+ 521 0148 9C       		.byte	0x9c
+ 522 0149 80010000 		.4byte	0x180
+ 523 014d 0F       		.uleb128 0xf
+ 524 014e AD000000 		.4byte	.LASF20
+ 525 0152 01       		.byte	0x1
+ 526 0153 3C01     		.2byte	0x13c
+ 527 0155 81000000 		.4byte	0x81
+ 528 0159 00000000 		.4byte	.LLST0
+ 529 015d 0A       		.uleb128 0xa
+ 530 015e 08000000 		.4byte	.LVL3
+ 531 0162 F5020000 		.4byte	0x2f5
+ 532 0166 70010000 		.4byte	0x170
+ 533 016a 0B       		.uleb128 0xb
+ 534 016b 01       		.uleb128 0x1
+ 535 016c 50       		.byte	0x50
+ 536 016d 01       		.uleb128 0x1
+ 537 016e 38       		.byte	0x38
+ 538 016f 00       		.byte	0
+ 539 0170 0C       		.uleb128 0xc
+ 540 0171 1C000000 		.4byte	.LVL5
+ 541 0175 36030000 		.4byte	0x336
+ 542 0179 0B       		.uleb128 0xb
+ 543 017a 01       		.uleb128 0x1
+ 544 017b 50       		.byte	0x50
+ 545 017c 01       		.uleb128 0x1
+ 546 017d 38       		.byte	0x38
+ 547 017e 00       		.byte	0
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 19
+
+
+ 548 017f 00       		.byte	0
+ 549 0180 10       		.uleb128 0x10
+ 550 0181 96000000 		.4byte	.LASF19
+ 551 0185 01       		.byte	0x1
+ 552 0186 6D01     		.2byte	0x16d
+ 553 0188 00000000 		.4byte	.LFB4
+ 554 018c 18000000 		.4byte	.LFE4-.LFB4
+ 555 0190 01       		.uleb128 0x1
+ 556 0191 9C       		.byte	0x9c
+ 557 0192 C1010000 		.4byte	0x1c1
+ 558 0196 11       		.uleb128 0x11
+ 559 0197 67010000 		.4byte	.LASF24
+ 560 019b 01       		.byte	0x1
+ 561 019c 6D01     		.2byte	0x16d
+ 562 019e 81000000 		.4byte	0x81
+ 563 01a2 1E000000 		.4byte	.LLST1
+ 564 01a6 12       		.uleb128 0x12
+ 565 01a7 00000000 		.4byte	.LBB2
+ 566 01ab 10000000 		.4byte	.LBE2-.LBB2
+ 567 01af 0F       		.uleb128 0xf
+ 568 01b0 06030000 		.4byte	.LASF21
+ 569 01b4 01       		.byte	0x1
+ 570 01b5 7801     		.2byte	0x178
+ 571 01b7 81000000 		.4byte	0x81
+ 572 01bb 3F000000 		.4byte	.LLST2
+ 573 01bf 00       		.byte	0
+ 574 01c0 00       		.byte	0
+ 575 01c1 0E       		.uleb128 0xe
+ 576 01c2 26030000 		.4byte	.LASF23
+ 577 01c6 01       		.byte	0x1
+ 578 01c7 9601     		.2byte	0x196
+ 579 01c9 81000000 		.4byte	0x81
+ 580 01cd 00000000 		.4byte	.LFB5
+ 581 01d1 10000000 		.4byte	.LFE5-.LFB5
+ 582 01d5 01       		.uleb128 0x1
+ 583 01d6 9C       		.byte	0x9c
+ 584 01d7 EA010000 		.4byte	0x1ea
+ 585 01db 13       		.uleb128 0x13
+ 586 01dc 67010000 		.4byte	.LASF24
+ 587 01e0 01       		.byte	0x1
+ 588 01e1 9801     		.2byte	0x198
+ 589 01e3 81000000 		.4byte	0x81
+ 590 01e7 01       		.uleb128 0x1
+ 591 01e8 50       		.byte	0x50
+ 592 01e9 00       		.byte	0
+ 593 01ea 10       		.uleb128 0x10
+ 594 01eb 29020000 		.4byte	.LASF25
+ 595 01ef 01       		.byte	0x1
+ 596 01f0 BC01     		.2byte	0x1bc
+ 597 01f2 00000000 		.4byte	.LFB6
+ 598 01f6 30000000 		.4byte	.LFE6-.LFB6
+ 599 01fa 01       		.uleb128 0x1
+ 600 01fb 9C       		.byte	0x9c
+ 601 01fc 53020000 		.4byte	0x253
+ 602 0200 11       		.uleb128 0x11
+ 603 0201 F5020000 		.4byte	.LASF26
+ 604 0205 01       		.byte	0x1
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 20
+
+
+ 605 0206 BC01     		.2byte	0x1bc
+ 606 0208 81000000 		.4byte	0x81
+ 607 020c 5D000000 		.4byte	.LLST3
+ 608 0210 11       		.uleb128 0x11
+ 609 0211 69000000 		.4byte	.LASF27
+ 610 0215 01       		.byte	0x1
+ 611 0216 BC01     		.2byte	0x1bc
+ 612 0218 81000000 		.4byte	0x81
+ 613 021c 89000000 		.4byte	.LLST4
+ 614 0220 11       		.uleb128 0x11
+ 615 0221 49030000 		.4byte	.LASF28
+ 616 0225 01       		.byte	0x1
+ 617 0226 BC01     		.2byte	0x1bc
+ 618 0228 53020000 		.4byte	0x253
+ 619 022c B5000000 		.4byte	.LLST5
+ 620 0230 0A       		.uleb128 0xa
+ 621 0231 10000000 		.4byte	.LVL15
+ 622 0235 F5020000 		.4byte	0x2f5
+ 623 0239 43020000 		.4byte	0x243
+ 624 023d 0B       		.uleb128 0xb
+ 625 023e 01       		.uleb128 0x1
+ 626 023f 50       		.byte	0x50
+ 627 0240 01       		.uleb128 0x1
+ 628 0241 38       		.byte	0x38
+ 629 0242 00       		.byte	0
+ 630 0243 0C       		.uleb128 0xc
+ 631 0244 22000000 		.4byte	.LVL16
+ 632 0248 36030000 		.4byte	0x336
+ 633 024c 0B       		.uleb128 0xb
+ 634 024d 01       		.uleb128 0x1
+ 635 024e 50       		.byte	0x50
+ 636 024f 01       		.uleb128 0x1
+ 637 0250 38       		.byte	0x38
+ 638 0251 00       		.byte	0
+ 639 0252 00       		.byte	0
+ 640 0253 07       		.uleb128 0x7
+ 641 0254 04       		.byte	0x4
+ 642 0255 A1000000 		.4byte	0xa1
+ 643 0259 10       		.uleb128 0x10
+ 644 025a 74000000 		.4byte	.LASF29
+ 645 025e 01       		.byte	0x1
+ 646 025f DC01     		.2byte	0x1dc
+ 647 0261 00000000 		.4byte	.LFB7
+ 648 0265 0C000000 		.4byte	.LFE7-.LFB7
+ 649 0269 01       		.uleb128 0x1
+ 650 026a 9C       		.byte	0x9c
+ 651 026b 7E020000 		.4byte	0x27e
+ 652 026f 14       		.uleb128 0x14
+ 653 0270 69000000 		.4byte	.LASF27
+ 654 0274 01       		.byte	0x1
+ 655 0275 DC01     		.2byte	0x1dc
+ 656 0277 81000000 		.4byte	0x81
+ 657 027b 01       		.uleb128 0x1
+ 658 027c 50       		.byte	0x50
+ 659 027d 00       		.byte	0
+ 660 027e 15       		.uleb128 0x15
+ 661 027f 06000000 		.4byte	.LASF30
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 21
+
+
+ 662 0283 01       		.byte	0x1
+ 663 0284 1A       		.byte	0x1a
+ 664 0285 A1000000 		.4byte	0xa1
+ 665 0289 05       		.uleb128 0x5
+ 666 028a 03       		.byte	0x3
+ 667 028b 00000000 		.4byte	EZI2C_curStatus
+ 668 028f 15       		.uleb128 0x15
+ 669 0290 47000000 		.4byte	.LASF31
+ 670 0294 01       		.byte	0x1
+ 671 0295 1B       		.byte	0x1b
+ 672 0296 6B000000 		.4byte	0x6b
+ 673 029a 05       		.uleb128 0x5
+ 674 029b 03       		.byte	0x3
+ 675 029c 00000000 		.4byte	EZI2C_fsmState
+ 676 02a0 15       		.uleb128 0x15
+ 677 02a1 52020000 		.4byte	.LASF32
+ 678 02a5 01       		.byte	0x1
+ 679 02a6 1E       		.byte	0x1e
+ 680 02a7 53020000 		.4byte	0x253
+ 681 02ab 05       		.uleb128 0x5
+ 682 02ac 03       		.byte	0x3
+ 683 02ad 00000000 		.4byte	EZI2C_dataBuffer1
+ 684 02b1 15       		.uleb128 0x15
+ 685 02b2 25000000 		.4byte	.LASF33
+ 686 02b6 01       		.byte	0x1
+ 687 02b7 1F       		.byte	0x1f
+ 688 02b8 76000000 		.4byte	0x76
+ 689 02bc 05       		.uleb128 0x5
+ 690 02bd 03       		.byte	0x3
+ 691 02be 00000000 		.4byte	EZI2C_bufSizeBuf1
+ 692 02c2 15       		.uleb128 0x15
+ 693 02c3 48010000 		.4byte	.LASF34
+ 694 02c7 01       		.byte	0x1
+ 695 02c8 20       		.byte	0x20
+ 696 02c9 76000000 		.4byte	0x76
+ 697 02cd 05       		.uleb128 0x5
+ 698 02ce 03       		.byte	0x3
+ 699 02cf 00000000 		.4byte	EZI2C_protectBuf1
+ 700 02d3 15       		.uleb128 0x15
+ 701 02d4 E4020000 		.4byte	.LASF35
+ 702 02d8 01       		.byte	0x1
+ 703 02d9 21       		.byte	0x21
+ 704 02da 6B000000 		.4byte	0x6b
+ 705 02de 05       		.uleb128 0x5
+ 706 02df 03       		.byte	0x3
+ 707 02e0 00000000 		.4byte	EZI2C_offsetBuf1
+ 708 02e4 15       		.uleb128 0x15
+ 709 02e5 EF000000 		.4byte	.LASF36
+ 710 02e9 01       		.byte	0x1
+ 711 02ea 22       		.byte	0x22
+ 712 02eb 76000000 		.4byte	0x76
+ 713 02ef 05       		.uleb128 0x5
+ 714 02f0 03       		.byte	0x3
+ 715 02f1 00000000 		.4byte	EZI2C_indexBuf1
+ 716 02f5 16       		.uleb128 0x16
+ 717 02f6 64020000 		.4byte	.LASF37
+ 718 02fa 03       		.byte	0x3
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 22
+
+
+ 719 02fb 4E       		.byte	0x4e
+ 720 02fc 06030000 		.4byte	0x306
+ 721 0300 17       		.uleb128 0x17
+ 722 0301 6B000000 		.4byte	0x6b
+ 723 0305 00       		.byte	0
+ 724 0306 16       		.uleb128 0x16
+ 725 0307 86010000 		.4byte	.LASF38
+ 726 030b 03       		.byte	0x3
+ 727 030c 49       		.byte	0x49
+ 728 030d 1C030000 		.4byte	0x31c
+ 729 0311 17       		.uleb128 0x17
+ 730 0312 6B000000 		.4byte	0x6b
+ 731 0316 17       		.uleb128 0x17
+ 732 0317 6B000000 		.4byte	0x6b
+ 733 031b 00       		.byte	0
+ 734 031c 18       		.uleb128 0x18
+ 735 031d 16000000 		.4byte	.LASF43
+ 736 0321 03       		.byte	0x3
+ 737 0322 46       		.byte	0x46
+ 738 0323 B7000000 		.4byte	0xb7
+ 739 0327 36030000 		.4byte	0x336
+ 740 032b 17       		.uleb128 0x17
+ 741 032c 6B000000 		.4byte	0x6b
+ 742 0330 17       		.uleb128 0x17
+ 743 0331 B7000000 		.4byte	0xb7
+ 744 0335 00       		.byte	0
+ 745 0336 19       		.uleb128 0x19
+ 746 0337 2E010000 		.4byte	.LASF44
+ 747 033b 03       		.byte	0x3
+ 748 033c 4C       		.byte	0x4c
+ 749 033d 17       		.uleb128 0x17
+ 750 033e 6B000000 		.4byte	0x6b
+ 751 0342 00       		.byte	0
+ 752 0343 00       		.byte	0
+ 753              		.section	.debug_abbrev,"",%progbits
+ 754              	.Ldebug_abbrev0:
+ 755 0000 01       		.uleb128 0x1
+ 756 0001 11       		.uleb128 0x11
+ 757 0002 01       		.byte	0x1
+ 758 0003 25       		.uleb128 0x25
+ 759 0004 0E       		.uleb128 0xe
+ 760 0005 13       		.uleb128 0x13
+ 761 0006 0B       		.uleb128 0xb
+ 762 0007 03       		.uleb128 0x3
+ 763 0008 0E       		.uleb128 0xe
+ 764 0009 1B       		.uleb128 0x1b
+ 765 000a 0E       		.uleb128 0xe
+ 766 000b 55       		.uleb128 0x55
+ 767 000c 17       		.uleb128 0x17
+ 768 000d 11       		.uleb128 0x11
+ 769 000e 01       		.uleb128 0x1
+ 770 000f 10       		.uleb128 0x10
+ 771 0010 17       		.uleb128 0x17
+ 772 0011 00       		.byte	0
+ 773 0012 00       		.byte	0
+ 774 0013 02       		.uleb128 0x2
+ 775 0014 24       		.uleb128 0x24
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 23
+
+
+ 776 0015 00       		.byte	0
+ 777 0016 0B       		.uleb128 0xb
+ 778 0017 0B       		.uleb128 0xb
+ 779 0018 3E       		.uleb128 0x3e
+ 780 0019 0B       		.uleb128 0xb
+ 781 001a 03       		.uleb128 0x3
+ 782 001b 0E       		.uleb128 0xe
+ 783 001c 00       		.byte	0
+ 784 001d 00       		.byte	0
+ 785 001e 03       		.uleb128 0x3
+ 786 001f 24       		.uleb128 0x24
+ 787 0020 00       		.byte	0
+ 788 0021 0B       		.uleb128 0xb
+ 789 0022 0B       		.uleb128 0xb
+ 790 0023 3E       		.uleb128 0x3e
+ 791 0024 0B       		.uleb128 0xb
+ 792 0025 03       		.uleb128 0x3
+ 793 0026 08       		.uleb128 0x8
+ 794 0027 00       		.byte	0
+ 795 0028 00       		.byte	0
+ 796 0029 04       		.uleb128 0x4
+ 797 002a 16       		.uleb128 0x16
+ 798 002b 00       		.byte	0
+ 799 002c 03       		.uleb128 0x3
+ 800 002d 0E       		.uleb128 0xe
+ 801 002e 3A       		.uleb128 0x3a
+ 802 002f 0B       		.uleb128 0xb
+ 803 0030 3B       		.uleb128 0x3b
+ 804 0031 0B       		.uleb128 0xb
+ 805 0032 49       		.uleb128 0x49
+ 806 0033 13       		.uleb128 0x13
+ 807 0034 00       		.byte	0
+ 808 0035 00       		.byte	0
+ 809 0036 05       		.uleb128 0x5
+ 810 0037 35       		.uleb128 0x35
+ 811 0038 00       		.byte	0
+ 812 0039 49       		.uleb128 0x49
+ 813 003a 13       		.uleb128 0x13
+ 814 003b 00       		.byte	0
+ 815 003c 00       		.byte	0
+ 816 003d 06       		.uleb128 0x6
+ 817 003e 16       		.uleb128 0x16
+ 818 003f 00       		.byte	0
+ 819 0040 03       		.uleb128 0x3
+ 820 0041 0E       		.uleb128 0xe
+ 821 0042 3A       		.uleb128 0x3a
+ 822 0043 0B       		.uleb128 0xb
+ 823 0044 3B       		.uleb128 0x3b
+ 824 0045 05       		.uleb128 0x5
+ 825 0046 49       		.uleb128 0x49
+ 826 0047 13       		.uleb128 0x13
+ 827 0048 00       		.byte	0
+ 828 0049 00       		.byte	0
+ 829 004a 07       		.uleb128 0x7
+ 830 004b 0F       		.uleb128 0xf
+ 831 004c 00       		.byte	0
+ 832 004d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 24
+
+
+ 833 004e 0B       		.uleb128 0xb
+ 834 004f 49       		.uleb128 0x49
+ 835 0050 13       		.uleb128 0x13
+ 836 0051 00       		.byte	0
+ 837 0052 00       		.byte	0
+ 838 0053 08       		.uleb128 0x8
+ 839 0054 15       		.uleb128 0x15
+ 840 0055 00       		.byte	0
+ 841 0056 27       		.uleb128 0x27
+ 842 0057 19       		.uleb128 0x19
+ 843 0058 00       		.byte	0
+ 844 0059 00       		.byte	0
+ 845 005a 09       		.uleb128 0x9
+ 846 005b 2E       		.uleb128 0x2e
+ 847 005c 01       		.byte	0x1
+ 848 005d 3F       		.uleb128 0x3f
+ 849 005e 19       		.uleb128 0x19
+ 850 005f 03       		.uleb128 0x3
+ 851 0060 0E       		.uleb128 0xe
+ 852 0061 3A       		.uleb128 0x3a
+ 853 0062 0B       		.uleb128 0xb
+ 854 0063 3B       		.uleb128 0x3b
+ 855 0064 0B       		.uleb128 0xb
+ 856 0065 27       		.uleb128 0x27
+ 857 0066 19       		.uleb128 0x19
+ 858 0067 11       		.uleb128 0x11
+ 859 0068 01       		.uleb128 0x1
+ 860 0069 12       		.uleb128 0x12
+ 861 006a 06       		.uleb128 0x6
+ 862 006b 40       		.uleb128 0x40
+ 863 006c 18       		.uleb128 0x18
+ 864 006d 9742     		.uleb128 0x2117
+ 865 006f 19       		.uleb128 0x19
+ 866 0070 01       		.uleb128 0x1
+ 867 0071 13       		.uleb128 0x13
+ 868 0072 00       		.byte	0
+ 869 0073 00       		.byte	0
+ 870 0074 0A       		.uleb128 0xa
+ 871 0075 898201   		.uleb128 0x4109
+ 872 0078 01       		.byte	0x1
+ 873 0079 11       		.uleb128 0x11
+ 874 007a 01       		.uleb128 0x1
+ 875 007b 31       		.uleb128 0x31
+ 876 007c 13       		.uleb128 0x13
+ 877 007d 01       		.uleb128 0x1
+ 878 007e 13       		.uleb128 0x13
+ 879 007f 00       		.byte	0
+ 880 0080 00       		.byte	0
+ 881 0081 0B       		.uleb128 0xb
+ 882 0082 8A8201   		.uleb128 0x410a
+ 883 0085 00       		.byte	0
+ 884 0086 02       		.uleb128 0x2
+ 885 0087 18       		.uleb128 0x18
+ 886 0088 9142     		.uleb128 0x2111
+ 887 008a 18       		.uleb128 0x18
+ 888 008b 00       		.byte	0
+ 889 008c 00       		.byte	0
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 25
+
+
+ 890 008d 0C       		.uleb128 0xc
+ 891 008e 898201   		.uleb128 0x4109
+ 892 0091 01       		.byte	0x1
+ 893 0092 11       		.uleb128 0x11
+ 894 0093 01       		.uleb128 0x1
+ 895 0094 31       		.uleb128 0x31
+ 896 0095 13       		.uleb128 0x13
+ 897 0096 00       		.byte	0
+ 898 0097 00       		.byte	0
+ 899 0098 0D       		.uleb128 0xd
+ 900 0099 2E       		.uleb128 0x2e
+ 901 009a 00       		.byte	0
+ 902 009b 3F       		.uleb128 0x3f
+ 903 009c 19       		.uleb128 0x19
+ 904 009d 03       		.uleb128 0x3
+ 905 009e 0E       		.uleb128 0xe
+ 906 009f 3A       		.uleb128 0x3a
+ 907 00a0 0B       		.uleb128 0xb
+ 908 00a1 3B       		.uleb128 0x3b
+ 909 00a2 05       		.uleb128 0x5
+ 910 00a3 27       		.uleb128 0x27
+ 911 00a4 19       		.uleb128 0x19
+ 912 00a5 11       		.uleb128 0x11
+ 913 00a6 01       		.uleb128 0x1
+ 914 00a7 12       		.uleb128 0x12
+ 915 00a8 06       		.uleb128 0x6
+ 916 00a9 40       		.uleb128 0x40
+ 917 00aa 18       		.uleb128 0x18
+ 918 00ab 9742     		.uleb128 0x2117
+ 919 00ad 19       		.uleb128 0x19
+ 920 00ae 00       		.byte	0
+ 921 00af 00       		.byte	0
+ 922 00b0 0E       		.uleb128 0xe
+ 923 00b1 2E       		.uleb128 0x2e
+ 924 00b2 01       		.byte	0x1
+ 925 00b3 3F       		.uleb128 0x3f
+ 926 00b4 19       		.uleb128 0x19
+ 927 00b5 03       		.uleb128 0x3
+ 928 00b6 0E       		.uleb128 0xe
+ 929 00b7 3A       		.uleb128 0x3a
+ 930 00b8 0B       		.uleb128 0xb
+ 931 00b9 3B       		.uleb128 0x3b
+ 932 00ba 05       		.uleb128 0x5
+ 933 00bb 27       		.uleb128 0x27
+ 934 00bc 19       		.uleb128 0x19
+ 935 00bd 49       		.uleb128 0x49
+ 936 00be 13       		.uleb128 0x13
+ 937 00bf 11       		.uleb128 0x11
+ 938 00c0 01       		.uleb128 0x1
+ 939 00c1 12       		.uleb128 0x12
+ 940 00c2 06       		.uleb128 0x6
+ 941 00c3 40       		.uleb128 0x40
+ 942 00c4 18       		.uleb128 0x18
+ 943 00c5 9742     		.uleb128 0x2117
+ 944 00c7 19       		.uleb128 0x19
+ 945 00c8 01       		.uleb128 0x1
+ 946 00c9 13       		.uleb128 0x13
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 26
+
+
+ 947 00ca 00       		.byte	0
+ 948 00cb 00       		.byte	0
+ 949 00cc 0F       		.uleb128 0xf
+ 950 00cd 34       		.uleb128 0x34
+ 951 00ce 00       		.byte	0
+ 952 00cf 03       		.uleb128 0x3
+ 953 00d0 0E       		.uleb128 0xe
+ 954 00d1 3A       		.uleb128 0x3a
+ 955 00d2 0B       		.uleb128 0xb
+ 956 00d3 3B       		.uleb128 0x3b
+ 957 00d4 05       		.uleb128 0x5
+ 958 00d5 49       		.uleb128 0x49
+ 959 00d6 13       		.uleb128 0x13
+ 960 00d7 02       		.uleb128 0x2
+ 961 00d8 17       		.uleb128 0x17
+ 962 00d9 00       		.byte	0
+ 963 00da 00       		.byte	0
+ 964 00db 10       		.uleb128 0x10
+ 965 00dc 2E       		.uleb128 0x2e
+ 966 00dd 01       		.byte	0x1
+ 967 00de 3F       		.uleb128 0x3f
+ 968 00df 19       		.uleb128 0x19
+ 969 00e0 03       		.uleb128 0x3
+ 970 00e1 0E       		.uleb128 0xe
+ 971 00e2 3A       		.uleb128 0x3a
+ 972 00e3 0B       		.uleb128 0xb
+ 973 00e4 3B       		.uleb128 0x3b
+ 974 00e5 05       		.uleb128 0x5
+ 975 00e6 27       		.uleb128 0x27
+ 976 00e7 19       		.uleb128 0x19
+ 977 00e8 11       		.uleb128 0x11
+ 978 00e9 01       		.uleb128 0x1
+ 979 00ea 12       		.uleb128 0x12
+ 980 00eb 06       		.uleb128 0x6
+ 981 00ec 40       		.uleb128 0x40
+ 982 00ed 18       		.uleb128 0x18
+ 983 00ee 9742     		.uleb128 0x2117
+ 984 00f0 19       		.uleb128 0x19
+ 985 00f1 01       		.uleb128 0x1
+ 986 00f2 13       		.uleb128 0x13
+ 987 00f3 00       		.byte	0
+ 988 00f4 00       		.byte	0
+ 989 00f5 11       		.uleb128 0x11
+ 990 00f6 05       		.uleb128 0x5
+ 991 00f7 00       		.byte	0
+ 992 00f8 03       		.uleb128 0x3
+ 993 00f9 0E       		.uleb128 0xe
+ 994 00fa 3A       		.uleb128 0x3a
+ 995 00fb 0B       		.uleb128 0xb
+ 996 00fc 3B       		.uleb128 0x3b
+ 997 00fd 05       		.uleb128 0x5
+ 998 00fe 49       		.uleb128 0x49
+ 999 00ff 13       		.uleb128 0x13
+ 1000 0100 02       		.uleb128 0x2
+ 1001 0101 17       		.uleb128 0x17
+ 1002 0102 00       		.byte	0
+ 1003 0103 00       		.byte	0
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 27
+
+
+ 1004 0104 12       		.uleb128 0x12
+ 1005 0105 0B       		.uleb128 0xb
+ 1006 0106 01       		.byte	0x1
+ 1007 0107 11       		.uleb128 0x11
+ 1008 0108 01       		.uleb128 0x1
+ 1009 0109 12       		.uleb128 0x12
+ 1010 010a 06       		.uleb128 0x6
+ 1011 010b 00       		.byte	0
+ 1012 010c 00       		.byte	0
+ 1013 010d 13       		.uleb128 0x13
+ 1014 010e 34       		.uleb128 0x34
+ 1015 010f 00       		.byte	0
+ 1016 0110 03       		.uleb128 0x3
+ 1017 0111 0E       		.uleb128 0xe
+ 1018 0112 3A       		.uleb128 0x3a
+ 1019 0113 0B       		.uleb128 0xb
+ 1020 0114 3B       		.uleb128 0x3b
+ 1021 0115 05       		.uleb128 0x5
+ 1022 0116 49       		.uleb128 0x49
+ 1023 0117 13       		.uleb128 0x13
+ 1024 0118 02       		.uleb128 0x2
+ 1025 0119 18       		.uleb128 0x18
+ 1026 011a 00       		.byte	0
+ 1027 011b 00       		.byte	0
+ 1028 011c 14       		.uleb128 0x14
+ 1029 011d 05       		.uleb128 0x5
+ 1030 011e 00       		.byte	0
+ 1031 011f 03       		.uleb128 0x3
+ 1032 0120 0E       		.uleb128 0xe
+ 1033 0121 3A       		.uleb128 0x3a
+ 1034 0122 0B       		.uleb128 0xb
+ 1035 0123 3B       		.uleb128 0x3b
+ 1036 0124 05       		.uleb128 0x5
+ 1037 0125 49       		.uleb128 0x49
+ 1038 0126 13       		.uleb128 0x13
+ 1039 0127 02       		.uleb128 0x2
+ 1040 0128 18       		.uleb128 0x18
+ 1041 0129 00       		.byte	0
+ 1042 012a 00       		.byte	0
+ 1043 012b 15       		.uleb128 0x15
+ 1044 012c 34       		.uleb128 0x34
+ 1045 012d 00       		.byte	0
+ 1046 012e 03       		.uleb128 0x3
+ 1047 012f 0E       		.uleb128 0xe
+ 1048 0130 3A       		.uleb128 0x3a
+ 1049 0131 0B       		.uleb128 0xb
+ 1050 0132 3B       		.uleb128 0x3b
+ 1051 0133 0B       		.uleb128 0xb
+ 1052 0134 49       		.uleb128 0x49
+ 1053 0135 13       		.uleb128 0x13
+ 1054 0136 3F       		.uleb128 0x3f
+ 1055 0137 19       		.uleb128 0x19
+ 1056 0138 02       		.uleb128 0x2
+ 1057 0139 18       		.uleb128 0x18
+ 1058 013a 00       		.byte	0
+ 1059 013b 00       		.byte	0
+ 1060 013c 16       		.uleb128 0x16
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 28
+
+
+ 1061 013d 2E       		.uleb128 0x2e
+ 1062 013e 01       		.byte	0x1
+ 1063 013f 3F       		.uleb128 0x3f
+ 1064 0140 19       		.uleb128 0x19
+ 1065 0141 03       		.uleb128 0x3
+ 1066 0142 0E       		.uleb128 0xe
+ 1067 0143 3A       		.uleb128 0x3a
+ 1068 0144 0B       		.uleb128 0xb
+ 1069 0145 3B       		.uleb128 0x3b
+ 1070 0146 0B       		.uleb128 0xb
+ 1071 0147 27       		.uleb128 0x27
+ 1072 0148 19       		.uleb128 0x19
+ 1073 0149 3C       		.uleb128 0x3c
+ 1074 014a 19       		.uleb128 0x19
+ 1075 014b 01       		.uleb128 0x1
+ 1076 014c 13       		.uleb128 0x13
+ 1077 014d 00       		.byte	0
+ 1078 014e 00       		.byte	0
+ 1079 014f 17       		.uleb128 0x17
+ 1080 0150 05       		.uleb128 0x5
+ 1081 0151 00       		.byte	0
+ 1082 0152 49       		.uleb128 0x49
+ 1083 0153 13       		.uleb128 0x13
+ 1084 0154 00       		.byte	0
+ 1085 0155 00       		.byte	0
+ 1086 0156 18       		.uleb128 0x18
+ 1087 0157 2E       		.uleb128 0x2e
+ 1088 0158 01       		.byte	0x1
+ 1089 0159 3F       		.uleb128 0x3f
+ 1090 015a 19       		.uleb128 0x19
+ 1091 015b 03       		.uleb128 0x3
+ 1092 015c 0E       		.uleb128 0xe
+ 1093 015d 3A       		.uleb128 0x3a
+ 1094 015e 0B       		.uleb128 0xb
+ 1095 015f 3B       		.uleb128 0x3b
+ 1096 0160 0B       		.uleb128 0xb
+ 1097 0161 27       		.uleb128 0x27
+ 1098 0162 19       		.uleb128 0x19
+ 1099 0163 49       		.uleb128 0x49
+ 1100 0164 13       		.uleb128 0x13
+ 1101 0165 3C       		.uleb128 0x3c
+ 1102 0166 19       		.uleb128 0x19
+ 1103 0167 01       		.uleb128 0x1
+ 1104 0168 13       		.uleb128 0x13
+ 1105 0169 00       		.byte	0
+ 1106 016a 00       		.byte	0
+ 1107 016b 19       		.uleb128 0x19
+ 1108 016c 2E       		.uleb128 0x2e
+ 1109 016d 01       		.byte	0x1
+ 1110 016e 3F       		.uleb128 0x3f
+ 1111 016f 19       		.uleb128 0x19
+ 1112 0170 03       		.uleb128 0x3
+ 1113 0171 0E       		.uleb128 0xe
+ 1114 0172 3A       		.uleb128 0x3a
+ 1115 0173 0B       		.uleb128 0xb
+ 1116 0174 3B       		.uleb128 0x3b
+ 1117 0175 0B       		.uleb128 0xb
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 29
+
+
+ 1118 0176 27       		.uleb128 0x27
+ 1119 0177 19       		.uleb128 0x19
+ 1120 0178 3C       		.uleb128 0x3c
+ 1121 0179 19       		.uleb128 0x19
+ 1122 017a 00       		.byte	0
+ 1123 017b 00       		.byte	0
+ 1124 017c 00       		.byte	0
+ 1125              		.section	.debug_loc,"",%progbits
+ 1126              	.Ldebug_loc0:
+ 1127              	.LLST0:
+ 1128 0000 0E000000 		.4byte	.LVL4
+ 1129 0004 1E000000 		.4byte	.LVL6
+ 1130 0008 0100     		.2byte	0x1
+ 1131 000a 54       		.byte	0x54
+ 1132 000b 1E000000 		.4byte	.LVL6
+ 1133 000f 24000000 		.4byte	.LFE3
+ 1134 0013 0100     		.2byte	0x1
+ 1135 0015 50       		.byte	0x50
+ 1136 0016 00000000 		.4byte	0
+ 1137 001a 00000000 		.4byte	0
+ 1138              	.LLST1:
+ 1139 001e 00000000 		.4byte	.LVL7
+ 1140 0022 0A000000 		.4byte	.LVL10
+ 1141 0026 0100     		.2byte	0x1
+ 1142 0028 50       		.byte	0x50
+ 1143 0029 0A000000 		.4byte	.LVL10
+ 1144 002d 18000000 		.4byte	.LFE4
+ 1145 0031 0400     		.2byte	0x4
+ 1146 0033 F3       		.byte	0xf3
+ 1147 0034 01       		.uleb128 0x1
+ 1148 0035 50       		.byte	0x50
+ 1149 0036 9F       		.byte	0x9f
+ 1150 0037 00000000 		.4byte	0
+ 1151 003b 00000000 		.4byte	0
+ 1152              	.LLST2:
+ 1153 003f 04000000 		.4byte	.LVL8
+ 1154 0043 0E000000 		.4byte	.LVL11
+ 1155 0047 0100     		.2byte	0x1
+ 1156 0049 51       		.byte	0x51
+ 1157 004a 0E000000 		.4byte	.LVL11
+ 1158 004e 18000000 		.4byte	.LFE4
+ 1159 0052 0100     		.2byte	0x1
+ 1160 0054 52       		.byte	0x52
+ 1161 0055 00000000 		.4byte	0
+ 1162 0059 00000000 		.4byte	0
+ 1163              	.LLST3:
+ 1164 005d 00000000 		.4byte	.LVL13
+ 1165 0061 0C000000 		.4byte	.LVL14
+ 1166 0065 0100     		.2byte	0x1
+ 1167 0067 50       		.byte	0x50
+ 1168 0068 0C000000 		.4byte	.LVL14
+ 1169 006c 22000000 		.4byte	.LVL19
+ 1170 0070 0100     		.2byte	0x1
+ 1171 0072 56       		.byte	0x56
+ 1172 0073 22000000 		.4byte	.LVL19
+ 1173 0077 30000000 		.4byte	.LFE6
+ 1174 007b 0400     		.2byte	0x4
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 30
+
+
+ 1175 007d F3       		.byte	0xf3
+ 1176 007e 01       		.uleb128 0x1
+ 1177 007f 50       		.byte	0x50
+ 1178 0080 9F       		.byte	0x9f
+ 1179 0081 00000000 		.4byte	0
+ 1180 0085 00000000 		.4byte	0
+ 1181              	.LLST4:
+ 1182 0089 00000000 		.4byte	.LVL13
+ 1183 008d 0F000000 		.4byte	.LVL15-1
+ 1184 0091 0100     		.2byte	0x1
+ 1185 0093 51       		.byte	0x51
+ 1186 0094 0F000000 		.4byte	.LVL15-1
+ 1187 0098 22000000 		.4byte	.LVL18
+ 1188 009c 0100     		.2byte	0x1
+ 1189 009e 55       		.byte	0x55
+ 1190 009f 22000000 		.4byte	.LVL18
+ 1191 00a3 30000000 		.4byte	.LFE6
+ 1192 00a7 0400     		.2byte	0x4
+ 1193 00a9 F3       		.byte	0xf3
+ 1194 00aa 01       		.uleb128 0x1
+ 1195 00ab 51       		.byte	0x51
+ 1196 00ac 9F       		.byte	0x9f
+ 1197 00ad 00000000 		.4byte	0
+ 1198 00b1 00000000 		.4byte	0
+ 1199              	.LLST5:
+ 1200 00b5 00000000 		.4byte	.LVL13
+ 1201 00b9 0F000000 		.4byte	.LVL15-1
+ 1202 00bd 0100     		.2byte	0x1
+ 1203 00bf 52       		.byte	0x52
+ 1204 00c0 0F000000 		.4byte	.LVL15-1
+ 1205 00c4 22000000 		.4byte	.LVL17
+ 1206 00c8 0100     		.2byte	0x1
+ 1207 00ca 54       		.byte	0x54
+ 1208 00cb 22000000 		.4byte	.LVL17
+ 1209 00cf 30000000 		.4byte	.LFE6
+ 1210 00d3 0400     		.2byte	0x4
+ 1211 00d5 F3       		.byte	0xf3
+ 1212 00d6 01       		.uleb128 0x1
+ 1213 00d7 52       		.byte	0x52
+ 1214 00d8 9F       		.byte	0x9f
+ 1215 00d9 00000000 		.4byte	0
+ 1216 00dd 00000000 		.4byte	0
+ 1217              		.section	.debug_aranges,"",%progbits
+ 1218 0000 4C000000 		.4byte	0x4c
+ 1219 0004 0200     		.2byte	0x2
+ 1220 0006 00000000 		.4byte	.Ldebug_info0
+ 1221 000a 04       		.byte	0x4
+ 1222 000b 00       		.byte	0
+ 1223 000c 0000     		.2byte	0
+ 1224 000e 0000     		.2byte	0
+ 1225 0010 00000000 		.4byte	.LFB1
+ 1226 0014 C0000000 		.4byte	.LFE1-.LFB1
+ 1227 0018 00000000 		.4byte	.LFB2
+ 1228 001c 0C000000 		.4byte	.LFE2-.LFB2
+ 1229 0020 00000000 		.4byte	.LFB3
+ 1230 0024 24000000 		.4byte	.LFE3-.LFB3
+ 1231 0028 00000000 		.4byte	.LFB4
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 31
+
+
+ 1232 002c 18000000 		.4byte	.LFE4-.LFB4
+ 1233 0030 00000000 		.4byte	.LFB5
+ 1234 0034 10000000 		.4byte	.LFE5-.LFB5
+ 1235 0038 00000000 		.4byte	.LFB6
+ 1236 003c 30000000 		.4byte	.LFE6-.LFB6
+ 1237 0040 00000000 		.4byte	.LFB7
+ 1238 0044 0C000000 		.4byte	.LFE7-.LFB7
+ 1239 0048 00000000 		.4byte	0
+ 1240 004c 00000000 		.4byte	0
+ 1241              		.section	.debug_ranges,"",%progbits
+ 1242              	.Ldebug_ranges0:
+ 1243 0000 00000000 		.4byte	.LFB1
+ 1244 0004 C0000000 		.4byte	.LFE1
+ 1245 0008 00000000 		.4byte	.LFB2
+ 1246 000c 0C000000 		.4byte	.LFE2
+ 1247 0010 00000000 		.4byte	.LFB3
+ 1248 0014 24000000 		.4byte	.LFE3
+ 1249 0018 00000000 		.4byte	.LFB4
+ 1250 001c 18000000 		.4byte	.LFE4
+ 1251 0020 00000000 		.4byte	.LFB5
+ 1252 0024 10000000 		.4byte	.LFE5
+ 1253 0028 00000000 		.4byte	.LFB6
+ 1254 002c 30000000 		.4byte	.LFE6
+ 1255 0030 00000000 		.4byte	.LFB7
+ 1256 0034 0C000000 		.4byte	.LFE7
+ 1257 0038 00000000 		.4byte	0
+ 1258 003c 00000000 		.4byte	0
+ 1259              		.section	.debug_line,"",%progbits
+ 1260              	.Ldebug_line0:
+ 1261 0000 18010000 		.section	.debug_str,"MS",%progbits,1
+ 1261      02006C00 
+ 1261      00000201 
+ 1261      FB0E0D00 
+ 1261      01010101 
+ 1262              	.LASF15:
+ 1263 0000 72656733 		.ascii	"reg32\000"
+ 1263      3200
+ 1264              	.LASF30:
+ 1265 0006 455A4932 		.ascii	"EZI2C_curStatus\000"
+ 1265      435F6375 
+ 1265      72537461 
+ 1265      74757300 
+ 1266              	.LASF43:
+ 1267 0016 4379496E 		.ascii	"CyIntSetVector\000"
+ 1267      74536574 
+ 1267      56656374 
+ 1267      6F7200
+ 1268              	.LASF33:
+ 1269 0025 455A4932 		.ascii	"EZI2C_bufSizeBuf1\000"
+ 1269      435F6275 
+ 1269      6653697A 
+ 1269      65427566 
+ 1269      3100
+ 1270              	.LASF18:
+ 1271 0037 455A4932 		.ascii	"EZI2C_EzI2CInit\000"
+ 1271      435F457A 
+ 1271      49324349 
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 32
+
+
+ 1271      6E697400 
+ 1272              	.LASF31:
+ 1273 0047 455A4932 		.ascii	"EZI2C_fsmState\000"
+ 1273      435F6673 
+ 1273      6D537461 
+ 1273      746500
+ 1274              	.LASF3:
+ 1275 0056 73686F72 		.ascii	"short unsigned int\000"
+ 1275      7420756E 
+ 1275      7369676E 
+ 1275      65642069 
+ 1275      6E7400
+ 1276              	.LASF27:
+ 1277 0069 7277426F 		.ascii	"rwBoundary\000"
+ 1277      756E6461 
+ 1277      727900
+ 1278              	.LASF29:
+ 1279 0074 455A4932 		.ascii	"EZI2C_EzI2CSetReadBoundaryBuffer1\000"
+ 1279      435F457A 
+ 1279      49324353 
+ 1279      65745265 
+ 1279      6164426F 
+ 1280              	.LASF19:
+ 1281 0096 455A4932 		.ascii	"EZI2C_EzI2CSetAddress1\000"
+ 1281      435F457A 
+ 1281      49324353 
+ 1281      65744164 
+ 1281      64726573 
+ 1282              	.LASF20:
+ 1283 00ad 73746174 		.ascii	"status\000"
+ 1283      757300
+ 1284              	.LASF12:
+ 1285 00b4 666C6F61 		.ascii	"float\000"
+ 1285      7400
+ 1286              	.LASF1:
+ 1287 00ba 756E7369 		.ascii	"unsigned char\000"
+ 1287      676E6564 
+ 1287      20636861 
+ 1287      7200
+ 1288              	.LASF40:
+ 1289 00c8 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\EZI2C_EZI2C.c\000"
+ 1289      6E657261 
+ 1289      7465645F 
+ 1289      536F7572 
+ 1289      63655C50 
+ 1290              	.LASF36:
+ 1291 00ef 455A4932 		.ascii	"EZI2C_indexBuf1\000"
+ 1291      435F696E 
+ 1291      64657842 
+ 1291      75663100 
+ 1292              	.LASF5:
+ 1293 00ff 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1293      20756E73 
+ 1293      69676E65 
+ 1293      6420696E 
+ 1293      7400
+ 1294              	.LASF9:
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 33
+
+
+ 1295 0111 75696E74 		.ascii	"uint8\000"
+ 1295      3800
+ 1296              	.LASF42:
+ 1297 0117 455A4932 		.ascii	"EZI2C_EzI2CStop\000"
+ 1297      435F457A 
+ 1297      49324353 
+ 1297      746F7000 
+ 1298              	.LASF13:
+ 1299 0127 646F7562 		.ascii	"double\000"
+ 1299      6C6500
+ 1300              	.LASF44:
+ 1301 012e 4379496E 		.ascii	"CyIntEnable\000"
+ 1301      74456E61 
+ 1301      626C6500 
+ 1302              	.LASF10:
+ 1303 013a 75696E74 		.ascii	"uint16\000"
+ 1303      313600
+ 1304              	.LASF11:
+ 1305 0141 75696E74 		.ascii	"uint32\000"
+ 1305      333200
+ 1306              	.LASF34:
+ 1307 0148 455A4932 		.ascii	"EZI2C_protectBuf1\000"
+ 1307      435F7072 
+ 1307      6F746563 
+ 1307      74427566 
+ 1307      3100
+ 1308              	.LASF8:
+ 1309 015a 756E7369 		.ascii	"unsigned int\000"
+ 1309      676E6564 
+ 1309      20696E74 
+ 1309      00
+ 1310              	.LASF24:
+ 1311 0167 61646472 		.ascii	"address\000"
+ 1311      65737300 
+ 1312              	.LASF7:
+ 1313 016f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1313      206C6F6E 
+ 1313      6720756E 
+ 1313      7369676E 
+ 1313      65642069 
+ 1314              	.LASF38:
+ 1315 0186 4379496E 		.ascii	"CyIntSetPriority\000"
+ 1315      74536574 
+ 1315      5072696F 
+ 1315      72697479 
+ 1315      00
+ 1316              	.LASF39:
+ 1317 0197 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1317      4320342E 
+ 1317      382E3420 
+ 1317      32303134 
+ 1317      30353236 
+ 1318 01ca 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1318      20726576 
+ 1318      6973696F 
+ 1318      6E203231 
+ 1318      31333538 
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 34
+
+
+ 1319 01fd 67202D66 		.ascii	"g -ffunction-sections\000"
+ 1319      66756E63 
+ 1319      74696F6E 
+ 1319      2D736563 
+ 1319      74696F6E 
+ 1320              	.LASF16:
+ 1321 0213 63796973 		.ascii	"cyisraddress\000"
+ 1321      72616464 
+ 1321      72657373 
+ 1321      00
+ 1322              	.LASF17:
+ 1323 0220 73697A65 		.ascii	"sizetype\000"
+ 1323      74797065 
+ 1323      00
+ 1324              	.LASF25:
+ 1325 0229 455A4932 		.ascii	"EZI2C_EzI2CSetBuffer1\000"
+ 1325      435F457A 
+ 1325      49324353 
+ 1325      65744275 
+ 1325      66666572 
+ 1326              	.LASF6:
+ 1327 023f 6C6F6E67 		.ascii	"long long int\000"
+ 1327      206C6F6E 
+ 1327      6720696E 
+ 1327      7400
+ 1328              	.LASF14:
+ 1329 024d 63686172 		.ascii	"char\000"
+ 1329      00
+ 1330              	.LASF32:
+ 1331 0252 455A4932 		.ascii	"EZI2C_dataBuffer1\000"
+ 1331      435F6461 
+ 1331      74614275 
+ 1331      66666572 
+ 1331      3100
+ 1332              	.LASF37:
+ 1333 0264 4379496E 		.ascii	"CyIntDisable\000"
+ 1333      74446973 
+ 1333      61626C65 
+ 1333      00
+ 1334              	.LASF41:
+ 1335 0271 433A5C55 		.ascii	"C:\\Users\\11401393\\Documents\\PSoC Creator\\CE976"
+ 1335      73657273 
+ 1335      5C313134 
+ 1335      30313339 
+ 1335      335C446F 
+ 1336 029f 33342050 		.ascii	"34 PSoC 4 Breathing LED\\CE97634 PSoC 4 Breathing L"
+ 1336      536F4320 
+ 1336      34204272 
+ 1336      65617468 
+ 1336      696E6720 
+ 1337 02d1 45442E63 		.ascii	"ED.cydsn\000"
+ 1337      7964736E 
+ 1337      00
+ 1338              	.LASF2:
+ 1339 02da 73686F72 		.ascii	"short int\000"
+ 1339      7420696E 
+ 1339      7400
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccThBLAi.s 			page 35
+
+
+ 1340              	.LASF35:
+ 1341 02e4 455A4932 		.ascii	"EZI2C_offsetBuf1\000"
+ 1341      435F6F66 
+ 1341      66736574 
+ 1341      42756631 
+ 1341      00
+ 1342              	.LASF26:
+ 1343 02f5 62756653 		.ascii	"bufSize\000"
+ 1343      697A6500 
+ 1344              	.LASF4:
+ 1345 02fd 6C6F6E67 		.ascii	"long int\000"
+ 1345      20696E74 
+ 1345      00
+ 1346              	.LASF21:
+ 1347 0306 6D617463 		.ascii	"matchReg\000"
+ 1347      68526567 
+ 1347      00
+ 1348              	.LASF22:
+ 1349 030f 455A4932 		.ascii	"EZI2C_EzI2CGetActivity\000"
+ 1349      435F457A 
+ 1349      49324347 
+ 1349      65744163 
+ 1349      74697669 
+ 1350              	.LASF23:
+ 1351 0326 455A4932 		.ascii	"EZI2C_EzI2CGetAddress1\000"
+ 1351      435F457A 
+ 1351      49324347 
+ 1351      65744164 
+ 1351      64726573 
+ 1352              	.LASF0:
+ 1353 033d 7369676E 		.ascii	"signed char\000"
+ 1353      65642063 
+ 1353      68617200 
+ 1354              	.LASF28:
+ 1355 0349 62756666 		.ascii	"buffer\000"
+ 1355      657200
+ 1356              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

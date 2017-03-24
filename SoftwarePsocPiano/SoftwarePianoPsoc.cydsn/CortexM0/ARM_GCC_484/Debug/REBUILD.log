@@ -1,0 +1,81 @@
+--------------- Rebuild Started: 03/24/2017 09:23:44 Project: SoftwarePianPsoc, Configuration: ARM GCC 4.8.4 Debug ---------------
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\main.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cymetadata.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Cm0Start.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyFlash.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyLib.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cyPm.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\cyutils.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyDMA.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CyLFClk.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense_CSHL.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense_INT.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense_TunerHelper.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense_SMS.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense_SampleClk.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\CapSense_SenseClk.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Clock_2.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD1.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD1_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc1CW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc1CCW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc2CW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc2CCW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD2.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD2_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD3.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD3_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc3CCW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc3CW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD4.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\QuadD4_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc4CCW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Enc4CW.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C_INT.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_SCBCLK.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_sda.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_scl.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\I2C_SCB_IRQ.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Control_Reg_1.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\Control_Reg_1_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\SoftwarePianPsoc.hex"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\SoftwarePianPsoc.elf"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\SoftwarePianPsoc.map"
+Deleting file ".\SoftwarePianPsoc.cycdx"
+Deleting file ".\SoftwarePianPsoc.rpt"
+Deleting file ".\SoftwarePianPsoc_timing.html"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\.deps\C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_484\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe -.appdatapath "C:\Users\11401393\AppData\Local\Cypress Semiconductor\PSoC Creator\3.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SoftwarePianPsoc.cydsn\SoftwarePianPsoc.cyprj" -d CY8C4247AZI-M485 -s "C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SoftwarePianPsoc.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0025: error: No input on Instance "Status_Reg_1", terminal "clock".
+ * C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SoftwarePianPsoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_802)
+ * C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SoftwarePianPsoc.cydsn\TopDesign\TopDesign.cysch (Shape_234.20)
+ADD: sdb.M0050: error: Terminal "clock" requires connection when it is visible.
+ * C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SoftwarePianPsoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_802)
+ * C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SoftwarePianPsoc.cydsn\TopDesign\TopDesign.cysch (Shape_234.20)
+cmod
+source
+source
+source
+source
+source
+source
+source
+source
+source
+source
+source
+source
+Error: cdf.M0005: CyDsFit aborted due to errors, please address all errors and rerun CyDsFit. (App=cydsfit)
+--------------- Rebuild Failed: 03/24/2017 09:23:51 ---------------

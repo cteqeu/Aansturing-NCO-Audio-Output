@@ -1,0 +1,8 @@
+C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\CE97634 PSoC 4 Breathing LED.cydsn\CE97634 PSoC 4 Breathing LED.cyprj|13f0d084-8317-4940-9e06-cb927eef313e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9c4cf504-f29a-4c74-bd67-d65644da1f37
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|39f465b9-97a2-4ea1-aa96-f2b7a9619727
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|94ebb7ff-4d1b-4b60-9161-9124456955f6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f2a69546-338b-4abe-b62d-56b079b5b554
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|6beecc54-fa12-4035-9acd-e66a6e2bb948
+C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SCB_I2cCommSlave01.cydsn\SCB_I2cCommSlave01.cyprj|d10cb459-8e2e-4bad-9a2f-04c6ce84451a
+C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SCB_I2cCommSlave02.cydsn\SCB_I2cCommSlave02.cyprj|bbfa4e02-9d85-44ab-ba97-2037dd53f1d0

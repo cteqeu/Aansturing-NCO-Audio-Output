@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|c98d402e-d4d5-4e94-a296-91803381b7a0
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|54d2ca22-46ee-4266-b6bd-75d1aaac7ba1
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f4feffcf-171d-4a95-8830-0aa41194f1b7
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|5fb41847-f5ed-499e-857e-a89ce518a433
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|957e43f0-51f2-433b-9940-814df0a8ce33
+C:\Users\11401393\Documents\PSoC Creator\CE97634 PSoC 4 Breathing LED\SoftwarePianPsoc.cydsn\SoftwarePianPsoc.cyprj|5d1f286b-9100-40be-a5ab-a4efebfe7fee
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|f45eed0a-5729-4b11-81b6-7fd595b3ca5a

@@ -1,0 +1,72 @@
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/CortexM0/ARM_GCC_484/Debug/main.o : C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLFClk.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_BOOT.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C_PVT.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PINS.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PVT.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCBCLK.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCB_IRQ.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl_aliases.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda_aliases.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_BLUE.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_BLUE_aliases.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_GREEN.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_GREEN_aliases.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_RED.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_RED_aliases.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmFunc.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmInstr.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydisabledsheets.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cypins.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/project.h C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/main.c C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/main.h 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_BOOT.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C_PVT.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PINS.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PVT.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCBCLK.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCB_IRQ.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl_aliases.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda_aliases.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_BLUE.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_BLUE_aliases.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_GREEN.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_GREEN_aliases.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_RED.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/LED_RED_aliases.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/project.h : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/main.c : 
+
+C:/Users/11401393/Documents/PSoC\ Creator/CE97634\ PSoC\ 4\ Breathing\ LED/SCB_I2cCommSlave01.cydsn/main.h : 
+
