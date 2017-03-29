@@ -54,7 +54,7 @@ extern uint8  QuadD2_initVar;
 
 /* Quad Mode */
 /* Parameters */
-#define QuadD2_QUAD_ENCODING_MODES            (2lu)
+#define QuadD2_QUAD_ENCODING_MODES            (1lu)
 
 /* Signal modes */
 #define QuadD2_QUAD_INDEX_SIGNAL_MODE         (0lu)

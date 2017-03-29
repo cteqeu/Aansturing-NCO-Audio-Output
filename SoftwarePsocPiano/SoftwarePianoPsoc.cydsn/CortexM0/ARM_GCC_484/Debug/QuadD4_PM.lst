@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
   30:.\Generated_Source\PSoC4/QuadD4_PM.c **** *
   31:.\Generated_Source\PSoC4/QuadD4_PM.c **** * Parameters:
   32:.\Generated_Source\PSoC4/QuadD4_PM.c **** *  None
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 2
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/QuadD4_PM.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
   52 0008 03D5     		bpl	.L3
   61:.\Generated_Source\PSoC4/QuadD4_PM.c ****     {
   62:.\Generated_Source\PSoC4/QuadD4_PM.c ****         QuadD4_backup.enableState = 1u;
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 3
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 3
 
 
   53              		.loc 1 62 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
   84:.\Generated_Source\PSoC4/QuadD4_PM.c **** * Return:
   85:.\Generated_Source\PSoC4/QuadD4_PM.c **** *  None
   86:.\Generated_Source\PSoC4/QuadD4_PM.c **** *
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 4
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 4
 
 
   87:.\Generated_Source\PSoC4/QuadD4_PM.c **** *******************************************************************************/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  114:.\Generated_Source\PSoC4/QuadD4_PM.c ****         QuadD4_Enable();
  113              		.loc 1 114 0
  114 000a FFF7FEFF 		bl	QuadD4_Enable
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 5
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 5
 
 
  115              	.LVL1:
@@ -273,40 +273,40 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
  143 000a 04       		.byte	0x4
  144 000b 01       		.uleb128 0x1
- 145 000c B6010000 		.4byte	.LASF23
+ 145 000c AC010000 		.4byte	.LASF23
  146 0010 01       		.byte	0x1
- 147 0011 2E010000 		.4byte	.LASF24
- 148 0015 59010000 		.4byte	.LASF25
+ 147 0011 77010000 		.4byte	.LASF24
+ 148 0015 5C000000 		.4byte	.LASF25
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 22010000 		.4byte	.LASF0
+ 155 0028 6B010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
- 159 002f AE000000 		.4byte	.LASF1
+ 159 002f 01010000 		.4byte	.LASF1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 DF000000 		.4byte	.LASF2
+ 163 0036 A2010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
- 167 003d 0F010000 		.4byte	.LASF3
+ 167 003d 58010000 		.4byte	.LASF3
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 6
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 6
 
 
  170 0043 05       		.byte	0x5
- 171 0044 D6000000 		.4byte	.LASF4
+ 171 0044 29010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
- 175 004b 62000000 		.4byte	.LASF5
+ 175 004b B5000000 		.4byte	.LASF5
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
@@ -314,7 +314,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 74000000 		.4byte	.LASF7
+ 183 0059 C7000000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -324,7 +324,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  190 0066 07       		.byte	0x7
  191 0067 21000000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c 5C000000 		.4byte	.LASF9
+ 193 006c AF000000 		.4byte	.LASF9
  194 0070 02       		.byte	0x2
  195 0071 B3       		.byte	0xb3
  196 0072 2C000000 		.4byte	0x2c
@@ -336,17 +336,17 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  202 0081 02       		.uleb128 0x2
  203 0082 04       		.byte	0x4
  204 0083 04       		.byte	0x4
- 205 0084 53010000 		.4byte	.LASF11
+ 205 0084 9C010000 		.4byte	.LASF11
  206 0088 02       		.uleb128 0x2
  207 0089 08       		.byte	0x8
  208 008a 04       		.byte	0x4
- 209 008b 02010000 		.4byte	.LASF12
+ 209 008b 4B010000 		.4byte	.LASF12
  210 008f 02       		.uleb128 0x2
  211 0090 01       		.byte	0x1
  212 0091 08       		.byte	0x8
- 213 0092 BC000000 		.4byte	.LASF13
+ 213 0092 0F010000 		.4byte	.LASF13
  214 0096 05       		.uleb128 0x5
- 215 0097 09010000 		.4byte	.LASF14
+ 215 0097 52010000 		.4byte	.LASF14
  216 009b 02       		.byte	0x2
  217 009c 5F01     		.2byte	0x15f
  218 009e A2000000 		.4byte	0xa2
@@ -355,24 +355,24 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  221 00a7 02       		.uleb128 0x2
  222 00a8 04       		.byte	0x4
  223 00a9 07       		.byte	0x7
- 224 00aa 32020000 		.4byte	.LASF15
+ 224 00aa 28020000 		.4byte	.LASF15
  225 00ae 07       		.uleb128 0x7
  226 00af 01       		.byte	0x1
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 7
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 7
 
 
  227 00b0 03       		.byte	0x3
  228 00b1 21       		.byte	0x21
  229 00b2 C3000000 		.4byte	0xc3
  230 00b6 08       		.uleb128 0x8
- 231 00b7 F6000000 		.4byte	.LASF26
+ 231 00b7 3F010000 		.4byte	.LASF26
  232 00bb 03       		.byte	0x3
  233 00bc 23       		.byte	0x23
  234 00bd 6B000000 		.4byte	0x6b
  235 00c1 00       		.byte	0
  236 00c2 00       		.byte	0
  237 00c3 04       		.uleb128 0x4
- 238 00c4 C1000000 		.4byte	.LASF16
+ 238 00c4 14010000 		.4byte	.LASF16
  239 00c8 03       		.byte	0x3
  240 00c9 24       		.byte	0x24
  241 00ca AE000000 		.4byte	0xae
@@ -385,7 +385,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  248 00dd 01       		.uleb128 0x1
  249 00de 9C       		.byte	0x9c
  250 00df 0A       		.uleb128 0xa
- 251 00e0 E9000000 		.4byte	.LASF19
+ 251 00e0 32010000 		.4byte	.LASF19
  252 00e4 01       		.byte	0x1
  253 00e5 3A       		.byte	0x3a
  254 00e6 00000000 		.4byte	.LFB2
@@ -398,7 +398,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  261 00f9 3F010000 		.4byte	0x13f
  262 00fd 00       		.byte	0
  263 00fe 09       		.uleb128 0x9
- 264 00ff 8B000000 		.4byte	.LASF18
+ 264 00ff DE000000 		.4byte	.LASF18
  265 0103 01       		.byte	0x1
  266 0104 58       		.byte	0x58
  267 0105 00000000 		.4byte	.LFB3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  281 0125 0E000000 		.4byte	.LVL1
  282 0129 47010000 		.4byte	0x147
  283 012d 00       		.byte	0
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 8
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 8
 
 
  284 012e 0C       		.uleb128 0xc
@@ -434,7 +434,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  294 0144 03       		.byte	0x3
  295 0145 3201     		.2byte	0x132
  296 0147 0D       		.uleb128 0xd
- 297 0148 A0000000 		.4byte	.LASF22
+ 297 0148 F3000000 		.4byte	.LASF22
  298 014c 03       		.byte	0x3
  299 014d 3001     		.2byte	0x130
  300 014f 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  338 0023 3E       		.uleb128 0x3e
  339 0024 0B       		.uleb128 0xb
  340 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 9
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 9
 
 
  341 0026 08       		.uleb128 0x8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  395 005c 3A       		.uleb128 0x3a
  396 005d 0B       		.uleb128 0xb
  397 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 10
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 10
 
 
  398 005f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  452 0097 00       		.byte	0
  453 0098 0B       		.uleb128 0xb
  454 0099 898201   		.uleb128 0x4109
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 11
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 11
 
 
  455 009c 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  509 0028 00000000 		.4byte	.LFB4
  510 002c 14000000 		.4byte	.LFE4-.LFB4
  511 0030 00000000 		.4byte	0
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 12
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 12
 
 
  512 0034 00000000 		.4byte	0
@@ -714,123 +714,123 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 1
  541      61766543 
  541      6F6E6669 
  541      6700
- 542              	.LASF9:
- 543 005c 75696E74 		.ascii	"uint8\000"
- 543      3800
- 544              	.LASF5:
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 13
+ 542              	.LASF25:
+ 543 005c 433A5C55 		.ascii	"C:\\Users\\11401393\\Documents\\PSoC Creator\\Softw"
+ 543      73657273 
+ 543      5C313134 
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 13
 
 
- 545 0062 6C6F6E67 		.ascii	"long unsigned int\000"
- 545      20756E73 
- 545      69676E65 
- 545      6420696E 
- 545      7400
- 546              	.LASF7:
- 547 0074 6C6F6E67 		.ascii	"long long unsigned int\000"
- 547      206C6F6E 
- 547      6720756E 
- 547      7369676E 
- 547      65642069 
- 548              	.LASF18:
- 549 008b 51756164 		.ascii	"QuadD4_RestoreConfig\000"
- 549      44345F52 
- 549      6573746F 
- 549      7265436F 
- 549      6E666967 
- 550              	.LASF22:
- 551 00a0 51756164 		.ascii	"QuadD4_Enable\000"
- 551      44345F45 
- 551      6E61626C 
- 551      6500
- 552              	.LASF1:
- 553 00ae 756E7369 		.ascii	"unsigned char\000"
- 553      676E6564 
- 553      20636861 
- 553      7200
- 554              	.LASF13:
- 555 00bc 63686172 		.ascii	"char\000"
- 555      00
- 556              	.LASF16:
- 557 00c1 51756164 		.ascii	"QuadD4_BACKUP_STRUCT\000"
- 557      44345F42 
- 557      41434B55 
- 557      505F5354 
- 557      52554354 
- 558              	.LASF4:
- 559 00d6 6C6F6E67 		.ascii	"long int\000"
- 559      20696E74 
- 559      00
- 560              	.LASF2:
- 561 00df 73686F72 		.ascii	"short int\000"
- 561      7420696E 
- 561      7400
- 562              	.LASF19:
- 563 00e9 51756164 		.ascii	"QuadD4_Sleep\000"
- 563      44345F53 
- 563      6C656570 
- 563      00
- 564              	.LASF26:
- 565 00f6 656E6162 		.ascii	"enableState\000"
- 565      6C655374 
- 565      61746500 
- 566              	.LASF12:
- 567 0102 646F7562 		.ascii	"double\000"
- 567      6C6500
- 568              	.LASF14:
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccMpyR8a.s 			page 14
+ 543      30313339 
+ 543      335C446F 
+ 544 008a 61726550 		.ascii	"arePsocPiano\\SoftwarePianoPsoc.cydsn\000"
+ 544      736F6350 
+ 544      69616E6F 
+ 544      5C536F66 
+ 544      74776172 
+ 545              	.LASF9:
+ 546 00af 75696E74 		.ascii	"uint8\000"
+ 546      3800
+ 547              	.LASF5:
+ 548 00b5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 548      20756E73 
+ 548      69676E65 
+ 548      6420696E 
+ 548      7400
+ 549              	.LASF7:
+ 550 00c7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 550      206C6F6E 
+ 550      6720756E 
+ 550      7369676E 
+ 550      65642069 
+ 551              	.LASF18:
+ 552 00de 51756164 		.ascii	"QuadD4_RestoreConfig\000"
+ 552      44345F52 
+ 552      6573746F 
+ 552      7265436F 
+ 552      6E666967 
+ 553              	.LASF22:
+ 554 00f3 51756164 		.ascii	"QuadD4_Enable\000"
+ 554      44345F45 
+ 554      6E61626C 
+ 554      6500
+ 555              	.LASF1:
+ 556 0101 756E7369 		.ascii	"unsigned char\000"
+ 556      676E6564 
+ 556      20636861 
+ 556      7200
+ 557              	.LASF13:
+ 558 010f 63686172 		.ascii	"char\000"
+ 558      00
+ 559              	.LASF16:
+ 560 0114 51756164 		.ascii	"QuadD4_BACKUP_STRUCT\000"
+ 560      44345F42 
+ 560      41434B55 
+ 560      505F5354 
+ 560      52554354 
+ 561              	.LASF4:
+ 562 0129 6C6F6E67 		.ascii	"long int\000"
+ 562      20696E74 
+ 562      00
+ 563              	.LASF19:
+ 564 0132 51756164 		.ascii	"QuadD4_Sleep\000"
+ 564      44345F53 
+ 564      6C656570 
+ 564      00
+ 565              	.LASF26:
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccUvqrdh.s 			page 14
 
 
- 569 0109 72656733 		.ascii	"reg32\000"
- 569      3200
- 570              	.LASF3:
- 571 010f 73686F72 		.ascii	"short unsigned int\000"
- 571      7420756E 
- 571      7369676E 
- 571      65642069 
- 571      6E7400
- 572              	.LASF0:
- 573 0122 7369676E 		.ascii	"signed char\000"
- 573      65642063 
- 573      68617200 
- 574              	.LASF24:
- 575 012e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\QuadD4_PM.c\000"
- 575      6E657261 
- 575      7465645F 
- 575      536F7572 
- 575      63655C50 
- 576              	.LASF11:
- 577 0153 666C6F61 		.ascii	"float\000"
- 577      7400
- 578              	.LASF25:
- 579 0159 433A5C55 		.ascii	"C:\\Users\\11401393\\Documents\\PSoC Creator\\CE976"
- 579      73657273 
- 579      5C313134 
- 579      30313339 
- 579      335C446F 
- 580 0187 33342050 		.ascii	"34 PSoC 4 Breathing LED\\SoftwarePianPsoc.cydsn\000"
- 580      536F4320 
- 580      34204272 
- 580      65617468 
- 580      696E6720 
+ 566 013f 656E6162 		.ascii	"enableState\000"
+ 566      6C655374 
+ 566      61746500 
+ 567              	.LASF12:
+ 568 014b 646F7562 		.ascii	"double\000"
+ 568      6C6500
+ 569              	.LASF14:
+ 570 0152 72656733 		.ascii	"reg32\000"
+ 570      3200
+ 571              	.LASF3:
+ 572 0158 73686F72 		.ascii	"short unsigned int\000"
+ 572      7420756E 
+ 572      7369676E 
+ 572      65642069 
+ 572      6E7400
+ 573              	.LASF0:
+ 574 016b 7369676E 		.ascii	"signed char\000"
+ 574      65642063 
+ 574      68617200 
+ 575              	.LASF24:
+ 576 0177 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\QuadD4_PM.c\000"
+ 576      6E657261 
+ 576      7465645F 
+ 576      536F7572 
+ 576      63655C50 
+ 577              	.LASF11:
+ 578 019c 666C6F61 		.ascii	"float\000"
+ 578      7400
+ 579              	.LASF2:
+ 580 01a2 73686F72 		.ascii	"short int\000"
+ 580      7420696E 
+ 580      7400
  581              	.LASF23:
- 582 01b6 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 582 01ac 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
  582      4320342E 
  582      382E3420 
  582      32303134 
  582      30353236 
- 583 01e9 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 583 01df 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
  583      20726576 
  583      6973696F 
  583      6E203231 
  583      31333538 
- 584 021c 67202D66 		.ascii	"g -ffunction-sections\000"
+ 584 0212 67202D66 		.ascii	"g -ffunction-sections\000"
  584      66756E63 
  584      74696F6E 
  584      2D736563 
  584      74696F6E 
  585              	.LASF15:
- 586 0232 73697A65 		.ascii	"sizetype\000"
+ 586 0228 73697A65 		.ascii	"sizetype\000"
  586      74797065 
  586      00
  587              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

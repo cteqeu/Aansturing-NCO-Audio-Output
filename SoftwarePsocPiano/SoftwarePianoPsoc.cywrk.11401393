@@ -134,14 +134,6 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\I2C_sda\I2C_sda.c</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\I2C_sda\I2C_sda.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\I2C_sda\I2C_sda_aliases.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_1</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_1\Pin_1.c</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_1\Pin_1.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_1\Pin_1_aliases.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_2</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_2\Pin_2.c</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_2\Pin_2.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Pin_2\Pin_2_aliases.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD1</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD1\QuadD1.c</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD1\QuadD1.h</v>
@@ -154,10 +146,6 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD3\QuadD3.c</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD3\QuadD3.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD3\QuadD3_PM.c</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD4</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD4\QuadD4.c</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD4\QuadD4.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD4\QuadD4_PM.c</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cydevice_trm.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
@@ -273,16 +261,12 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\I2C_scl.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\I2C_sda.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\main.lst</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Pin_1.lst</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Pin_2.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD1.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD1_PM.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD2.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD2_PM.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD3.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD3_PM.lst</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD4.lst</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD4_PM.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.elf</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.hex</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.map</v>
@@ -293,6 +277,40 @@
 <VisibleNodeIds>
 <v>SoftwarePianoPsoc</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense_CSHL.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense_INT.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense_PM.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense_SampleClk.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense_SenseClk.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense_SMS.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CapSense_TunerHelper.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock_2.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Cm0Start.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CyDMA.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CyFlash.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CyLFClk.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\CyLib.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\cymetadata.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\cyPm.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc1CCW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc1CW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc2CCW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc2CW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc3CCW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc3CW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc4CCW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\Enc4CW.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\I2C.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\I2C_EZI2C.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -307,6 +325,14 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\PSoC 4 Architecture TRM</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\PSoC 4200M Family Datasheet</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides\cy_boot_v5_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides\cy_dmac_v1_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides\cy_lfclk_v1_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CapSense_CSD_P4_v2_20</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\cy_clock_v2_20</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\cy_pins_v2_10</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\SCB_P4_v3_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\TCPWM_P4_v2_0</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>SoftwarePianoPsoc</v>
@@ -314,6 +340,14 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\PSoC 4 Architecture TRM</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\PSoC 4200M Family Datasheet</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides\cy_boot_v5_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides\cy_dmac_v1_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\System Reference Guides\cy_lfclk_v1_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CapSense_CSD_P4_v2_20</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\cy_clock_v2_20</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\cy_pins_v2_10</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\SCB_P4_v3_0</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\TCPWM_P4_v2_0</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>

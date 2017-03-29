@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
   30:.\Generated_Source\PSoC4/Enc3CCW.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/Enc3CCW.c **** *
   32:.\Generated_Source\PSoC4/Enc3CCW.c **** * Summary:
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 2
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Enc3CCW.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
   52:.\Generated_Source\PSoC4/Enc3CCW.c **** ********************************************************************************
   53:.\Generated_Source\PSoC4/Enc3CCW.c **** *
   54:.\Generated_Source\PSoC4/Enc3CCW.c **** * Summary:
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 3
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 3
 
 
   55:.\Generated_Source\PSoC4/Enc3CCW.c **** *  Change the drive mode on the pins of the port.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
   80:.\Generated_Source\PSoC4/Enc3CCW.c **** * Function Name: Enc3CCW_Read
   81:.\Generated_Source\PSoC4/Enc3CCW.c **** ********************************************************************************
   82:.\Generated_Source\PSoC4/Enc3CCW.c **** *
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 4
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 4
 
 
   83:.\Generated_Source\PSoC4/Enc3CCW.c **** * Summary:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  112:.\Generated_Source\PSoC4/Enc3CCW.c **** *
  113:.\Generated_Source\PSoC4/Enc3CCW.c **** * Return: 
  114:.\Generated_Source\PSoC4/Enc3CCW.c **** *  Returns the current value assigned to the Digital Port's data output register
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 5
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 5
 
 
  115:.\Generated_Source\PSoC4/Enc3CCW.c **** *  
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  141              		.cfi_startproc
  143:.\Generated_Source\PSoC4/Enc3CCW.c **** 		uint8 maskedStatus = (uint8)(Enc3CCW_INTSTAT & Enc3CCW_MASK);
  142              		.loc 1 143 0
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 6
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 6
 
 
  143 0000 024B     		ldr	r3, .L14
@@ -331,48 +331,48 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  167 0006 00000000 		.4byte	.Ldebug_abbrev0
  168 000a 04       		.byte	0x4
  169 000b 01       		.uleb128 0x1
- 170 000c 44010000 		.4byte	.LASF24
+ 170 000c 3A010000 		.4byte	.LASF24
  171 0010 01       		.byte	0x1
- 172 0011 21000000 		.4byte	.LASF25
- 173 0015 44000000 		.4byte	.LASF26
+ 172 0011 74000000 		.4byte	.LASF25
+ 173 0015 21000000 		.4byte	.LASF26
  174 0019 00000000 		.4byte	.Ldebug_ranges0+0
  175 001d 00000000 		.4byte	0
  176 0021 00000000 		.4byte	.Ldebug_line0
  177 0025 02       		.uleb128 0x2
  178 0026 01       		.byte	0x1
  179 0027 06       		.byte	0x6
- 180 0028 12020000 		.4byte	.LASF0
+ 180 0028 08020000 		.4byte	.LASF0
  181 002c 02       		.uleb128 0x2
  182 002d 01       		.byte	0x1
  183 002e 08       		.byte	0x8
- 184 002f A7000000 		.4byte	.LASF1
+ 184 002f 9D000000 		.4byte	.LASF1
  185 0033 02       		.uleb128 0x2
  186 0034 02       		.byte	0x2
  187 0035 05       		.byte	0x5
- 188 0036 F9010000 		.4byte	.LASF2
+ 188 0036 EF010000 		.4byte	.LASF2
  189 003a 02       		.uleb128 0x2
  190 003b 02       		.byte	0x2
  191 003c 07       		.byte	0x7
- 192 003d DA000000 		.4byte	.LASF3
+ 192 003d D0000000 		.4byte	.LASF3
  193 0041 02       		.uleb128 0x2
  194 0042 04       		.byte	0x4
  195 0043 05       		.byte	0x5
- 196 0044 09020000 		.4byte	.LASF4
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 7
+ 196 0044 FF010000 		.4byte	.LASF4
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 7
 
 
  197 0048 02       		.uleb128 0x2
  198 0049 04       		.byte	0x4
  199 004a 07       		.byte	0x7
- 200 004b C8000000 		.4byte	.LASF5
+ 200 004b BE000000 		.4byte	.LASF5
  201 004f 02       		.uleb128 0x2
  202 0050 08       		.byte	0x8
  203 0051 05       		.byte	0x5
- 204 0052 D9010000 		.4byte	.LASF6
+ 204 0052 CF010000 		.4byte	.LASF6
  205 0056 02       		.uleb128 0x2
  206 0057 08       		.byte	0x8
  207 0058 07       		.byte	0x7
- 208 0059 16010000 		.4byte	.LASF7
+ 208 0059 0C010000 		.4byte	.LASF7
  209 005d 03       		.uleb128 0x3
  210 005e 04       		.byte	0x4
  211 005f 05       		.byte	0x5
@@ -380,29 +380,29 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  213 0064 02       		.uleb128 0x2
  214 0065 04       		.byte	0x4
  215 0066 07       		.byte	0x7
- 216 0067 09010000 		.4byte	.LASF8
+ 216 0067 FF000000 		.4byte	.LASF8
  217 006b 04       		.uleb128 0x4
- 218 006c 03020000 		.4byte	.LASF9
+ 218 006c F9010000 		.4byte	.LASF9
  219 0070 02       		.byte	0x2
  220 0071 B3       		.byte	0xb3
  221 0072 2C000000 		.4byte	0x2c
  222 0076 04       		.uleb128 0x4
- 223 0077 F4000000 		.4byte	.LASF10
+ 223 0077 EA000000 		.4byte	.LASF10
  224 007b 02       		.byte	0x2
  225 007c B5       		.byte	0xb5
  226 007d 48000000 		.4byte	0x48
  227 0081 02       		.uleb128 0x2
  228 0082 04       		.byte	0x4
  229 0083 04       		.byte	0x4
- 230 0084 A1000000 		.4byte	.LASF11
+ 230 0084 97000000 		.4byte	.LASF11
  231 0088 02       		.uleb128 0x2
  232 0089 08       		.byte	0x8
  233 008a 04       		.byte	0x4
- 234 008b ED000000 		.4byte	.LASF12
+ 234 008b E3000000 		.4byte	.LASF12
  235 008f 02       		.uleb128 0x2
  236 0090 01       		.byte	0x1
  237 0091 08       		.byte	0x8
- 238 0092 F4010000 		.4byte	.LASF13
+ 238 0092 EA010000 		.4byte	.LASF13
  239 0096 05       		.uleb128 0x5
  240 0097 00000000 		.4byte	.LASF14
  241 009b 02       		.byte	0x2
@@ -411,14 +411,14 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  244 00a2 06       		.uleb128 0x6
  245 00a3 76000000 		.4byte	0x76
  246 00a7 07       		.uleb128 0x7
- 247 00a8 FB000000 		.4byte	.LASF15
+ 247 00a8 F1000000 		.4byte	.LASF15
  248 00ac 01       		.byte	0x1
  249 00ad 2A       		.byte	0x2a
  250 00ae 00000000 		.4byte	.LFB0
  251 00b2 18000000 		.4byte	.LFE0-.LFB0
  252 00b6 01       		.uleb128 0x1
  253 00b7 9C       		.byte	0x9c
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 8
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 8
 
 
  254 00b8 DB000000 		.4byte	0xdb
@@ -429,7 +429,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  259 00c3 6B000000 		.4byte	0x6b
  260 00c7 00000000 		.4byte	.LLST0
  261 00cb 09       		.uleb128 0x9
- 262 00cc B5000000 		.4byte	.LASF22
+ 262 00cc AB000000 		.4byte	.LASF22
  263 00d0 01       		.byte	0x1
  264 00d1 2C       		.byte	0x2c
  265 00d2 6B000000 		.4byte	0x6b
@@ -445,14 +445,14 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  275 00eb 9C       		.byte	0x9c
  276 00ec 00010000 		.4byte	0x100
  277 00f0 08       		.uleb128 0x8
- 278 00f1 D4010000 		.4byte	.LASF18
+ 278 00f1 CA010000 		.4byte	.LASF18
  279 00f5 01       		.byte	0x1
  280 00f6 49       		.byte	0x49
  281 00f7 6B000000 		.4byte	0x6b
  282 00fb 3F000000 		.4byte	.LLST2
  283 00ff 00       		.byte	0
  284 0100 0A       		.uleb128 0xa
- 285 0101 BB000000 		.4byte	.LASF19
+ 285 0101 B1000000 		.4byte	.LASF19
  286 0105 01       		.byte	0x1
  287 0106 61       		.byte	0x61
  288 0107 6B000000 		.4byte	0x6b
@@ -461,7 +461,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  291 0113 01       		.uleb128 0x1
  292 0114 9C       		.byte	0x9c
  293 0115 0A       		.uleb128 0xa
- 294 0116 C0010000 		.4byte	.LASF20
+ 294 0116 B6010000 		.4byte	.LASF20
  295 011a 01       		.byte	0x1
  296 011b 75       		.byte	0x75
  297 011c 6B000000 		.4byte	0x6b
@@ -470,7 +470,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  300 0128 01       		.uleb128 0x1
  301 0129 9C       		.byte	0x9c
  302 012a 0B       		.uleb128 0xb
- 303 012b 2D010000 		.4byte	.LASF21
+ 303 012b 23010000 		.4byte	.LASF21
  304 012f 01       		.byte	0x1
  305 0130 8D       		.byte	0x8d
  306 0131 6B000000 		.4byte	0x6b
@@ -478,11 +478,11 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  308 0139 10000000 		.4byte	.LFE4-.LFB4
  309 013d 01       		.uleb128 0x1
  310 013e 9C       		.byte	0x9c
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 9
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 9
 
 
  311 013f 0C       		.uleb128 0xc
- 312 0140 E7010000 		.4byte	.LASF23
+ 312 0140 DD010000 		.4byte	.LASF23
  313 0144 01       		.byte	0x1
  314 0145 8F       		.byte	0x8f
  315 0146 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  365 002b 00       		.byte	0
  366 002c 03       		.uleb128 0x3
  367 002d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 10
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 10
 
 
  368 002e 3A       		.uleb128 0x3a
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  422 0065 05       		.uleb128 0x5
  423 0066 00       		.byte	0
  424 0067 03       		.uleb128 0x3
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 11
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 11
 
 
  425 0068 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  479 009f 3F       		.uleb128 0x3f
  480 00a0 19       		.uleb128 0x19
  481 00a1 03       		.uleb128 0x3
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 12
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 12
 
 
  482 00a2 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  536 0029 0100     		.2byte	0x1
  537 002b 52       		.byte	0x52
  538 002c 0E000000 		.4byte	.LVL3
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 13
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 13
 
 
  539 0030 18000000 		.4byte	.LFE0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  593              	.Ldebug_line0:
  594 0000 A8000000 		.section	.debug_str,"MS",%progbits,1
  594      02004600 
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 14
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 14
 
 
  594      00000201 
@@ -796,136 +796,136 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 1
  600      53657444 
  600      72697665 
  600      4D6F6465 
- 601              	.LASF25:
- 602 0021 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Enc3CCW.c\000"
- 602      6E657261 
- 602      7465645F 
- 602      536F7572 
- 602      63655C50 
- 603              	.LASF26:
- 604 0044 433A5C55 		.ascii	"C:\\Users\\11401393\\Documents\\PSoC Creator\\CE976"
- 604      73657273 
- 604      5C313134 
- 604      30313339 
- 604      335C446F 
- 605 0072 33342050 		.ascii	"34 PSoC 4 Breathing LED\\SoftwarePianPsoc.cydsn\000"
- 605      536F4320 
- 605      34204272 
- 605      65617468 
- 605      696E6720 
+ 601              	.LASF26:
+ 602 0021 433A5C55 		.ascii	"C:\\Users\\11401393\\Documents\\PSoC Creator\\Softw"
+ 602      73657273 
+ 602      5C313134 
+ 602      30313339 
+ 602      335C446F 
+ 603 004f 61726550 		.ascii	"arePsocPiano\\SoftwarePianoPsoc.cydsn\000"
+ 603      736F6350 
+ 603      69616E6F 
+ 603      5C536F66 
+ 603      74776172 
+ 604              	.LASF25:
+ 605 0074 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Enc3CCW.c\000"
+ 605      6E657261 
+ 605      7465645F 
+ 605      536F7572 
+ 605      63655C50 
  606              	.LASF11:
- 607 00a1 666C6F61 		.ascii	"float\000"
+ 607 0097 666C6F61 		.ascii	"float\000"
  607      7400
  608              	.LASF1:
- 609 00a7 756E7369 		.ascii	"unsigned char\000"
+ 609 009d 756E7369 		.ascii	"unsigned char\000"
  609      676E6564 
  609      20636861 
  609      7200
  610              	.LASF22:
- 611 00b5 64725661 		.ascii	"drVal\000"
+ 611 00ab 64725661 		.ascii	"drVal\000"
  611      6C00
  612              	.LASF19:
- 613 00bb 456E6333 		.ascii	"Enc3CCW_Read\000"
+ 613 00b1 456E6333 		.ascii	"Enc3CCW_Read\000"
  613      4343575F 
  613      52656164 
  613      00
  614              	.LASF5:
- 615 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 615 00be 6C6F6E67 		.ascii	"long unsigned int\000"
  615      20756E73 
  615      69676E65 
  615      6420696E 
  615      7400
  616              	.LASF3:
- 617 00da 73686F72 		.ascii	"short unsigned int\000"
+ 617 00d0 73686F72 		.ascii	"short unsigned int\000"
  617      7420756E 
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 15
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 15
 
 
  617      7369676E 
  617      65642069 
  617      6E7400
  618              	.LASF12:
- 619 00ed 646F7562 		.ascii	"double\000"
+ 619 00e3 646F7562 		.ascii	"double\000"
  619      6C6500
  620              	.LASF10:
- 621 00f4 75696E74 		.ascii	"uint32\000"
+ 621 00ea 75696E74 		.ascii	"uint32\000"
  621      333200
  622              	.LASF15:
- 623 00fb 456E6333 		.ascii	"Enc3CCW_Write\000"
+ 623 00f1 456E6333 		.ascii	"Enc3CCW_Write\000"
  623      4343575F 
  623      57726974 
  623      6500
  624              	.LASF8:
- 625 0109 756E7369 		.ascii	"unsigned int\000"
+ 625 00ff 756E7369 		.ascii	"unsigned int\000"
  625      676E6564 
  625      20696E74 
  625      00
  626              	.LASF7:
- 627 0116 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 627 010c 6C6F6E67 		.ascii	"long long unsigned int\000"
  627      206C6F6E 
  627      6720756E 
  627      7369676E 
  627      65642069 
  628              	.LASF21:
- 629 012d 456E6333 		.ascii	"Enc3CCW_ClearInterrupt\000"
+ 629 0123 456E6333 		.ascii	"Enc3CCW_ClearInterrupt\000"
  629      4343575F 
  629      436C6561 
  629      72496E74 
  629      65727275 
  630              	.LASF24:
- 631 0144 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 631 013a 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
  631      4320342E 
  631      382E3420 
  631      32303134 
  631      30353236 
- 632 0177 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 632 016d 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
  632      20726576 
  632      6973696F 
  632      6E203231 
  632      31333538 
- 633 01aa 67202D66 		.ascii	"g -ffunction-sections\000"
+ 633 01a0 67202D66 		.ascii	"g -ffunction-sections\000"
  633      66756E63 
  633      74696F6E 
  633      2D736563 
  633      74696F6E 
  634              	.LASF20:
- 635 01c0 456E6333 		.ascii	"Enc3CCW_ReadDataReg\000"
+ 635 01b6 456E6333 		.ascii	"Enc3CCW_ReadDataReg\000"
  635      4343575F 
  635      52656164 
  635      44617461 
  635      52656700 
  636              	.LASF18:
- 637 01d4 6D6F6465 		.ascii	"mode\000"
+ 637 01ca 6D6F6465 		.ascii	"mode\000"
  637      00
  638              	.LASF6:
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\cc1JDpCU.s 			page 16
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccpdbXpD.s 			page 16
 
 
- 639 01d9 6C6F6E67 		.ascii	"long long int\000"
+ 639 01cf 6C6F6E67 		.ascii	"long long int\000"
  639      206C6F6E 
  639      6720696E 
  639      7400
  640              	.LASF23:
- 641 01e7 6D61736B 		.ascii	"maskedStatus\000"
+ 641 01dd 6D61736B 		.ascii	"maskedStatus\000"
  641      65645374 
  641      61747573 
  641      00
  642              	.LASF13:
- 643 01f4 63686172 		.ascii	"char\000"
+ 643 01ea 63686172 		.ascii	"char\000"
  643      00
  644              	.LASF2:
- 645 01f9 73686F72 		.ascii	"short int\000"
+ 645 01ef 73686F72 		.ascii	"short int\000"
  645      7420696E 
  645      7400
  646              	.LASF9:
- 647 0203 75696E74 		.ascii	"uint8\000"
+ 647 01f9 75696E74 		.ascii	"uint8\000"
  647      3800
  648              	.LASF4:
- 649 0209 6C6F6E67 		.ascii	"long int\000"
+ 649 01ff 6C6F6E67 		.ascii	"long int\000"
  649      20696E74 
  649      00
  650              	.LASF0:
- 651 0212 7369676E 		.ascii	"signed char\000"
+ 651 0208 7369676E 		.ascii	"signed char\000"
  651      65642063 
  651      68617200 
  652              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
