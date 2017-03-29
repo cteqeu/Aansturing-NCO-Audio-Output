@@ -1,82 +1,11 @@
---------------- Build Started: 03/29/2017 14:28:46 Project: SoftwarePianoPsoc, Configuration: ARM GCC 4.8.4 Debug ---------------
-cydsfit.exe -.appdatapath "C:\Users\11401393\AppData\Local\Cypress Semiconductor\PSoC Creator\3.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\11401393\Documents\PSoC Creator\SoftwarePsocPiano\SoftwarePianoPsoc.cydsn\SoftwarePianoPsoc.cyprj" -d CY8C4247AZI-M485 -s "C:\Users\11401393\Documents\PSoC Creator\SoftwarePsocPiano\SoftwarePianoPsoc.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
-Elaborating Design...
-cmod
-source
-source
-source
-source
-source
-source
-source
-source
-source
-source
-source
-source
-HDL Generation ...
-Synthesis ...
-Place and Route ...
-Tech mapping ...
-Analog Placement ...
-Analog Routing ...
-Analog Code Generation ...
-Digital Placement ...
-Digital Routing ...
-Bitstream Generation ...
-Static timing analysis ...
-API Generation ...
-Dependency Generation ...
-Clean Temporary Files ...
+--------------- Build Started: 03/29/2017 15:29:03 Project: SoftwarePianoPsoc, Configuration: ARM GCC 4.8.4 Debug ---------------
+The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\main.c -o .\CortexM0\ARM_GCC_484\Debug\main.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cyfitter_cfg.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cyfitter_cfg.c -o .\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cymetadata.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cymetadata.c -o .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Cm0Start.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Cm0Start.c -o .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-arm-none-eabi-as.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=.\CortexM0\ARM_GCC_484\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o .\Generated_Source\PSoC4\CyBootAsmGnu.s
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CyFlash.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CyFlash.c -o .\CortexM0\ARM_GCC_484\Debug\CyFlash.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CyLib.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CyLib.c -o .\CortexM0\ARM_GCC_484\Debug\CyLib.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cyPm.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cyPm.c -o .\CortexM0\ARM_GCC_484\Debug\cyPm.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cyutils.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\cyutils.c -o .\CortexM0\ARM_GCC_484\Debug\cyutils.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CyDMA.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CyDMA.c -o .\CortexM0\ARM_GCC_484\Debug\CyDMA.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CyLFClk.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CyLFClk.c -o .\CortexM0\ARM_GCC_484\Debug\CyLFClk.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense_PM.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense_PM.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense_CSHL.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense_CSHL.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense_CSHL.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense_INT.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense_INT.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense_INT.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense_TunerHelper.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense_TunerHelper.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense_TunerHelper.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense_SMS.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense_SMS.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense_SMS.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense_SampleClk.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense_SampleClk.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense_SampleClk.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/CapSense_SenseClk.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\CapSense_SenseClk.c -o .\CortexM0\ARM_GCC_484\Debug\CapSense_SenseClk.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Clock_2.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Clock_2.c -o .\CortexM0\ARM_GCC_484\Debug\Clock_2.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/QuadD1.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\QuadD1.c -o .\CortexM0\ARM_GCC_484\Debug\QuadD1.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/QuadD1_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\QuadD1_PM.c -o .\CortexM0\ARM_GCC_484\Debug\QuadD1_PM.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc1CW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc1CW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc1CW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc1CCW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc1CCW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc1CCW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc2CW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc2CW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc2CW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc2CCW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc2CCW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc2CCW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/QuadD2.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\QuadD2.c -o .\CortexM0\ARM_GCC_484\Debug\QuadD2.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/QuadD2_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\QuadD2_PM.c -o .\CortexM0\ARM_GCC_484\Debug\QuadD2_PM.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/QuadD3.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\QuadD3.c -o .\CortexM0\ARM_GCC_484\Debug\QuadD3.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/QuadD3_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\QuadD3_PM.c -o .\CortexM0\ARM_GCC_484\Debug\QuadD3_PM.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc3CCW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc3CCW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc3CCW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc3CW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc3CW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc3CW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc4CCW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc4CCW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc4CCW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/Enc4CW.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\Enc4CW.c -o .\CortexM0\ARM_GCC_484\Debug\Enc4CW.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C.c -o .\CortexM0\ARM_GCC_484\Debug\I2C.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_PM.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_PM.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_PM.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_BOOT.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_BOOT.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_BOOT.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_EZI2C.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_EZI2C.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_EZI2C_INT.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_EZI2C_INT.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C_INT.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_EZI2C_BOOT.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_EZI2C_BOOT.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C_BOOT.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_SCBCLK.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_SCBCLK.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_SCBCLK.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_sda.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_sda.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_sda.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_scl.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_scl.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_scl.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/I2C_SCB_IRQ.lst -g -D DEBUG -Wall -ffunction-sections -Og -c .\Generated_Source\PSoC4\I2C_SCB_IRQ.c -o .\CortexM0\ARM_GCC_484\Debug\I2C_SCB_IRQ.o
 arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a .\CortexM0\ARM_GCC_484\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_484\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_484\Debug\CyFlash.o .\CortexM0\ARM_GCC_484\Debug\CyLib.o .\CortexM0\ARM_GCC_484\Debug\cyPm.o .\CortexM0\ARM_GCC_484\Debug\cyutils.o .\CortexM0\ARM_GCC_484\Debug\CyDMA.o .\CortexM0\ARM_GCC_484\Debug\CyLFClk.o .\CortexM0\ARM_GCC_484\Debug\CapSense.o .\CortexM0\ARM_GCC_484\Debug\CapSense_PM.o .\CortexM0\ARM_GCC_484\Debug\CapSense_CSHL.o .\CortexM0\ARM_GCC_484\Debug\CapSense_INT.o .\CortexM0\ARM_GCC_484\Debug\CapSense_TunerHelper.o .\CortexM0\ARM_GCC_484\Debug\CapSense_SMS.o .\CortexM0\ARM_GCC_484\Debug\CapSense_SampleClk.o .\CortexM0\ARM_GCC_484\Debug\CapSense_SenseClk.o .\CortexM0\ARM_GCC_484\Debug\Clock_2.o .\CortexM0\ARM_GCC_484\Debug\QuadD1.o .\CortexM0\ARM_GCC_484\Debug\QuadD1_PM.o .\CortexM0\ARM_GCC_484\Debug\Enc1CW.o .\CortexM0\ARM_GCC_484\Debug\Enc1CCW.o .\CortexM0\ARM_GCC_484\Debug\Enc2CW.o .\CortexM0\ARM_GCC_484\Debug\Enc2CCW.o .\CortexM0\ARM_GCC_484\Debug\QuadD2.o .\CortexM0\ARM_GCC_484\Debug\QuadD2_PM.o .\CortexM0\ARM_GCC_484\Debug\QuadD3.o .\CortexM0\ARM_GCC_484\Debug\QuadD3_PM.o .\CortexM0\ARM_GCC_484\Debug\Enc3CCW.o .\CortexM0\ARM_GCC_484\Debug\Enc3CW.o .\CortexM0\ARM_GCC_484\Debug\Enc4CCW.o .\CortexM0\ARM_GCC_484\Debug\Enc4CW.o .\CortexM0\ARM_GCC_484\Debug\I2C.o .\CortexM0\ARM_GCC_484\Debug\I2C_PM.o .\CortexM0\ARM_GCC_484\Debug\I2C_BOOT.o .\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C.o .\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C_INT.o .\CortexM0\ARM_GCC_484\Debug\I2C_EZI2C_BOOT.o .\CortexM0\ARM_GCC_484\Debug\I2C_SCBCLK.o .\CortexM0\ARM_GCC_484\Debug\I2C_sda.o .\CortexM0\ARM_GCC_484\Debug\I2C_scl.o .\CortexM0\ARM_GCC_484\Debug\I2C_SCB_IRQ.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.elf .\CortexM0\ARM_GCC_484\Debug\main.o .\CortexM0\ARM_GCC_484\Debug\cymetadata.o .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a" "C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_484\Debug\CyComponentLibrary.a" -mcpu=cortex-m0 -mthumb -g -ffunction-sections -Og -Wl,-Map,.\CortexM0\ARM_GCC_484\Debug/SoftwarePianoPsoc.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
 cyelftool.exe -C "C:\Users\11401393\Documents\PSoC Creator\SoftwarePsocPiano\SoftwarePianoPsoc.cydsn\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.elf" --flash_row_size 128 --flash_size 131072
 cyelftool.exe -S "C:\Users\11401393\Documents\PSoC Creator\SoftwarePsocPiano\SoftwarePianoPsoc.cydsn\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.elf"
-Flash used: 8704 of 131072 bytes (6,6%).
+Flash used: 8576 of 131072 bytes (6,5%).
 SRAM used: 3020 of 16384 bytes (18,4%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 03/29/2017 14:29:21 ---------------
+--------------- Build Succeeded: 03/29/2017 15:29:05 ---------------

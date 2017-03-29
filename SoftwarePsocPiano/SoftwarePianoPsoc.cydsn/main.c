@@ -58,32 +58,32 @@ int main()
             CapSense_UpdateEnabledBaselines();
             CapSense_ScanEnabledWidgets();
         }
+               
+        //encoder 1,2 en 3
+        i2cbuf[2] = QuadD1_ReadCounter();      
+        i2cbuf[3] = QuadD2_ReadCounter();
+        i2cbuf[4] = QuadD3_ReadCounter(); 
         
-        //encoder 1
+        //encoder 4
         prev_pin1 = pin1;
         prev_pin2 = pin2;
         pin1 = Enc4CCW_Read();
         pin2 = Enc4CW_Read();
         if(pin1 == 0 && prev_pin1 == 1){
             if(pin2 == 1){
-                i2cbuf[2] = i2cbuf[2] + 1;
+                i2cbuf[5] = i2cbuf[5] + 1;
             }
             else if(pin2 == 0){
-                i2cbuf[2] = i2cbuf[2] - 1;
+                i2cbuf[5] = i2cbuf[5] - 1;
             }
         }
         else if(pin2 == 1 && prev_pin2 == 0){
             if(pin1 == 1){
-                i2cbuf[2] = i2cbuf[2] + 1;
+                i2cbuf[5] = i2cbuf[5] + 1;
             }
             else if(pin1 == 0){
-                i2cbuf[2] = i2cbuf[2] - 1;
+                i2cbuf[5] = i2cbuf[5] - 1;
             } 
         }
-        
-        //encoder 2,3 en 4
-        i2cbuf[3] = QuadD1_ReadCounter();      
-        i2cbuf[4] = QuadD2_ReadCounter();
-        i2cbuf[5] = QuadD3_ReadCounter(); 
     }
 }
