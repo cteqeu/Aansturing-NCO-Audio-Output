@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Jun 14 11:43:00 2017
+# Process ID: 19220
+# Current directory: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11088 C:\Users\11401393\Desktop\NCO_audio_output\Vivado_BD_SDK\Aansturing_Audio_output\Aansturing_Audio_output.xpr
+# Log file: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/vivado.log
+# Journal file: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado/xilinx_com_zybo_audio_ctrl_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 790.320 ; gain = 149.246
+launch_sdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 14 23:45:42 2017...

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>design_1_wrapper_hw_platform_0_Traces</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Traces/Run_jun-10_13-52/PS_Trace_jun-10_13-52/PS_Trace_jun-10_13-52_</name>
+			<type>1</type>
+			<location>C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_jun-10_13-52/PS_Trace_jun-10_13-52_1/PS_Trace_jun-10_13-52_1_</name>
+			<type>1</type>
+			<location>C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_jun-10_14-37/PS_Trace_jun-10_14-37/PS_Trace_jun-10_14-37_</name>
+			<type>1</type>
+			<location>C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+	</linkedResources>
+</projectDescription>

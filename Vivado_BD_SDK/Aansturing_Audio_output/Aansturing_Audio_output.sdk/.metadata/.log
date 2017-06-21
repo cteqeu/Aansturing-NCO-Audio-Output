@@ -1,0 +1,48 @@
+!SESSION 2017-06-19 16:39:01.755 -----------------------------------------------
+eclipse.buildId=2016.4
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=nl_BE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk
+
+This is a continuation of log file C:\Users\11401393\Desktop\NCO_audio_output\Vivado_BD_SDK\Aansturing_Audio_output\Aansturing_Audio_output.sdk\.metadata\.bak_0.log
+Created Time: 2017-06-19 17:43:03.190
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:43:03.191
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279787424A"} -index 0], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:43:03.330
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279787424A"} -index 0], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:43:03.331
+!MESSAGE XSCT Command: [con], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:43:03.351
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:45:09.307
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/NCO_audio_output_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:45:09.326
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/NCO_audio_output_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:45:09.327
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/NCO_audio_output_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:45:09.336
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/NCO_audio_output_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:45:09.337
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/NCO_audio_output_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:45:09.341
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/NCO_audio_output_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:53:02.198
+!MESSAGE XSCT Command: [disconnect tcfchan#16], Thread: Thread-1055
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-06-19 17:53:02.202
+!MESSAGE XSCT command with result: [disconnect tcfchan#16], Result: [null, ]. Thread: Thread-1055

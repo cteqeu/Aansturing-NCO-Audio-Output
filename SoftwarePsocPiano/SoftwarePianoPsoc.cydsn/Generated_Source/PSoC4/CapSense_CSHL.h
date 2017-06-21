@@ -26,7 +26,7 @@
 ***************************************/
 
 #define CapSense_SIGNAL_SIZE                    (8u)
-#define CapSense_AUTO_RESET                     (1u)
+#define CapSense_AUTO_RESET                     (0u)
 #define CapSense_RAW_FILTER_MASK                (8u)
 
 /* Signal size definition */

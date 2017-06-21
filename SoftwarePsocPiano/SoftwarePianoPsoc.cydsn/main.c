@@ -4,6 +4,7 @@ int main()
 {   
     uint8 i2cbuf[6];
     uint8 pin1 = 0, pin2 = 0, prev_pin1 = 0, prev_pin2 = 0;
+    uint8 sw_input = 0;
     
     CyGlobalIntEnable;
     
@@ -59,6 +60,10 @@ int main()
             CapSense_ScanEnabledWidgets();
         }
                
+        //switch
+        sw_input = sw_Read();
+        if(sw_input)i2cbuf[1] = i2cbuf[1] | (sw_input<<0);
+        
         //encoder 1,2 en 3
         i2cbuf[2] = QuadD1_ReadCounter();      
         i2cbuf[3] = QuadD2_ReadCounter();
@@ -76,7 +81,7 @@ int main()
             else if(pin2 == 0){
                 i2cbuf[5] = i2cbuf[5] - 1;
             }
-        }
+        }                                                                                                
         else if(pin2 == 1 && prev_pin2 == 0){
             if(pin1 == 1){
                 i2cbuf[5] = i2cbuf[5] + 1;

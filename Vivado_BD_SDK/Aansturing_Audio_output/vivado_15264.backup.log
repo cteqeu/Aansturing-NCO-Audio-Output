@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jun 12 19:08:38 2017
+# Process ID: 15264
+# Current directory: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14948 C:\Users\11401393\Desktop\NCO_audio_output\Vivado_BD_SDK\Aansturing_Audio_output\Aansturing_Audio_output.xpr
+# Log file: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/vivado.log
+# Journal file: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado/xilinx_com_zybo_audio_ctrl_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 791.750 ; gain = 147.273
+open_bd_design {C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:xilinx:zybo_audio_ctrl:1.0 - zybo_audio_ctrl_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:hls:NCO2:1.0 - NCO2
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 887.406 ; gain = 82.008
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 13 10:17:00 2017...

@@ -50,6 +50,8 @@
 #include "Enc4CCW_aliases.h"
 #include "Enc4CW.h"
 #include "Enc4CW_aliases.h"
+#include "sw.h"
+#include "sw_aliases.h"
 #include "CapSense_SampleClk.h"
 #include "CapSense_Sns_aliases.h"
 #include "CapSense_SenseClk.h"

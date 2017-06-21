@@ -1,0 +1,222 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jun 12 11:24:37 2017
+# Process ID: 21236
+# Current directory: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19904 C:\Users\11401393\Desktop\NCO_audio_output\Vivado_BD_SDK\Aansturing_Audio_output\Aansturing_Audio_output.xpr
+# Log file: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/vivado.log
+# Journal file: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado/xilinx_com_zybo_audio_ctrl_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 847.164 ; gain = 194.660
+open_bd_design {C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:xilinx:zybo_audio_ctrl:1.0 - zybo_audio_ctrl_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:hls:NCO2:1.0 - NCO2
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2/solution1/impl/ip/component.xml. It will be created.
+open_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 877.613 ; gain = 30.449
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado/xilinx_com_zybo_audio_ctrl_1.0'.
+update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1025.367 ; gain = 23.445
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:NCO2:1.0 [get_ips  design_1_NCO2_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_NCO2_0_0 (Nco2 1.0) from revision 1706112032 to revision 1706121126
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_NCO2_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block NCO2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zybo_audio_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 9c79d2caab37f64a; cache size = 10.127 MB.
+[Mon Jun 12 11:28:19 2017] Launched design_1_NCO2_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_NCO2_0_0_synth_1: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/synth_1/runme.log
+[Mon Jun 12 11:28:19 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1198.684 ; gain = 156.063
+file copy -force C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/design_1_wrapper.sysdef C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado/xilinx_com_zybo_audio_ctrl_1.0'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1263.055 ; gain = 22.762
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:NCO2:1.0 [get_ips  design_1_NCO2_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_NCO2_0_0 (Nco2 1.0) from revision 1706121126 to revision 1706121150
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_NCO2_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd]
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block NCO2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zybo_audio_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1361.977 ; gain = 29.742
+catch { config_ip_cache -export [get_ips -all design_1_NCO2_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 9c79d2caab37f64a; cache size = 10.127 MB.
+export_ip_user_files -of_objects [get_files C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 2 design_1_NCO2_0_0_synth_1
+[Mon Jun 12 11:52:18 2017] Launched design_1_NCO2_0_0_synth_1...
+Run output will be captured here: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.ip_user_files -ipstatic_source_dir C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.cache/compile_simlib/modelsim} {questa=C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.cache/compile_simlib/questa} {riviera=C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.cache/compile_simlib/riviera} {activehdl=C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Jun 12 11:56:36 2017] Launched synth_1...
+Run output will be captured here: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/synth_1/runme.log
+[Mon Jun 12 11:56:36 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/runme.log
+report_ip_status -name ip_status 
+file copy -force C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/design_1_wrapper.sysdef C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2/solution1/impl/ip/component.xml. It will be created.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado/xilinx_com_zybo_audio_ctrl_1.0'.
+update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.977 ; gain = 0.000
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:NCO2:1.0 [get_ips  design_1_NCO2_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_NCO2_0_0 (Nco2 1.0) from revision 1706121150 to revision 1706121219
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1363.492 ; gain = 0.652
+export_ip_user_files -of_objects [get_ips design_1_NCO2_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block NCO2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zybo_audio_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 9c79d2caab37f64a; cache size = 10.127 MB.
+[Mon Jun 12 12:24:48 2017] Launched design_1_NCO2_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_NCO2_0_0_synth_1: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/synth_1/runme.log
+[Mon Jun 12 12:24:48 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1438.332 ; gain = 74.781
+file copy -force C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/design_1_wrapper.sysdef C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key2'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado_HLS/NCO_key4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/NCO_audio_output/IP_Vivado/xilinx_com_zybo_audio_ctrl_1.0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:NCO2:1.0 [get_ips  design_1_NCO2_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_NCO2_0_0 (Nco2 1.0) from revision 1706121219 to revision 1706121248
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_NCO2_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Wrote  : <C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block NCO2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zybo_audio_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 9c79d2caab37f64a; cache size = 10.127 MB.
+[Mon Jun 12 12:49:59 2017] Launched design_1_NCO2_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_NCO2_0_0_synth_1: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/synth_1/runme.log
+[Mon Jun 12 12:49:59 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1558.957 ; gain = 53.691
+file copy -force C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/design_1_wrapper.sysdef C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+
+file copy -force C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/impl_1/design_1_wrapper.sysdef C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk -hwspec C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 12 13:23:35 2017...

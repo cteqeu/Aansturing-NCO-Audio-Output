@@ -34,6 +34,8 @@ Archive member included because of file (symbol)
                               .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o) (I2C_EzI2CInit)
 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
                               .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o) (I2C_EZI2C_STRETCH_ISR)
+.\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+                              .\CortexM0\ARM_GCC_484\Debug\main.o (sw_Read)
 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
                               .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o) (CyDelayCycles)
 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
@@ -635,6 +637,17 @@ Discarded input sections
                 0x00000000        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .text.sw_Write
+                0x00000000       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .text.sw_SetDriveMode
+                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .text.sw_ReadDataReg
+                0x00000000       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .text.sw_ClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
@@ -746,7 +759,7 @@ END GROUP
                 0x0000ff80                appl2_start = (appl1_start + ALIGN ((((0x20000 - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
                 0x00000000                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
 
-.text           0x00000000     0x1f24
+.text           0x00000000     0x1f4c
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -760,334 +773,337 @@ END GROUP
                 0x00000010                Reset
                 0x00000001                ASSERT ((. != __cy_reset), No reset code)
  *(.psocinit)
- .psocinit      0x00000018      0x248 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+ .psocinit      0x00000018      0x24c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
                 0x000000fc                cyfitter_cfg
-                0x00000260                . = MAX (., 0x100)
+                0x00000264                . = MAX (., 0x100)
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x00000260       0x60 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
- .text.main     0x000002c0      0x1a4 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x000002c0                main
+ .text          0x00000264       0x60 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .text.main     0x000002c4      0x1b4 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x000002c4                main
  .text.IntDefaultHandler
-                0x00000464        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x00000464                IntDefaultHandler
- .text.Start_c  0x00000468       0x48 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x00000468                Start_c
+                0x00000478        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x00000478                IntDefaultHandler
+ .text.Start_c  0x0000047c       0x48 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x0000047c                Start_c
  .text.initialize_psoc
-                0x000004b0       0x58 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x000004b0                initialize_psoc
+                0x000004c4       0x58 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x000004c4                initialize_psoc
  .text.cfg_write_bytes32
-                0x00000508       0x38 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+                0x0000051c       0x38 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000540       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+                0x00000554       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
  .text.CYMEMZERO
-                0x00000568        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+                0x00000574        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
  .text.CySysClkImoGetWcoLock
-                0x00000574       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x00000580       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
  .text.CySysClkImoDisableWcoLock
-                0x00000588       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x00000588                CySysClkImoDisableWcoLock
+                0x00000594       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x00000594                CySysClkImoDisableWcoLock
  .text.CyIntEnable
-                0x0000059c       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x0000059c                CyIntEnable
+                0x000005a8       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x000005a8                CyIntEnable
  .text.CyIntDisable
-                0x000005b0       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x000005b0                CyIntDisable
+                0x000005bc       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x000005bc                CyIntDisable
  .text.CyIntClearPending
-                0x000005c4       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x000005c4                CyIntClearPending
- .text.CyHalt   0x000005d8        0x4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x000005d8                CyHalt
+                0x000005d0       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x000005d0                CyIntClearPending
+ .text.CyHalt   0x000005e4        0x4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x000005e4                CyHalt
  .text.CyIntSetVector
-                0x000005dc       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x000005dc                CyIntSetVector
+                0x000005e8       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x000005e8                CyIntSetVector
  .text.CyIntSetPriority
-                0x000005fc       0x48 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x000005fc                CyIntSetPriority
- .text.CyDelay  0x00000644       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x00000644                CyDelay
+                0x00000608       0x48 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x00000608                CyIntSetPriority
+ .text.CyDelay  0x00000650       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x00000650                CyDelay
  .text.CySysClkImoEnableWcoLock
-                0x00000674       0xbc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x00000674                CySysClkImoEnableWcoLock
+                0x00000680       0xbc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x00000680                CySysClkImoEnableWcoLock
  .text.CySysClkWriteImoFreq
-                0x00000730       0x80 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x00000730                CySysClkWriteImoFreq
+                0x0000073c       0x80 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x0000073c                CySysClkWriteImoFreq
  .text.CySysWdtLocked
-                0x000007b0       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+                0x000007bc       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
  .text.CySysClkWcoEnabled
-                0x000007c8       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
-                0x000007c8                CySysClkWcoEnabled
+                0x000007d4       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+                0x000007d4                CySysClkWcoEnabled
  .text.CySysWdtLock
-                0x000007dc       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
-                0x000007dc                CySysWdtLock
+                0x000007e8       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+                0x000007e8                CySysWdtLock
  .text.CySysWdtUnlock
-                0x000007f8       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
-                0x000007f8                CySysWdtUnlock
+                0x00000804       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+                0x00000804                CySysWdtUnlock
  .text.CySysWdtClearInterrupt
-                0x00000828       0x4c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
-                0x00000828                CySysWdtClearInterrupt
+                0x00000834       0x4c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+                0x00000834                CySysWdtClearInterrupt
  .text.CySysWdtIsr
-                0x00000874       0xa4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
-                0x00000874                CySysWdtIsr
+                0x00000880       0xa4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+                0x00000880                CySysWdtIsr
  .text.CapSense_CsdHwBlockInit
-                0x00000918       0x84 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000918                CapSense_CsdHwBlockInit
+                0x00000924       0x84 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000924                CapSense_CsdHwBlockInit
  .text.CapSense_Enable
-                0x0000099c       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x0000099c                CapSense_Enable
+                0x000009a8       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x000009a8                CapSense_Enable
  .text.CapSense_IsBusy
-                0x000009dc       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x000009dc                CapSense_IsBusy
+                0x000009e8       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x000009e8                CapSense_IsBusy
  .text.CapSense_ReadSensorRaw
-                0x000009ec       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x000009ec                CapSense_ReadSensorRaw
+                0x000009f8       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x000009f8                CapSense_ReadSensorRaw
  .text.CapSense_EnableSensor
-                0x000009fc       0x48 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x000009fc                CapSense_EnableSensor
+                0x00000a08       0x48 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000a08                CapSense_EnableSensor
  .text.CapSense_DisableSensor
-                0x00000a44       0x70 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000a44                CapSense_DisableSensor
+                0x00000a50       0x70 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000a50                CapSense_DisableSensor
  .text.CapSense_ClearSensors
-                0x00000ab4       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000ab4                CapSense_ClearSensors
+                0x00000ac0       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000ac0                CapSense_ClearSensors
  .text.CapSense_SetShieldDelay
-                0x00000ac8       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000ac8                CapSense_SetShieldDelay
+                0x00000ad4       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000ad4                CapSense_SetShieldDelay
  .text.CapSense_Init
-                0x00000adc       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000adc                CapSense_Init
+                0x00000ae8       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000ae8                CapSense_Init
  .text.CapSense_Start
-                0x00000b04       0x38 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000b04                CapSense_Start
+                0x00000b10       0x38 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000b10                CapSense_Start
  .text.CapSense_GetBitValue
-                0x00000b3c       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000b3c                CapSense_GetBitValue
+                0x00000b48       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000b48                CapSense_GetBitValue
  .text.CapSense_FindNextSensor
-                0x00000b54       0x24 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000b54                CapSense_FindNextSensor
+                0x00000b60       0x24 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000b60                CapSense_FindNextSensor
  .text.CapSense_PreScan
-                0x00000b78      0x10c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000b78                CapSense_PreScan
+                0x00000b84      0x10c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000b84                CapSense_PreScan
  .text.CapSense_ScanSensor
-                0x00000c84       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000c84                CapSense_ScanSensor
+                0x00000c90       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000c90                CapSense_ScanSensor
  .text.CapSense_ScanEnabledWidgets
-                0x00000ca0       0x34 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000ca0                CapSense_ScanEnabledWidgets
+                0x00000cac       0x34 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000cac                CapSense_ScanEnabledWidgets
  .text.CapSense_PostScan
-                0x00000cd4       0x8c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000cd4                CapSense_PostScan
+                0x00000ce0       0x8c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000ce0                CapSense_PostScan
  .text.CapSense_SetBitValue
-                0x00000d60       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000d60                CapSense_SetBitValue
+                0x00000d6c       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000d6c                CapSense_SetBitValue
  .text.CapSense_GetSensorRaw
-                0x00000d88       0x2c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00000d88                CapSense_GetSensorRaw
+                0x00000d94       0x2c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00000d94                CapSense_GetSensorRaw
  .text.CapSense_BaseInit
-                0x00000db4       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000db4                CapSense_BaseInit
+                0x00000dc0       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00000dc0                CapSense_BaseInit
  .text.CapSense_InitializeSensorBaseline
-                0x00000df4       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000df4                CapSense_InitializeSensorBaseline
+                0x00000e00       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00000e00                CapSense_InitializeSensorBaseline
  .text.CapSense_InitializeAllBaselines
-                0x00000e0c       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000e0c                CapSense_InitializeAllBaselines
+                0x00000e18       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00000e18                CapSense_InitializeAllBaselines
  .text.CapSense_CheckIsSensorActive
-                0x00000e20       0xa8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000e20                CapSense_CheckIsSensorActive
+                0x00000e2c       0xa8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00000e2c                CapSense_CheckIsSensorActive
  .text.CapSense_IIR4Filter
-                0x00000ec8        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000ec8                CapSense_IIR4Filter
+                0x00000ed4        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00000ed4                CapSense_IIR4Filter
  .text.CapSense_UpdateBaselineNoThreshold
-                0x00000ed4      0x110 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000ed4                CapSense_UpdateBaselineNoThreshold
+                0x00000ee0      0x118 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00000ee0                CapSense_UpdateBaselineNoThreshold
  .text.CapSense_UpdateSensorBaseline
-                0x00000fe4       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000fe4                CapSense_UpdateSensorBaseline
+                0x00000ff8       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00000ff8                CapSense_UpdateSensorBaseline
  .text.CapSense_UpdateEnabledBaselines
-                0x00000ff4       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00000ff4                CapSense_UpdateEnabledBaselines
+                0x00001008       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x00001008                CapSense_UpdateEnabledBaselines
  .text.CapSense_ISR
-                0x0000101c       0x9c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
-                0x0000101c                CapSense_ISR
+                0x00001030       0x9c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
+                0x00001030                CapSense_ISR
  .text.CapSense_UpdateThresholds
-                0x000010b8       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
-                0x000010b8                CapSense_UpdateThresholds
+                0x000010cc       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+                0x000010cc                CapSense_UpdateThresholds
  .text.CapSense_SetAnalogSwitchesSrcDirect
-                0x000010e8       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
-                0x000010e8                CapSense_SetAnalogSwitchesSrcDirect
+                0x000010fc       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+                0x000010fc                CapSense_SetAnalogSwitchesSrcDirect
  .text.CapSense_DisableBaselineIDAC
-                0x000010f8       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
-                0x000010f8                CapSense_DisableBaselineIDAC
+                0x0000110c       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+                0x0000110c                CapSense_DisableBaselineIDAC
  .text.CapSense_EnableBaselineIDAC
-                0x00001114       0x50 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
-                0x00001114                CapSense_EnableBaselineIDAC
+                0x00001128       0x50 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+                0x00001128                CapSense_EnableBaselineIDAC
  .text.CapSense_AutoTune
-                0x00001164       0xa4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
-                0x00001164                CapSense_AutoTune
+                0x00001178       0xa4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+                0x00001178                CapSense_AutoTune
  .text.CapSense_SampleClk_StartEx
-                0x00001208       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
-                0x00001208                CapSense_SampleClk_StartEx
+                0x0000121c       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
+                0x0000121c                CapSense_SampleClk_StartEx
  .text.CapSense_SampleClk_Stop
-                0x00001224       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
-                0x00001224                CapSense_SampleClk_Stop
+                0x00001238       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
+                0x00001238                CapSense_SampleClk_Stop
  .text.CapSense_SampleClk_SetFractionalDividerRegister
-                0x0000123c       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
-                0x0000123c                CapSense_SampleClk_SetFractionalDividerRegister
+                0x00001250       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
+                0x00001250                CapSense_SampleClk_SetFractionalDividerRegister
  .text.CapSense_SenseClk_StartEx
-                0x0000125c       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
-                0x0000125c                CapSense_SenseClk_StartEx
+                0x00001270       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
+                0x00001270                CapSense_SenseClk_StartEx
  .text.CapSense_SenseClk_Stop
-                0x00001278       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
-                0x00001278                CapSense_SenseClk_Stop
+                0x0000128c       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
+                0x0000128c                CapSense_SenseClk_Stop
  .text.CapSense_SenseClk_SetFractionalDividerRegister
-                0x00001290       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
-                0x00001290                CapSense_SenseClk_SetFractionalDividerRegister
+                0x000012a4       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
+                0x000012a4                CapSense_SenseClk_SetFractionalDividerRegister
  .text.QuadD1_Enable
-                0x000012b0       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x000012b0                QuadD1_Enable
+                0x000012c4       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x000012c4                QuadD1_Enable
  .text.QuadD1_WriteCounter
-                0x000012cc       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x000012cc                QuadD1_WriteCounter
+                0x000012e0       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x000012e0                QuadD1_WriteCounter
  .text.QuadD1_ReadCounter
-                0x000012dc       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x000012dc                QuadD1_ReadCounter
+                0x000012f0       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x000012f0                QuadD1_ReadCounter
  .text.QuadD1_SetCounterMode
-                0x000012ec       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x000012ec                QuadD1_SetCounterMode
+                0x00001300       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x00001300                QuadD1_SetCounterMode
  .text.QuadD1_WritePeriod
-                0x00001314       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x00001314                QuadD1_WritePeriod
+                0x00001328       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x00001328                QuadD1_WritePeriod
  .text.QuadD1_TriggerCommand
-                0x00001324       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x00001324                QuadD1_TriggerCommand
+                0x00001338       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x00001338                QuadD1_TriggerCommand
  .text.QuadD1_SetInterruptMode
-                0x00001340        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x00001340                QuadD1_SetInterruptMode
+                0x00001354        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x00001354                QuadD1_SetInterruptMode
  .text.QuadD1_Init
-                0x0000134c       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x0000134c                QuadD1_Init
+                0x00001360       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x00001360                QuadD1_Init
  .text.QuadD1_Start
-                0x00001388       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                0x00001388                QuadD1_Start
+                0x0000139c       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                0x0000139c                QuadD1_Start
  .text.QuadD2_Enable
-                0x000013a8       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x000013a8                QuadD2_Enable
+                0x000013bc       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x000013bc                QuadD2_Enable
  .text.QuadD2_WriteCounter
-                0x000013c4       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x000013c4                QuadD2_WriteCounter
+                0x000013d8       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x000013d8                QuadD2_WriteCounter
  .text.QuadD2_ReadCounter
-                0x000013d4       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x000013d4                QuadD2_ReadCounter
+                0x000013e8       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x000013e8                QuadD2_ReadCounter
  .text.QuadD2_SetCounterMode
-                0x000013e4       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x000013e4                QuadD2_SetCounterMode
+                0x000013f8       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x000013f8                QuadD2_SetCounterMode
  .text.QuadD2_WritePeriod
-                0x0000140c       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x0000140c                QuadD2_WritePeriod
+                0x00001420       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x00001420                QuadD2_WritePeriod
  .text.QuadD2_TriggerCommand
-                0x0000141c       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x0000141c                QuadD2_TriggerCommand
+                0x00001430       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x00001430                QuadD2_TriggerCommand
  .text.QuadD2_SetInterruptMode
-                0x00001438        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x00001438                QuadD2_SetInterruptMode
+                0x0000144c        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x0000144c                QuadD2_SetInterruptMode
  .text.QuadD2_Init
-                0x00001444       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x00001444                QuadD2_Init
+                0x00001458       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x00001458                QuadD2_Init
  .text.QuadD2_Start
-                0x00001480       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                0x00001480                QuadD2_Start
+                0x00001494       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                0x00001494                QuadD2_Start
  .text.QuadD3_Enable
-                0x000014a0       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x000014a0                QuadD3_Enable
+                0x000014b4       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x000014b4                QuadD3_Enable
  .text.QuadD3_WriteCounter
-                0x000014bc       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x000014bc                QuadD3_WriteCounter
+                0x000014d0       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x000014d0                QuadD3_WriteCounter
  .text.QuadD3_ReadCounter
-                0x000014cc       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x000014cc                QuadD3_ReadCounter
+                0x000014e0       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x000014e0                QuadD3_ReadCounter
  .text.QuadD3_SetCounterMode
-                0x000014dc       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x000014dc                QuadD3_SetCounterMode
+                0x000014f0       0x28 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x000014f0                QuadD3_SetCounterMode
  .text.QuadD3_WritePeriod
-                0x00001504       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x00001504                QuadD3_WritePeriod
+                0x00001518       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x00001518                QuadD3_WritePeriod
  .text.QuadD3_TriggerCommand
-                0x00001514       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x00001514                QuadD3_TriggerCommand
+                0x00001528       0x1c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x00001528                QuadD3_TriggerCommand
  .text.QuadD3_SetInterruptMode
-                0x00001530        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x00001530                QuadD3_SetInterruptMode
+                0x00001544        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x00001544                QuadD3_SetInterruptMode
  .text.QuadD3_Init
-                0x0000153c       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x0000153c                QuadD3_Init
+                0x00001550       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x00001550                QuadD3_Init
  .text.QuadD3_Start
-                0x00001578       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                0x00001578                QuadD3_Start
+                0x0000158c       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                0x0000158c                QuadD3_Start
  .text.Enc4CCW_Read
-                0x00001598       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
-                0x00001598                Enc4CCW_Read
+                0x000015ac       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
+                0x000015ac                Enc4CCW_Read
  .text.Enc4CW_Read
-                0x000015a8       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
-                0x000015a8                Enc4CW_Read
+                0x000015bc       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
+                0x000015bc                Enc4CW_Read
  .text.I2C_ScbEnableIntr
-                0x000015b8        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+                0x000015cc        0xc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
  .text.I2C_Init
-                0x000015c4        0x8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
-                0x000015c4                I2C_Init
+                0x000015d8        0x8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+                0x000015d8                I2C_Init
  .text.I2C_Enable
-                0x000015cc       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
-                0x000015cc                I2C_Enable
+                0x000015e0       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+                0x000015e0                I2C_Enable
  .text.I2C_Start
-                0x000015e4       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
-                0x000015e4                I2C_Start
+                0x000015f8       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+                0x000015f8                I2C_Start
  .text.I2C_EzI2CInit
-                0x00001604       0xc0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
-                0x00001604                I2C_EzI2CInit
+                0x00001618       0xc0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
+                0x00001618                I2C_EzI2CInit
  .text.I2C_EzI2CSetBuffer1
-                0x000016c4       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
-                0x000016c4                I2C_EzI2CSetBuffer1
+                0x000016d8       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
+                0x000016d8                I2C_EzI2CSetBuffer1
  .text.I2C_EZI2C_STRETCH_ISR
-                0x000016f4      0x33c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
-                0x000016f4                I2C_EZI2C_STRETCH_ISR
- .text          0x00001a30       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
-                0x00001a30                CyDelayCycles
-                0x00001a42                CyEnterCriticalSection
-                0x00001a4a                CyExitCriticalSection
+                0x00001708      0x33c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
+                0x00001708                I2C_EZI2C_STRETCH_ISR
+ .text.sw_Read  0x00001a44       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+                0x00001a44                sw_Read
+ *fill*         0x00001a54        0x4 
+ .text          0x00001a58       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
+                0x00001a58                CyDelayCycles
+                0x00001a6a                CyEnterCriticalSection
+                0x00001a72                CyExitCriticalSection
  .text.CySysFlashSetWaitCycles
-                0x00001a50       0x54 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
-                0x00001a50                CySysFlashSetWaitCycles
+                0x00001a78       0x54 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+                0x00001a78                CySysFlashSetWaitCycles
  .text.CalibrateOneDAC_P4_v2_20
-                0x00001aa4       0x40 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
-                0x00001aa4                CalibrateOneDAC_P4_v2_20
+                0x00001acc       0x40 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+                0x00001acc                CalibrateOneDAC_P4_v2_20
  .text.CalibrateSensors_P4_v2_20
-                0x00001ae4       0x22 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
-                0x00001ae4                CalibrateSensors_P4_v2_20
- *fill*         0x00001b06        0x2 
+                0x00001b0c       0x22 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+                0x00001b0c                CalibrateSensors_P4_v2_20
+ *fill*         0x00001b2e        0x2 
  .text.TunePrescalers_P4_v2_20
-                0x00001b08       0x48 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
-                0x00001b08                TunePrescalers_P4_v2_20
+                0x00001b30       0x48 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+                0x00001b30                TunePrescalers_P4_v2_20
  .text.TuneSensitivity_P4_v2_20
-                0x00001b50      0x100 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
-                0x00001b50                TuneSensitivity_P4_v2_20
+                0x00001b78      0x100 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+                0x00001b78                TuneSensitivity_P4_v2_20
  .text.MeasureNoiseEnvelope_P4_v2_20
-                0x00001c50      0x118 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
-                0x00001c50                MeasureNoiseEnvelope_P4_v2_20
- .text          0x00001d68       0x9c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
-                0x00001d68                __aeabi_uidiv
-                0x00001d68                __udivsi3
-                0x00001df0                __aeabi_uidivmod
- .text          0x00001e04       0xc0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
-                0x00001e04                __divsi3
-                0x00001e04                __aeabi_idiv
-                0x00001eb0                __aeabi_idivmod
- .text          0x00001ec4        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x00001ec4                __aeabi_idiv0
-                0x00001ec4                __aeabi_ldiv0
+                0x00001c78      0x118 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+                0x00001c78                MeasureNoiseEnvelope_P4_v2_20
+ .text          0x00001d90       0x9c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
+                0x00001d90                __aeabi_uidiv
+                0x00001d90                __udivsi3
+                0x00001e18                __aeabi_uidivmod
+ .text          0x00001e2c       0xc0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
+                0x00001e2c                __divsi3
+                0x00001e2c                __aeabi_idiv
+                0x00001ed8                __aeabi_idivmod
+ .text          0x00001eec        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x00001eec                __aeabi_idiv0
+                0x00001eec                __aeabi_ldiv0
  .text.__libc_init_array
-                0x00001ec8       0x4c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
-                0x00001ec8                __libc_init_array
- .text.memset   0x00001f14       0x10 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
-                0x00001f14                memset
+                0x00001ef0       0x4c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+                0x00001ef0                __libc_init_array
+ .text.memset   0x00001f3c       0x10 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+                0x00001f3c                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -1100,91 +1116,91 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00001f24        0x0
+.v4_bx          0x00001f4c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00001f24        0x0
+.iplt           0x00001f4c        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00001f24        0x4
+.eh_frame       0x00001f4c        0x4
  *(.eh_frame)
- .eh_frame      0x00001f24        0x0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
- .eh_frame      0x00001f24        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
-                0x00001f28                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00001f4c        0x0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .eh_frame      0x00001f4c        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
+                0x00001f50                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00001f28                __exidx_end = .
+                0x00001f50                __exidx_end = .
 
-.rodata         0x00001f28      0x1e8
+.rodata         0x00001f50      0x1e8
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00001f28       0x6c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
- .rodata        0x00001f94       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                0x00001f94                cyImoFreqMhz2Reg
- .rodata        0x00001fc4       0xb4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                0x00001fc4                CapSense_portTable
-                0x00001fd0                CapSense_pinShiftTbl
-                0x00001fdc                CapSense_prtSelTbl
-                0x00001ffc                CapSense_prtCfgTbl
-                0x0000201c                CapSense_prtDRTbl
-                0x0000203c                CapSense_widgetNumber
-                0x00002048                CapSense_maskTable
- .rodata        0x00002078       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                0x00002078                CapSense_rawDataIndex
-                0x00002084                CapSense_numberOfSensors
- .rodata        0x00002090       0x48 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
-                0x00002090                CapSense_configPointers
-                0x000020c8                prescalerTable
-                0x000020d8                . = ALIGN (0x4)
+ .rodata        0x00001f50       0x6c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+ .rodata        0x00001fbc       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                0x00001fbc                cyImoFreqMhz2Reg
+ .rodata        0x00001fec       0xb4 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                0x00001fec                CapSense_portTable
+                0x00001ff8                CapSense_pinShiftTbl
+                0x00002004                CapSense_prtSelTbl
+                0x00002024                CapSense_prtCfgTbl
+                0x00002044                CapSense_prtDRTbl
+                0x00002064                CapSense_widgetNumber
+                0x00002070                CapSense_maskTable
+ .rodata        0x000020a0       0x18 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                0x000020a0                CapSense_rawDataIndex
+                0x000020ac                CapSense_numberOfSensors
+ .rodata        0x000020b8       0x48 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+                0x000020b8                CapSense_configPointers
+                0x000020f0                prescalerTable
+                0x00002100                . = ALIGN (0x4)
  *(.init)
- .init          0x000020d8        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x000020d8                _init
- .init          0x000020dc        0x8 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
-                0x000020e4                . = ALIGN (0x4)
-                0x000020e4                __preinit_array_start = .
+ .init          0x00002100        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x00002100                _init
+ .init          0x00002104        0x8 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+                0x0000210c                . = ALIGN (0x4)
+                0x0000210c                __preinit_array_start = .
  *(.preinit_array)
-                0x000020e4                __preinit_array_end = .
-                0x000020e4                . = ALIGN (0x4)
-                0x000020e4                __init_array_start = .
+                0x0000210c                __preinit_array_end = .
+                0x0000210c                . = ALIGN (0x4)
+                0x0000210c                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x000020e4        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
- .init_array    0x000020e8        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x000020ec                __init_array_end = .
-                0x000020ec                . = ALIGN (0x4)
+ .init_array    0x0000210c        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .init_array    0x00002110        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x00002114                __init_array_end = .
+                0x00002114                . = ALIGN (0x4)
  *(.fini)
- .fini          0x000020ec        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x000020ec                _fini
- .fini          0x000020f0        0x8 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
-                0x000020f8                . = ALIGN (0x4)
-                0x000020f8                __fini_array_start = .
+ .fini          0x00002114        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x00002114                _fini
+ .fini          0x00002118        0x8 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+                0x00002120                . = ALIGN (0x4)
+                0x00002120                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x000020f8        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .fini_array    0x00002120        0x4 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x000020fc                __fini_array_end = .
-                0x000020fc                . = ALIGN (0x4)
+                0x00002124                __fini_array_end = .
+                0x00002124                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x000020fc                . = ALIGN (0x4)
+                0x00002124                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x000020fc                . = ALIGN (0x4)
-                0x000020fc                __cy_regions = .
-                0x000020fc        0x4 LONG 0x2110 __cy_region_init_ram
-                0x00002100        0x4 LONG 0x200000c8 __cy_region_start_data
-                0x00002104        0x4 LONG 0xb0 __cy_region_init_size_ram
-                0x00002108        0x4 LONG 0x1d8 __cy_region_zero_size_ram
-                0x0000210c                __cy_regions_end = .
-                0x00002110                . = ALIGN (0x8)
- *fill*         0x0000210c        0x4 
-                0x00002110                _etext = .
+                0x00002124                . = ALIGN (0x4)
+                0x00002124                __cy_regions = .
+                0x00002124        0x4 LONG 0x2138 __cy_region_init_ram
+                0x00002128        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x0000212c        0x4 LONG 0xb0 __cy_region_init_size_ram
+                0x00002130        0x4 LONG 0x1d8 __cy_region_zero_size_ram
+                0x00002134                __cy_regions_end = .
+                0x00002138                . = ALIGN (0x8)
+ *fill*         0x00002134        0x4 
+                0x00002138                _etext = .
 
 .ramvectors     0x20000000       0xc0
                 0x20000000                __cy_region_start_ram = .
@@ -1196,7 +1212,7 @@ END GROUP
  *(.noinit)
  .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
 
-.data           0x200000c8       0xb0 load address 0x00002110
+.data           0x200000c8       0xb0 load address 0x00002138
                 0x200000c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000c8        0x0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
@@ -1226,10 +1242,10 @@ END GROUP
  *(.ram)
                 0x20000178                _edata = .
 
-.igot.plt       0x20000178        0x0 load address 0x000021c0
+.igot.plt       0x20000178        0x0 load address 0x000021e8
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
-.bss            0x20000178      0x1d8 load address 0x000021c0
+.bss            0x20000178      0x1d8 load address 0x000021e8
                 0x20000178                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -1297,11 +1313,11 @@ END GROUP
                 0x20000350                __end = .
                 0x20000350                PROVIDE (end, .)
                 0x20000350                PROVIDE (__bss_end__, .)
-                0x00002110                __cy_region_init_ram = LOADADDR (.data)
+                0x00002138                __cy_region_init_ram = LOADADDR (.data)
                 0x000000b0                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x000001d8                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x20000350       0x80 load address 0x000021c0
+.heap           0x20000350       0x80 load address 0x000021e8
                 0x20000350                . = _end
                 0x200003d0                . = (. + 0x80)
  *fill*         0x20000350       0x80 
@@ -1337,7 +1353,7 @@ END GROUP
                 0x90600000        0x4 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
                 0x90600000                cy_meta_chipprotect
 
-.rel.dyn        0x000021c0        0x0 load address 0x90600004
+.rel.dyn        0x000021e8        0x0 load address 0x90600004
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
 .stab
@@ -1358,7 +1374,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xd20
+.debug_aranges  0x00000000      0xd60
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 .\CortexM0\ARM_GCC_484\Debug\main.o
@@ -1401,42 +1417,45 @@ END GROUP
  .debug_aranges
                 0x00000c58       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
  .debug_aranges
-                0x00000c78       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
+                0x00000c78       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
  .debug_aranges
-                0x00000c98       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+                0x00000cb8       0x20 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000cd8       0x48 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+                0x00000cd8       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+ .debug_aranges
+                0x00000d18       0x48 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x7e93
+.debug_info     0x00000000     0x8005
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x4ce .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_info    0x000004ce       0xfd .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_info    0x000005cb      0x386 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_info    0x00000951      0x3fc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
- .debug_info    0x00000d4d      0xb64 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
- .debug_info    0x000018b1      0xdc3 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
- .debug_info    0x00002674     0x108c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
- .debug_info    0x00003700      0xdcd .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
- .debug_info    0x000044cd      0x1ad .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
- .debug_info    0x0000467a      0x6bf .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
- .debug_info    0x00004d39      0x163 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
- .debug_info    0x00004e9c      0x163 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
- .debug_info    0x00004fff      0x8ee .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
- .debug_info    0x000058ed      0x8ee .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
- .debug_info    0x000061db      0x8ee .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
- .debug_info    0x00006ac9      0x150 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
- .debug_info    0x00006c19      0x150 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
- .debug_info    0x00006d69      0x291 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
- .debug_info    0x00006ffa      0x344 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
- .debug_info    0x0000733e      0x1dc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
- .debug_info    0x0000751a       0xa3 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
- .debug_info    0x000075bd      0x2d5 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
- .debug_info    0x00007892      0x601 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+ .debug_info    0x00000000      0x4f1 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_info    0x000004f1       0xfd .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_info    0x000005ee      0x386 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_info    0x00000974      0x3fc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+ .debug_info    0x00000d70      0xb64 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+ .debug_info    0x000018d4      0xdc3 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+ .debug_info    0x00002697     0x108c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+ .debug_info    0x00003723      0xdcd .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+ .debug_info    0x000044f0      0x1ad .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
+ .debug_info    0x0000469d      0x6bf .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+ .debug_info    0x00004d5c      0x163 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
+ .debug_info    0x00004ebf      0x163 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
+ .debug_info    0x00005022      0x8ee .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+ .debug_info    0x00005910      0x8ee .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+ .debug_info    0x000061fe      0x8ee .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+ .debug_info    0x00006aec      0x150 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
+ .debug_info    0x00006c3c      0x150 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
+ .debug_info    0x00006d8c      0x291 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+ .debug_info    0x0000701d      0x344 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
+ .debug_info    0x00007361      0x1dc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
+ .debug_info    0x0000753d      0x150 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .debug_info    0x0000768d       0xa2 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
+ .debug_info    0x0000772f      0x2d5 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+ .debug_info    0x00007a04      0x601 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
 
-.debug_abbrev   0x00000000     0x1eec
+.debug_abbrev   0x00000000     0x1fa3
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x13f .\CortexM0\ARM_GCC_484\Debug\main.o
  .debug_abbrev  0x0000013f       0x5d .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
@@ -1458,37 +1477,39 @@ END GROUP
  .debug_abbrev  0x0000185b      0x141 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
  .debug_abbrev  0x0000199c      0x17d .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
  .debug_abbrev  0x00001b19       0xd3 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
- .debug_abbrev  0x00001bec       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00001c00      0x185 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
- .debug_abbrev  0x00001d85      0x167 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+ .debug_abbrev  0x00001bec       0xb7 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .debug_abbrev  0x00001ca3       0x14 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00001cb7      0x185 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+ .debug_abbrev  0x00001e3c      0x167 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
 
-.debug_line     0x00000000     0x2e30
+.debug_line     0x00000000     0x2ef5
  *(.debug_line)
- .debug_line    0x00000000      0x13c .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_line    0x0000013c       0x53 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_line    0x0000018f      0x231 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_line    0x000003c0      0x1b5 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
- .debug_line    0x00000575      0x499 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
- .debug_line    0x00000a0e      0x4c1 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
- .debug_line    0x00000ecf      0x4cc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
- .debug_line    0x0000139b      0x3c0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
- .debug_line    0x0000175b       0xae .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
- .debug_line    0x00001809      0x1a8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
- .debug_line    0x000019b1       0xe6 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
- .debug_line    0x00001a97       0xe5 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
- .debug_line    0x00001b7c      0x376 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
- .debug_line    0x00001ef2      0x376 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
- .debug_line    0x00002268      0x376 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
- .debug_line    0x000025de       0xad .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
- .debug_line    0x0000268b       0xac .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
- .debug_line    0x00002737      0x13d .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
- .debug_line    0x00002874      0x11a .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
- .debug_line    0x0000298e      0x170 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
- .debug_line    0x00002afe       0x68 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
- .debug_line    0x00002b66      0x10c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
- .debug_line    0x00002c72      0x1be C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+ .debug_line    0x00000000      0x14d .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_line    0x0000014d       0x53 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_line    0x000001a0      0x231 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_line    0x000003d1      0x1b5 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+ .debug_line    0x00000586      0x499 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+ .debug_line    0x00000a1f      0x4c1 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+ .debug_line    0x00000ee0      0x4cc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+ .debug_line    0x000013ac      0x3cc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+ .debug_line    0x00001778       0xae .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
+ .debug_line    0x00001826      0x1a8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+ .debug_line    0x000019ce       0xe6 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
+ .debug_line    0x00001ab4       0xe5 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
+ .debug_line    0x00001b99      0x376 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+ .debug_line    0x00001f0f      0x376 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+ .debug_line    0x00002285      0x376 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+ .debug_line    0x000025fb       0xad .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
+ .debug_line    0x000026a8       0xac .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
+ .debug_line    0x00002754      0x13d .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+ .debug_line    0x00002891      0x11a .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
+ .debug_line    0x000029ab      0x170 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
+ .debug_line    0x00002b1b       0xa8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .debug_line    0x00002bc3       0x68 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
+ .debug_line    0x00002c2b      0x10c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+ .debug_line    0x00002d37      0x1be C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
 
-.debug_frame    0x00000000     0x21f4
+.debug_frame    0x00000000     0x2254
  *(.debug_frame)
  .debug_frame   0x00000000       0x38 .\CortexM0\ARM_GCC_484\Debug\main.o
  .debug_frame   0x00000038       0xbc .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
@@ -1509,90 +1530,94 @@ END GROUP
  .debug_frame   0x00001dc8       0xe8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
  .debug_frame   0x00001eb0       0xa8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
  .debug_frame   0x00001f58       0x38 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
- .debug_frame   0x00001f90       0x80 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
- .debug_frame   0x00002010       0xe8 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
- .debug_frame   0x000020f8       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00002118       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
- .debug_frame   0x00002138       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
- .debug_frame   0x00002158       0x28 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
- .debug_frame   0x00002180       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
- .debug_frame   0x000021ac       0x28 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
- .debug_frame   0x000021d4       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+ .debug_frame   0x00001f90       0x60 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .debug_frame   0x00001ff0       0x80 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+ .debug_frame   0x00002070       0xe8 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+ .debug_frame   0x00002158       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00002178       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x00002198       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
+ .debug_frame   0x000021b8       0x28 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+ .debug_frame   0x000021e0       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+ .debug_frame   0x0000220c       0x28 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00002234       0x20 c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x32cc
+.debug_str      0x00000000     0x3334
  *(.debug_str)
- .debug_str     0x00000000      0x2f2 .\CortexM0\ARM_GCC_484\Debug\main.o
-                                0x335 (size before relaxing)
- .debug_str     0x000002f2       0x5b .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
-                                0x1cf (size before relaxing)
- .debug_str     0x0000034d      0x15c .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                                0x2f6 (size before relaxing)
- .debug_str     0x000004a9      0x134 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
-                                0x2ff (size before relaxing)
- .debug_str     0x000005dd      0x4f6 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
-                                0x6dc (size before relaxing)
- .debug_str     0x00000ad3      0x503 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
-                                0x704 (size before relaxing)
- .debug_str     0x00000fd6      0x7ef .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
-                                0xa88 (size before relaxing)
- .debug_str     0x000017c5      0x6d0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
-                                0xa10 (size before relaxing)
- .debug_str     0x00001e95       0x4a .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
-                                0x284 (size before relaxing)
- .debug_str     0x00001edf      0x1f6 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
-                                0x6bc (size before relaxing)
- .debug_str     0x000020d5       0xb8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
-                                0x29a (size before relaxing)
- .debug_str     0x0000218d       0x81 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
-                                0x294 (size before relaxing)
- .debug_str     0x0000220e      0x3dc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
-                                0x5d0 (size before relaxing)
- .debug_str     0x000025ea      0x31d .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
-                                0x5d0 (size before relaxing)
- .debug_str     0x00002907      0x31d .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
-                                0x5d0 (size before relaxing)
- .debug_str     0x00002c24       0x84 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
-                                0x214 (size before relaxing)
- .debug_str     0x00002ca8       0x6c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
-                                0x20e (size before relaxing)
- .debug_str     0x00002d14      0x101 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
-                                0x2b7 (size before relaxing)
- .debug_str     0x00002e15      0x10f .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
-                                0x31c (size before relaxing)
- .debug_str     0x00002f24       0x95 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
-                                0x2af (size before relaxing)
- .debug_str     0x00002fb9       0xb0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
-                                0x2a3 (size before relaxing)
- .debug_str     0x00003069      0x263 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+ .debug_str     0x00000000      0x302 .\CortexM0\ARM_GCC_484\Debug\main.o
+                                0x345 (size before relaxing)
+ .debug_str     0x00000302       0x5b .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+                                0x1ce (size before relaxing)
+ .debug_str     0x0000035d      0x15c .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                                0x2f5 (size before relaxing)
+ .debug_str     0x000004b9      0x134 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+                                0x2fe (size before relaxing)
+ .debug_str     0x000005ed      0x4f6 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+                                0x6db (size before relaxing)
+ .debug_str     0x00000ae3      0x503 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+                                0x703 (size before relaxing)
+ .debug_str     0x00000fe6      0x7ef .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+                                0xa87 (size before relaxing)
+ .debug_str     0x000017d5      0x6d0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+                                0xa0f (size before relaxing)
+ .debug_str     0x00001ea5       0x4a .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_INT.o)
+                                0x283 (size before relaxing)
+ .debug_str     0x00001eef      0x1f6 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+                                0x6bb (size before relaxing)
+ .debug_str     0x000020e5       0xb8 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
+                                0x299 (size before relaxing)
+ .debug_str     0x0000219d       0x81 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
+                                0x293 (size before relaxing)
+ .debug_str     0x0000221e      0x3dc .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+                                0x5cf (size before relaxing)
+ .debug_str     0x000025fa      0x31d .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+                                0x5cf (size before relaxing)
+ .debug_str     0x00002917      0x31d .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+                                0x5cf (size before relaxing)
+ .debug_str     0x00002c34       0x84 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
+                                0x213 (size before relaxing)
+ .debug_str     0x00002cb8       0x6c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
+                                0x20d (size before relaxing)
+ .debug_str     0x00002d24      0x101 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+                                0x2b6 (size before relaxing)
+ .debug_str     0x00002e25      0x10f .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
+                                0x31b (size before relaxing)
+ .debug_str     0x00002f34       0x95 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
+                                0x2ae (size before relaxing)
+ .debug_str     0x00002fc9       0x58 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+                                0x1f5 (size before relaxing)
+ .debug_str     0x00003021       0xb0 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+                                0x2a2 (size before relaxing)
+ .debug_str     0x000030d1      0x263 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
                                 0x593 (size before relaxing)
 
-.debug_loc      0x00000000     0x41a4
+.debug_loc      0x00000000     0x4248
  *(.debug_loc)
- .debug_loc     0x00000000       0xc9 .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_loc     0x000000c9      0x144 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_loc     0x0000020d      0x1ac .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
- .debug_loc     0x000003b9      0x518 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
- .debug_loc     0x000008d1      0x89f .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
- .debug_loc     0x00001170      0xac2 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
- .debug_loc     0x00001c32      0x88b .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
- .debug_loc     0x000024bd      0x172 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
- .debug_loc     0x0000262f       0x76 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
- .debug_loc     0x000026a5       0x76 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
- .debug_loc     0x0000271b      0x547 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
- .debug_loc     0x00002c62      0x547 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
- .debug_loc     0x000031a9      0x547 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
- .debug_loc     0x000036f0       0x81 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
- .debug_loc     0x00003771       0x81 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
- .debug_loc     0x000037f2       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
- .debug_loc     0x0000382e       0xe1 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
- .debug_loc     0x0000390f      0x148 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
- .debug_loc     0x00003a57       0xe7 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
- .debug_loc     0x00003b3e      0x666 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+ .debug_loc     0x00000000       0xe8 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_loc     0x000000e8      0x144 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_loc     0x0000022c      0x1ac .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(cyfitter_cfg.o)
+ .debug_loc     0x000003d8      0x518 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLib.o)
+ .debug_loc     0x000008f0      0x89f .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyLFClk.o)
+ .debug_loc     0x0000118f      0xac2 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense.o)
+ .debug_loc     0x00001c51      0x88f .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_CSHL.o)
+ .debug_loc     0x000024e0      0x172 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SMS.o)
+ .debug_loc     0x00002652       0x76 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SampleClk.o)
+ .debug_loc     0x000026c8       0x76 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CapSense_SenseClk.o)
+ .debug_loc     0x0000273e      0x547 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD1.o)
+ .debug_loc     0x00002c85      0x547 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD2.o)
+ .debug_loc     0x000031cc      0x547 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(QuadD3.o)
+ .debug_loc     0x00003713       0x81 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CCW.o)
+ .debug_loc     0x00003794       0x81 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(Enc4CW.o)
+ .debug_loc     0x00003815       0x3c .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
+ .debug_loc     0x00003851       0xe1 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
+ .debug_loc     0x00003932      0x148 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
+ .debug_loc     0x00003a7a       0x81 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .debug_loc     0x00003afb       0xe7 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+ .debug_loc     0x00003be2      0x666 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xbe0
+.debug_ranges   0x00000000      0xc10
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 .\CortexM0\ARM_GCC_484\Debug\main.o
  .debug_ranges  0x00000010       0x50 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
@@ -1613,8 +1638,9 @@ END GROUP
  .debug_ranges  0x00000ad8       0x50 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
  .debug_ranges  0x00000b28       0x40 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
  .debug_ranges  0x00000b68       0x10 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
- .debug_ranges  0x00000b78       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
- .debug_ranges  0x00000ba8       0x38 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+ .debug_ranges  0x00000b78       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
+ .debug_ranges  0x00000ba8       0x30 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+ .debug_ranges  0x00000bd8       0x38 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\CortexM0\ARM_GCC_484\Debug\main.o
@@ -1638,6 +1664,7 @@ END GROUP
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
  .comment       0x00000000       0x71 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
 
@@ -1706,33 +1733,35 @@ END GROUP
  .ARM.attributes
                 0x00000408       0x31 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(I2C_EZI2C_INT.o)
  .ARM.attributes
-                0x00000439       0x21 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
+                0x00000439       0x31 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(sw.o)
  .ARM.attributes
-                0x0000045a       0x31 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
+                0x0000046a       0x21 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyBootAsmGnu.o)
  .ARM.attributes
-                0x0000048b       0x31 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
+                0x0000048b       0x31 .\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.a(CyFlash.o)
  .ARM.attributes
-                0x000004bc       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
+                0x000004bc       0x31 C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CapSense_CSD_P4_v2_20\PSoC4\Library\CapsenseP4Library_GCC.a(CSD_P4_SmartSense_v2_20.o)
  .ARM.attributes
-                0x000004da       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
+                0x000004ed       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x000004f8       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x0000050b       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
  .ARM.attributes
-                0x00000516       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
+                0x00000529       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000542       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+                0x00000547       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
  .ARM.attributes
-                0x0000056e       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+                0x00000573       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
  .ARM.attributes
-                0x0000059a       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+                0x0000059f       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
  .ARM.attributes
-                0x000005c6       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
+                0x000005cb       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
  .ARM.attributes
-                0x000005f2       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+                0x000005f7       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x0000061e       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
+                0x00000623       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
  .ARM.attributes
-                0x0000064a       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+                0x0000064f       0x2c c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
+ .ARM.attributes
+                0x0000067b       0x1e c:/program files (x86)/cypress/psoc creator/3.2/psoc creator/import/gnu/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)

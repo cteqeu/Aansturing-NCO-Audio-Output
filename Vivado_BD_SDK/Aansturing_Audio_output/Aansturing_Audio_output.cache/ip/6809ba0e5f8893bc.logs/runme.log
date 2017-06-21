@@ -1,0 +1,761 @@
+
+*** Running vivado
+    with args -log design_1_NCO2_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_NCO2_0_0.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source design_1_NCO2_0_0.tcl -notrace
+Command: synth_design -top design_1_NCO2_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9140 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 297.266 ; gain = 87.184
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_NCO2_0_0' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/synth/design_1_NCO2_0_0.vhd:80]
+INFO: [Synth 8-3491] module 'NCO2' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:12' bound to instance 'U0' of component 'NCO2' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/synth/design_1_NCO2_0_0.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'NCO2' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:39]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:119]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:122]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:126]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:130]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:132]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:138]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:143]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:145]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:147]
+INFO: [Synth 8-3491] module 'NCO2_sine_V' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sine_V.vhd:4161' bound to instance 'sine_V_U' of component 'NCO2_sine_V' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sine_V' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sine_V.vhd:4174]
+INFO: [Synth 8-3491] module 'NCO2_sine_V_rom' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sine_V.vhd:12' bound to instance 'NCO2_sine_V_rom_U' of component 'NCO2_sine_V_rom' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sine_V.vhd:4186]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sine_V_rom' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sine_V.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sine_V_rom' (1#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sine_V.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sine_V' (2#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sine_V.vhd:4174]
+INFO: [Synth 8-3491] module 'NCO2_AXILiteS_s_axi' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_AXILiteS_s_axi.vhd:12' bound to instance 'NCO2_AXILiteS_s_axi_U' of component 'NCO2_AXILiteS_s_axi' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:278]
+INFO: [Synth 8-638] synthesizing module 'NCO2_AXILiteS_s_axi' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_AXILiteS_s_axi.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_AXILiteS_s_axi' (3#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_AXILiteS_s_axi.vhd:61]
+INFO: [Synth 8-3491] module 'NCO2_dmul_64ns_64bkb' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_dmul_64ns_64bkb.vhd:11' bound to instance 'NCO2_dmul_64ns_64bkb_U0' of component 'NCO2_dmul_64ns_64bkb' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'NCO2_dmul_64ns_64bkb' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_dmul_64ns_64bkb.vhd:29]
+INFO: [Synth 8-3491] module 'NCO2_ap_dmul_4_max_dsp_64' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_dmul_4_max_dsp_64.vhd:59' bound to instance 'NCO2_ap_dmul_4_max_dsp_64_u' of component 'NCO2_ap_dmul_4_max_dsp_64' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_dmul_64ns_64bkb.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'NCO2_ap_dmul_4_max_dsp_64' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_dmul_4_max_dsp_64.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ad02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_dmul_4_max_dsp_64.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_ap_dmul_4_max_dsp_64' (20#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_dmul_4_max_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_dmul_64ns_64bkb' (21#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_dmul_64ns_64bkb.vhd:29]
+INFO: [Synth 8-3491] module 'NCO2_ddiv_64ns_64cud' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_ddiv_64ns_64cud.vhd:11' bound to instance 'NCO2_ddiv_64ns_64cud_U1' of component 'NCO2_ddiv_64ns_64cud' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:322]
+INFO: [Synth 8-638] synthesizing module 'NCO2_ddiv_64ns_64cud' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_ddiv_64ns_64cud.vhd:29]
+INFO: [Synth 8-3491] module 'NCO2_ap_ddiv_29_no_dsp_64' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_ddiv_29_no_dsp_64.vhd:59' bound to instance 'NCO2_ap_ddiv_29_no_dsp_64_u' of component 'NCO2_ap_ddiv_29_no_dsp_64' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_ddiv_64ns_64cud.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'NCO2_ap_ddiv_29_no_dsp_64' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_ddiv_29_no_dsp_64.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ad02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_ddiv_29_no_dsp_64.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_ap_ddiv_29_no_dsp_64' (26#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_ddiv_29_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_ddiv_64ns_64cud' (27#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_ddiv_64ns_64cud.vhd:29]
+INFO: [Synth 8-3491] module 'NCO2_sitodp_32ns_dEe' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sitodp_32ns_dEe.vhd:11' bound to instance 'NCO2_sitodp_32ns_dEe_U2' of component 'NCO2_sitodp_32ns_dEe' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:337]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sitodp_32ns_dEe' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sitodp_32ns_dEe.vhd:27]
+INFO: [Synth 8-3491] module 'NCO2_ap_sitodp_3_no_dsp_32' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_sitodp_3_no_dsp_32.vhd:59' bound to instance 'NCO2_ap_sitodp_3_no_dsp_32_u' of component 'NCO2_ap_sitodp_3_no_dsp_32' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sitodp_32ns_dEe.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'NCO2_ap_sitodp_3_no_dsp_32' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_sitodp_3_no_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ad02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_sitodp_3_no_dsp_32.vhd:193]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_ap_sitodp_3_no_dsp_32' (34#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/ip/NCO2_ap_sitodp_3_no_dsp_32.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sitodp_32ns_dEe' (35#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2_sitodp_32ns_dEe.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'NCO2' (36#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'design_1_NCO2_0_0' (37#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/synth/design_1_NCO2_0_0.vhd:80]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized859 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized859 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized859 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized859 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized859 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized857 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized857 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized857 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized857 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized857 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized861 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized861 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized861 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized35 has unconnected port B[31]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized935 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized935 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized935 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized929 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized929 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized929 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized933 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized933 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized933 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized933 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized933 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized931 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized931 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized931 has unconnected port SINIT
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[30]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[29]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[28]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[27]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[26]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[25]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[24]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[23]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[22]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[21]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[20]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[19]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[18]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[17]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[16]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[15]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[14]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[13]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[12]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[11]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[10]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[9]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[8]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[7]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[6]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[5]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[4]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[3]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[2]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[1]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized927 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized927 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized927 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized927 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized927 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized39 has unconnected port B[26]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized925 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized925 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized925 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized925 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized925 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized915 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized915 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized915 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized915 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized915 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized913 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized913 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized913 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized913 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized913 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized911 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized911 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized911 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized911 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized911 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized909 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized909 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized909 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized909 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized909 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized923 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized923 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized923 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized923 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized923 has unconnected port SINIT
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 461.898 ; gain = 251.816
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 461.898 ; gain = 251.816
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 6330 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.292 . Memory (MB): peak = 732.547 ; gain = 4.293
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 732.547 ; gain = 522.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 732.547 ; gain = 522.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 732.547 ; gain = 522.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RVALID_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-3936] Found unconnected internal register 'val_assign_reg_311_reg' and it is trimmed from '64' to '63' bits. [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/e984/hdl/vhdl/NCO2.vhd:401]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:00 ; elapsed = 00:01:12 . Memory (MB): peak = 732.547 ; gain = 522.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DIV_OP.SPD.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[52]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[63]' (FD) to 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[53]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[53]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[63]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[54]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[55]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[56]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[57]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[58]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[59]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[60]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[61]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[62]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/MSB_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[0]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[1]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[2]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[3]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[4]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[5]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[6]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[7]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[8]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[9]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[10]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[11]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[12]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[13]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[14]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[15]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[16]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[17]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[18]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[19]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[20]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[21]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[22]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[23]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[24]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[25]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[26]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[27]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[28]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[29]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[30]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[31]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[32]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[33]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[34]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[35]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[36]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[37]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[38]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[39]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[40]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[41]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[42]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[43]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[44]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[45]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[46]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[47]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[48]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[49]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[50]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[62]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_ddiv_64ns_64cud_U1/din1_buf1_reg[51]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[0]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[1]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[2]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[3]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[4]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[5]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[6]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[7]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[8]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[9]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[10]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[11]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[12]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[13]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[14]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[15]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[16]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[17]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[18]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[19]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[20]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[21]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[22]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[23]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[24]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[25]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[26]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[27]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[28]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[29]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[30]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[31]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[32]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[33]' (FD) to 'U0/NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[61]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_dmul_64ns_64bkb_U0/din1_buf1_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_AXILiteS_s_axi_U/wstate_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_ddiv_64ns_64cud_U1/NCO2_ap_ddiv_29_no_dsp_64_u/U0 /i_synth/\DIV_OP.SPD.OP/MANT_DIV /\RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/IP_SIGN_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/EXP/IP_SIGN_DELAY/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (MULT.OP/OP/RESULT_REG.NORMAL.sign_op_reg) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[51]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[45]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[43]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[40]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[38]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[35]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[32]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[31]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[29]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[26]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[24]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[18]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[16]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[14]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[13]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[12]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[11]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[10]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[9]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[5]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[2]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[1].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[51]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[45]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[43]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[40]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[38]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[35]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[32]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[31]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[29]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[26]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[24]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[18]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[16]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[14]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[13]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[12]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[11]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[10]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[9]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[5]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[2]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[3].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[51]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[45]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[43]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[40]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[38]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[35]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[32]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[31]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[29]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[26]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[24]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[18]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[16]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[14]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[13]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[12]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[11]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[10]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[9]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[7]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[5]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[2]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[5].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[51]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[45]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[43]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[40]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[38]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[35]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[32]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[31]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[29]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[26]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[24]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[22]) is unused and will be removed from module flt_div_mant.
+INFO: [Synth 8-3332] Sequential element (RT[7].MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[21]) is unused and will be removed from module flt_div_mant.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:30 . Memory (MB): peak = 732.547 ; gain = 522.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:01:47 . Memory (MB): peak = 752.723 ; gain = 542.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:49 . Memory (MB): peak = 771.277 ; gain = 561.195
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:01:56 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:01:56 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:45 ; elapsed = 00:02:00 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:45 ; elapsed = 00:02:00 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:02:00 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:02:00 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    26|
+|2     |DSP48E1    |     1|
+|3     |DSP48E1_1  |     1|
+|4     |DSP48E1_10 |     1|
+|5     |DSP48E1_2  |     1|
+|6     |DSP48E1_3  |     1|
+|7     |DSP48E1_4  |     1|
+|8     |DSP48E1_5  |     1|
+|9     |DSP48E1_6  |     1|
+|10    |DSP48E1_7  |     1|
+|11    |DSP48E1_8  |     1|
+|12    |DSP48E1_9  |     1|
+|13    |LUT1       |    62|
+|14    |LUT2       |  1737|
+|15    |LUT3       |  1474|
+|16    |LUT4       |   169|
+|17    |LUT5       |   111|
+|18    |LUT6       |   228|
+|19    |MUXCY      |  3142|
+|20    |MUXF7      |     3|
+|21    |RAMB36E1   |     1|
+|22    |RAMB36E1_1 |     1|
+|23    |RAMB36E1_2 |     1|
+|24    |RAMB36E1_3 |     1|
+|25    |RAMB36E1_4 |     1|
+|26    |RAMB36E1_5 |     1|
+|27    |SRL16E     |    42|
+|28    |SRLC32E    |    37|
+|29    |XORCY      |  3110|
+|30    |FDRE       |  3120|
+|31    |FDSE       |     2|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:02:00 . Memory (MB): peak = 796.543 ; gain = 586.461
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 261 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:39 . Memory (MB): peak = 796.543 ; gain = 308.137
+Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:02:01 . Memory (MB): peak = 796.543 ; gain = 586.461
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6295 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc:6]
+Finished Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 842 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 842 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+405 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:52 ; elapsed = 00:02:03 . Memory (MB): peak = 796.543 ; gain = 578.785
+INFO: [Common 17-1381] The checkpoint 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/design_1_NCO2_0_0.dcp' has been generated.

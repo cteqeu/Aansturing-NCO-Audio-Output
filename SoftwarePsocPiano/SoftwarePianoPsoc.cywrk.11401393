@@ -25,6 +25,7 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CE97634 PSoC 4 Breathing LED.pdf</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense.c</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_CSHL.c</v>
@@ -146,6 +147,10 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD3\QuadD3.c</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD3\QuadD3.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\QuadD3\QuadD3_PM.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\sw</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\sw\sw.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\sw\sw.h</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\sw\sw_aliases.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cydevice_trm.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
@@ -172,6 +177,18 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense.h</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_CSHL.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_CSHL.h</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_INT.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_IP.h</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_PM.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_PVT.h</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_SMS.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_SMS.h</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_TunerHelper.c</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense\CapSense_TunerHelper.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense_SampleClk</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense_SampleClk\CapSense_SampleClk.c</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\CapSense_SampleClk\CapSense_SampleClk.h</v>
@@ -185,18 +202,6 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\Clock_2\Clock_2.h</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
-<v>SoftwarePianoPsoc\SoftwarePianoPsoc\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SoftwarePianoPsoc">
@@ -267,6 +272,7 @@
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD2_PM.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD3.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\QuadD3_PM.lst</v>
+<v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\Listing Files\sw.lst</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.elf</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.hex</v>
 <v>SoftwarePianoPsoc\SoftwarePianoPsoc\CortexM0\ARM_GCC_484\Debug\SoftwarePianoPsoc.map</v>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;NCO_audio_output/src/Vivado_BD_SDK&apos;" deleteContents="false" description="Delete resource &apos;NCO_audio_output/src/Vivado_BD_SDK&apos;" element1="/NCO_audio_output/src/Vivado_BD_SDK" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1496227999092"/>
+</session>

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
   30:.\Generated_Source\PSoC4/CapSense_PM.c **** *  Saves the customer configuration of CapSense.
   31:.\Generated_Source\PSoC4/CapSense_PM.c **** *
   32:.\Generated_Source\PSoC4/CapSense_PM.c **** * Parameters:
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 2
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/CapSense_PM.c **** *  None
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
   56:.\Generated_Source\PSoC4/CapSense_PM.c **** * Function Name: CapSense_Sleep
   57:.\Generated_Source\PSoC4/CapSense_PM.c **** ********************************************************************************
   58:.\Generated_Source\PSoC4/CapSense_PM.c **** *
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 3
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 3
 
 
   59:.\Generated_Source\PSoC4/CapSense_PM.c **** * Summary:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
   82 001e FFF7FEFF 		bl	CapSense_SenseClk_Stop
   83              	.LVL2:
   88:.\Generated_Source\PSoC4/CapSense_PM.c ****     CapSense_SampleClk_Stop();
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 4
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 4
 
 
   84              		.loc 1 88 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  109              		@ sp needed
  110 0000 7047     		bx	lr
  111              		.cfi_endproc
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 5
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 5
 
 
  112              	.LFE36:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  136              		.loc 1 147 0
  137 000e 034B     		ldr	r3, .L11
  138 0010 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 6
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 6
 
 
  139 0012 002B     		cmp	r3, #0
@@ -345,20 +345,20 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  176 000c F1000000 		.4byte	.LASF27
  177 0010 01       		.byte	0x1
  178 0011 8F000000 		.4byte	.LASF28
- 179 0015 E0010000 		.4byte	.LASF29
+ 179 0015 F4010000 		.4byte	.LASF29
  180 0019 00000000 		.4byte	.Ldebug_ranges0+0
  181 001d 00000000 		.4byte	0
  182 0021 00000000 		.4byte	.Ldebug_line0
  183 0025 02       		.uleb128 0x2
  184 0026 01       		.byte	0x1
  185 0027 06       		.byte	0x6
- 186 0028 5C020000 		.4byte	.LASF0
+ 186 0028 5B020000 		.4byte	.LASF0
  187 002c 02       		.uleb128 0x2
  188 002d 01       		.byte	0x1
  189 002e 08       		.byte	0x8
  190 002f 52000000 		.4byte	.LASF1
  191 0033 02       		.uleb128 0x2
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 7
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 7
 
 
  192 0034 02       		.byte	0x2
@@ -371,7 +371,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  199 0041 02       		.uleb128 0x2
  200 0042 04       		.byte	0x4
  201 0043 05       		.byte	0x5
- 202 0044 47020000 		.4byte	.LASF4
+ 202 0044 46020000 		.4byte	.LASF4
  203 0048 02       		.uleb128 0x2
  204 0049 04       		.byte	0x4
  205 004a 07       		.byte	0x7
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  246 0097 00000000 		.4byte	.LASF14
  247 009b 02       		.byte	0x2
  248 009c 5F01     		.2byte	0x15f
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 8
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 8
 
 
  249 009e A2000000 		.4byte	0xa2
@@ -434,7 +434,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  259 00b1 94       		.byte	0x94
  260 00b2 C3000000 		.4byte	0xc3
  261 00b6 08       		.uleb128 0x8
- 262 00b7 50020000 		.4byte	.LASF30
+ 262 00b7 4F020000 		.4byte	.LASF30
  263 00bb 03       		.byte	0x3
  264 00bc 96       		.byte	0x96
  265 00bd 6B000000 		.4byte	0x6b
@@ -446,7 +446,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  271 00c9 97       		.byte	0x97
  272 00ca AE000000 		.4byte	0xae
  273 00ce 09       		.uleb128 0x9
- 274 00cf 33020000 		.4byte	.LASF17
+ 274 00cf E0010000 		.4byte	.LASF17
  275 00d3 01       		.byte	0x1
  276 00d4 2E       		.byte	0x2e
  277 00d5 00000000 		.4byte	.LFB34
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  303 0110 0B       		.uleb128 0xb
  304 0111 22000000 		.4byte	.LVL2
  305 0115 9D010000 		.4byte	0x19d
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 9
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 9
 
 
  306 0119 0B       		.uleb128 0xb
@@ -486,7 +486,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  308 011e A4010000 		.4byte	0x1a4
  309 0122 00       		.byte	0
  310 0123 09       		.uleb128 0x9
- 311 0124 78020000 		.4byte	.LASF18
+ 311 0124 77020000 		.4byte	.LASF18
  312 0128 01       		.byte	0x1
  313 0129 72       		.byte	0x72
  314 012a 00000000 		.4byte	.LFB36
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  360 0188 00000000 		.4byte	CapSense_backup
  361 018c 0F       		.uleb128 0xf
  362 018d B2010000 		.4byte	.LASF23
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 10
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 10
 
 
  363 0191 06       		.byte	0x6
@@ -548,7 +548,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  367 0198 6B000000 		.4byte	0x6b
  368 019c 00       		.byte	0
  369 019d 11       		.uleb128 0x11
- 370 019e 8F020000 		.4byte	.LASF21
+ 370 019e 8E020000 		.4byte	.LASF21
  371 01a2 04       		.byte	0x4
  372 01a3 27       		.byte	0x27
  373 01a4 11       		.uleb128 0x11
@@ -572,7 +572,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  391 01c8 76000000 		.4byte	0x76
  392 01cc 00       		.byte	0
  393 01cd 11       		.uleb128 0x11
- 394 01ce 68020000 		.4byte	.LASF26
+ 394 01ce 67020000 		.4byte	.LASF26
  395 01d2 03       		.byte	0x3
  396 01d3 9F       		.byte	0x9f
  397 01d4 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  417 0011 00       		.byte	0
  418 0012 00       		.byte	0
  419 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 11
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 11
 
 
  420 0014 24       		.uleb128 0x24
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  474 004a 07       		.uleb128 0x7
  475 004b 13       		.uleb128 0x13
  476 004c 01       		.byte	0x1
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 12
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 12
 
 
  477 004d 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  531 0084 0E       		.uleb128 0xe
  532 0085 3A       		.uleb128 0x3a
  533 0086 0B       		.uleb128 0xb
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 13
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 13
 
 
  534 0087 3B       		.uleb128 0x3b
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  588 00c5 49       		.uleb128 0x49
  589 00c6 13       		.uleb128 0x13
  590 00c7 02       		.uleb128 0x2
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 14
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 14
 
 
  591 00c8 18       		.uleb128 0x18
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  645 000e 0000     		.2byte	0
  646 0010 00000000 		.4byte	.LFB34
  647 0014 18000000 		.4byte	.LFE34-.LFB34
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 15
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 15
 
 
  648 0018 00000000 		.4byte	.LFB35
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  682      20636861 
  682      7200
  683              	.LASF31:
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 16
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 16
 
 
  684 0060 43617053 		.ascii	"CapSense_backup\000"
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  704      74696F6E 
  704      2D736563 
  704      74696F6E 
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 17
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 17
 
 
  705              	.LASF15:
@@ -999,51 +999,51 @@ ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 1
  720      5F424143 
  720      4B55505F 
  720      53545255 
- 721              	.LASF29:
- 722 01e0 433A5C55 		.ascii	"C:\\Users\\11401393\\Documents\\PSoC Creator\\Softw"
- 722      73657273 
- 722      5C313134 
- 722      30313339 
- 722      335C446F 
- 723 020e 61726550 		.ascii	"arePsocPiano\\SoftwarePianoPsoc.cydsn\000"
- 723      736F6350 
- 723      69616E6F 
- 723      5C536F66 
- 723      74776172 
- 724              	.LASF17:
- 725 0233 43617053 		.ascii	"CapSense_SaveConfig\000"
- 725      656E7365 
- 725      5F536176 
- 725      65436F6E 
- 725      66696700 
+ 721              	.LASF17:
+ 722 01e0 43617053 		.ascii	"CapSense_SaveConfig\000"
+ 722      656E7365 
+ 722      5F536176 
+ 722      65436F6E 
+ 722      66696700 
+ 723              	.LASF29:
+ 724 01f4 433A5C55 		.ascii	"C:\\Users\\11401393\\Desktop\\bachelorproef\\Softwa"
+ 724      73657273 
+ 724      5C313134 
+ 724      30313339 
+ 724      335C4465 
+ 725 0222 72655073 		.ascii	"rePsocPiano\\SoftwarePianoPsoc.cydsn\000"
+ 725      6F635069 
+ 725      616E6F5C 
+ 725      536F6674 
+ 725      77617265 
  726              	.LASF4:
- 727 0247 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\11401393\AppData\Local\Temp\ccIiLCfu.s 			page 18
+ 727 0246 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\11401393\AppData\Local\Temp\cctCqaYP.s 			page 18
 
 
  727      20696E74 
  727      00
  728              	.LASF30:
- 729 0250 656E6162 		.ascii	"enableState\000"
+ 729 024f 656E6162 		.ascii	"enableState\000"
  729      6C655374 
  729      61746500 
  730              	.LASF0:
- 731 025c 7369676E 		.ascii	"signed char\000"
+ 731 025b 7369676E 		.ascii	"signed char\000"
  731      65642063 
  731      68617200 
  732              	.LASF26:
- 733 0268 43617053 		.ascii	"CapSense_Enable\000"
+ 733 0267 43617053 		.ascii	"CapSense_Enable\000"
  733      656E7365 
  733      5F456E61 
  733      626C6500 
  734              	.LASF18:
- 735 0278 43617053 		.ascii	"CapSense_RestoreConfig\000"
+ 735 0277 43617053 		.ascii	"CapSense_RestoreConfig\000"
  735      656E7365 
  735      5F526573 
  735      746F7265 
  735      436F6E66 
  736              	.LASF21:
- 737 028f 43617053 		.ascii	"CapSense_SenseClk_Stop\000"
+ 737 028e 43617053 		.ascii	"CapSense_SenseClk_Stop\000"
  737      656E7365 
  737      5F53656E 
  737      7365436C 

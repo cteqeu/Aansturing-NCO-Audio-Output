@@ -1,0 +1,561 @@
+
+*** Running vivado
+    with args -log design_1_NCO2_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_NCO2_0_0.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source design_1_NCO2_0_0.tcl -notrace
+Command: synth_design -top design_1_NCO2_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13044 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 294.184 ; gain = 83.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_NCO2_0_0' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/synth/design_1_NCO2_0_0.vhd:80]
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'NCO2' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:12' bound to instance 'U0' of component 'NCO2' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/synth/design_1_NCO2_0_0.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'NCO2' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:39]
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:102]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:105]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:108]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:112]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:115]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:122]
+	Parameter DataWidth bound to: 23 - type: integer 
+	Parameter AddressRange bound to: 8192 - type: integer 
+	Parameter AddressWidth bound to: 13 - type: integer 
+INFO: [Synth 8-3491] module 'NCO2_sine_V' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sine_V.vhd:4161' bound to instance 'sine_V_U' of component 'NCO2_sine_V' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sine_V' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sine_V.vhd:4174]
+	Parameter DataWidth bound to: 23 - type: integer 
+	Parameter AddressRange bound to: 8192 - type: integer 
+	Parameter AddressWidth bound to: 13 - type: integer 
+INFO: [Synth 8-3491] module 'NCO2_sine_V_rom' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sine_V.vhd:12' bound to instance 'NCO2_sine_V_rom_U' of component 'NCO2_sine_V_rom' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sine_V.vhd:4186]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sine_V_rom' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sine_V.vhd:27]
+	Parameter dwidth bound to: 23 - type: integer 
+	Parameter awidth bound to: 13 - type: integer 
+	Parameter mem_size bound to: 8192 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sine_V_rom' (1#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sine_V.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sine_V' (2#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sine_V.vhd:4174]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'NCO2_AXILiteS_s_axi' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_AXILiteS_s_axi.vhd:12' bound to instance 'NCO2_AXILiteS_s_axi_U' of component 'NCO2_AXILiteS_s_axi' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'NCO2_AXILiteS_s_axi' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_AXILiteS_s_axi.vhd:61]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'NCO2_AXILiteS_s_axi' (3#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_AXILiteS_s_axi.vhd:61]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 33 - type: integer 
+	Parameter din0_WIDTH bound to: 29 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'NCO2_sdiv_29ns_32bkb' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:231' bound to instance 'NCO2_sdiv_29ns_32bkb_U0' of component 'NCO2_sdiv_29ns_32bkb' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sdiv_29ns_32bkb' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:249]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 33 - type: integer 
+	Parameter din0_WIDTH bound to: 29 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+	Parameter in0_WIDTH bound to: 29 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'NCO2_sdiv_29ns_32bkb_div' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:110' bound to instance 'NCO2_sdiv_29ns_32bkb_div_U' of component 'NCO2_sdiv_29ns_32bkb_div' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sdiv_29ns_32bkb_div' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:127]
+	Parameter in0_WIDTH bound to: 29 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+	Parameter in0_WIDTH bound to: 29 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'NCO2_sdiv_29ns_32bkb_div_u' declared at 'c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:12' bound to instance 'NCO2_sdiv_29ns_32bkb_div_u_0' of component 'NCO2_sdiv_29ns_32bkb_div_u' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'NCO2_sdiv_29ns_32bkb_div_u' [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:39]
+	Parameter in0_WIDTH bound to: 29 - type: integer 
+	Parameter in1_WIDTH bound to: 32 - type: integer 
+	Parameter out_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sdiv_29ns_32bkb_div_u' (4#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sdiv_29ns_32bkb_div' (5#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'NCO2_sdiv_29ns_32bkb' (6#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:249]
+INFO: [Synth 8-256] done synthesizing module 'NCO2' (7#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'design_1_NCO2_0_0' (8#1) [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/synth/design_1_NCO2_0_0.vhd:80]
+WARNING: [Synth 8-3331] design NCO2_sine_V has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 333.543 ; gain = 123.176
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 333.543 ; gain = 123.176
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.055 . Memory (MB): peak = 640.586 ; gain = 0.059
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RVALID_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     29 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 8     
+	               30 Bit    Registers := 1     
+	               29 Bit    Registers := 4     
+	               24 Bit    Registers := 2     
+	               23 Bit    Registers := 1     
+	               13 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 1     
+	  37 Input     36 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     29 Bit        Muxes := 3     
+	   2 Input     28 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module NCO2_sine_V_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               23 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module NCO2_AXILiteS_s_axi 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module NCO2_sdiv_29ns_32bkb_div_u 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               30 Bit    Registers := 1     
+	               29 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     29 Bit        Muxes := 2     
+	   2 Input     28 Bit        Muxes := 1     
+Module NCO2_sdiv_29ns_32bkb_div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     29 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               29 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     29 Bit        Muxes := 1     
+Module NCO2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               13 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 1     
+	  37 Input     36 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/remd_tmp_reg' and it is trimmed from '29' to '28' bits. [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2_sdiv_29ns_32bkb.vhd:96]
+WARNING: [Synth 8-3936] Found unconnected internal register 'freq_assign_fu_38_reg' and it is trimmed from '32' to '19' bits. [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ipshared/ef5c/hdl/vhdl/NCO2.vhd:314]
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[0]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[1]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[2]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[3]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[4]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[5]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[6]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[7]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[8]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[9]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[10]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[11]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/divisor0_reg[12]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[0]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[1]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[2]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[3]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[4]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[5]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[6]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[7]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[8]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[9]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[10]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[11]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[12]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[13]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[14]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[15]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[16]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[17]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[18]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[19]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[20]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[21]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[22]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[23]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[24]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[25]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26] )
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[27]' (FD) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28] )
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/quot_reg[29]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/quot_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/quot_reg[30]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/quot_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_AXILiteS_s_axi_U/int_sine_out_V_reg[23] )
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_AXILiteS_s_axi_U/rstate_reg[1]' (FDS) to 'U0/NCO2_AXILiteS_s_axi_U/rstate_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_AXILiteS_s_axi_U/wstate_reg[2] )
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[28]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[1]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[2]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[3]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[4]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[5]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[6]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[7]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[8]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[9]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[10]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[11]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[12]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[0]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[1]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[2]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[3]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[4]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[5]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[6]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[7]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[8]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[9]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[10]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[11]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[12]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[13]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[14]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[15]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[16]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[17]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[18]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[19]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[20]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[21]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[22]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[23]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[24]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[25]' (FDE) to 'U0/NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[27]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[27] )
+WARNING: [Synth 8-3332] Sequential element (NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/sign0_reg[0]) is unused and will be removed from module NCO2.
+WARNING: [Synth 8-3332] Sequential element (NCO2_AXILiteS_s_axi_U/wstate_reg[2]) is unused and will be removed from module NCO2.
+WARNING: [Synth 8-3332] Sequential element (NCO2_AXILiteS_s_axi_U/int_sine_out_V_reg[23]) is unused and will be removed from module NCO2.
+WARNING: [Synth 8-3332] Sequential element (NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[26]) is unused and will be removed from module NCO2.
+WARNING: [Synth 8-3332] Sequential element (NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[26]) is unused and will be removed from module NCO2.
+WARNING: [Synth 8-3332] Sequential element (NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/dividend0_reg[28]) is unused and will be removed from module NCO2.
+WARNING: [Synth 8-3332] Sequential element (NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/dividend0_reg[27]) is unused and will be removed from module NCO2.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[0]) is unused and will be removed from module NCO2.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------+-----------------------------------+---------------+----------------+
+|Module Name     | RTL Object                        | Depth x Width | Implemented As | 
++----------------+-----------------------------------+---------------+----------------+
+|NCO2_sine_V_rom | q0_reg                            | 8192x23       | Block RAM      | 
+|NCO2            | sine_V_U/NCO2_sine_V_rom_U/q0_reg | 8192x23       | Block RAM      | 
++----------------+-----------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:01 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:02 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[29] is being inverted and renamed to NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[29]_inv.
+INFO: [Synth 8-5365] Flop NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[30] is being inverted and renamed to NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[30]_inv.
+INFO: [Synth 8-5365] Flop NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[31] is being inverted and renamed to NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/divisor0_reg[31]_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|NCO2        | NCO2_sdiv_29ns_32bkb_U0/NCO2_sdiv_29ns_32bkb_div_U/NCO2_sdiv_29ns_32bkb_div_u_0/r_stage_reg[29] | 29     | 1     | YES          | NO                 | YES               | 0      | 1       | 
++------------+-------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    44|
+|2     |LUT1       |   125|
+|3     |LUT2       |    67|
+|4     |LUT3       |   101|
+|5     |LUT4       |    87|
+|6     |LUT5       |     3|
+|7     |LUT6       |    10|
+|8     |RAMB36E1   |     1|
+|9     |RAMB36E1_1 |     1|
+|10    |RAMB36E1_2 |     1|
+|11    |RAMB36E1_3 |     1|
+|12    |RAMB36E1_4 |     1|
+|13    |RAMB36E1_5 |     1|
+|14    |SRLC32E    |     1|
+|15    |FDRE       |   399|
+|16    |FDSE       |    14|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+---------------------------+------+
+|      |Instance                             |Module                     |Cells |
++------+-------------------------------------+---------------------------+------+
+|1     |top                                  |                           |   857|
+|2     |  U0                                 |NCO2                       |   857|
+|3     |    NCO2_AXILiteS_s_axi_U            |NCO2_AXILiteS_s_axi        |   208|
+|4     |    NCO2_sdiv_29ns_32bkb_U0          |NCO2_sdiv_29ns_32bkb       |   418|
+|5     |      NCO2_sdiv_29ns_32bkb_div_U     |NCO2_sdiv_29ns_32bkb_div   |   418|
+|6     |        NCO2_sdiv_29ns_32bkb_div_u_0 |NCO2_sdiv_29ns_32bkb_div_u |   230|
+|7     |    sine_V_U                         |NCO2_sine_V                |     6|
+|8     |      NCO2_sine_V_rom_U              |NCO2_sine_V_rom            |     6|
++------+-------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 640.586 ; gain = 115.258
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:03 . Memory (MB): peak = 640.586 ; gain = 430.219
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc:6]
+Finished Parsing XDC File [c:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.srcs/sources_1/bd/design_1/ip/design_1_NCO2_0_0/constraints/NCO2_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+139 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 643.246 ; gain = 424.961
+INFO: [Common 17-1381] The checkpoint 'C:/Users/11401393/Desktop/NCO_audio_output/Vivado_BD_SDK/Aansturing_Audio_output/Aansturing_Audio_output.runs/design_1_NCO2_0_0_synth_1/design_1_NCO2_0_0.dcp' has been generated.

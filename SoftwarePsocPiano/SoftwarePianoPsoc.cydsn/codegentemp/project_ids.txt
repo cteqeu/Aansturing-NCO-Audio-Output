@@ -1,5 +1,5 @@
-C:\Users\11401393\Documents\PSoC Creator\SoftwarePsocPiano\SoftwarePianoPsoc.cydsn\SoftwarePianoPsoc.cyprj|cba558e4-8545-4673-a7b9-83939184d0d7
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|03ae39a5-235f-4281-b70d-efda39e44f60
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|cb8b2c24-d431-41be-b6fb-5702d9ff691f
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1374b754-3ee8-40b3-9974-a08267ffa125
-C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|11381a24-d29d-4364-89a4-3d94df0f4356
+C:\Users\11401393\Desktop\bachelorproef\SoftwarePsocPiano\SoftwarePianoPsoc.cydsn\SoftwarePianoPsoc.cyprj|650141d3-301c-49b5-8cfe-52bc9457c471
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|02c34866-c97a-4e54-9b5a-207ab52ed22a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c989453c-3a50-49eb-9858-0272784d24a9
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6c7f21c6-74e6-44f4-9956-35f337fab955
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c84be52f-f18e-4038-8efe-b60da9200843
